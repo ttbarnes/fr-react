@@ -1,0 +1,20 @@
+.navLink {
+  color: #E7E7E7;
+  position: relative;
+  z-index: 6;
+  display: block;
+  transition: all 0.5s ease;
+  padding: 1.1em 1.22em;
+  font-size: 1.1em;
+}
+.navLink:hover,
+.navLink:focus {
+  outline: 0 none;
+  background: #121212;
+  color: #fff;
+}
+
+.navLinkInner {
+  display: block;
+  transform: skew(-28.3deg) !important;
+}

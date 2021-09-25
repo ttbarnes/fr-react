@@ -1,0 +1,37 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  background: rgba(40,40,40,0.95);
+  border-bottom: solid 3px #121212;
+  box-shadow: 0 5px 12px #121212;
+}
+@media (min-width: 1040px) {
+  .header {
+    width: 110% !important;
+    margin: 0 -5% !important;
+    transform: skew(28.3deg);
+  }
+}
+
+.nav {
+  display: none;
+  text-align: center;
+}
+@media (min-width: 1040px) {
+  .nav {
+    display: block;
+  }
+}
+
+.navList {
+  background: none;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.navListItem {
+  float: left;
+  list-style-type: none;
+}
