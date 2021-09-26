@@ -1,5 +1,4 @@
-import styles from '../global.css';
-// import HeaderStyles from '../components/Header/styles.css';
+import styles from '../global.scss';
 
 const App = ({ Component, pageProps }) =>
   <Component {...pageProps} />;

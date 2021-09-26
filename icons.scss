@@ -1,0 +1,74 @@
+.icon-s-s,
+.icon-ssp,
+.icon-s-t,
+.icon-s-f,
+.icon-s-i,
+.icon-s-y,
+.icon-link,
+.icon-read,
+.icon-phone {
+  display: inline-block;
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
+  font-size: 1em;
+  border-radius: 50%;
+  color: #FFF;
+  text-align: center;
+  background-color: #282828;
+}
+.icon-s-s {
+  background: #e17842;
+  padding-top: 2px;
+}
+.icon-s-s::before {
+  margin-top: 3px;
+}
+.icon-ssp {
+  background: #1db954;
+  font-size: 1.55em;
+  margin-right: 10px !important;
+  padding-top: 1.5px;
+}
+.icon-ssp::before {
+  margin-left: 1px;
+}
+.icon-s-t {
+  background: #1ebced;
+  padding-top: 6px;
+  padding-bottom: 2px;
+}
+.icon-s-t::before {
+  margin-top: 1px;
+  margin-left: 1.5px;
+}
+.icon-s-f {
+  background: #3a5ba2;
+}
+.icon-s-f::before {
+  margin-top: 5px;
+}
+.icon-s-i {
+  background: #7e2b8a;
+}
+.icon-s-i::before {
+  margin-top: 5px;
+}
+.icon-s-y {
+  background: #e02f2f;
+  font-size: 0.9em;
+  padding-top: 1px;
+}
+.icon-s-y::before {
+  margin-top: 6px;
+}
+.icon-link::before {
+  margin-top: 5px;
+}
+.icon-read::before {
+  margin-top: 7px;
+  font-size: 0.9em;
+}
+.icon-phone::before {
+  margin-top: 5px;
+}
