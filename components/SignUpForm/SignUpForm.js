@@ -30,7 +30,7 @@ const SignUpForm = ({ heading }) => (
 
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 
-    <Script src='./scripts/mailchimp.js' />
+    {/* <Script src='./scripts/mailchimp.js' /> */}
 
   </div>
 );

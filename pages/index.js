@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header';
+import StickySocialLinks from '../components/StickySocialLinks';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -11,10 +12,11 @@ export default function Home() {
 
       <Header />
 
+      <StickySocialLinks />
+
       <main>
         
       </main>
-
 
       <Footer />
 
