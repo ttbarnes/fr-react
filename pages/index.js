@@ -6,20 +6,7 @@ import Footer from '../components/Footer';
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>FR React</title>
-      </Head>
-
-      <Header />
-
-      <StickySocialLinks />
-
-      <main>
-        
-      </main>
-
-      <Footer />
-
+      <p>Home page</p>
     </div>
   )
 }
