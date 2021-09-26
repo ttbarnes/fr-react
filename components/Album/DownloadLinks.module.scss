@@ -1,0 +1,88 @@
+.container {
+  float: none;
+  display: block;
+  width: 100%;
+  max-width: 322px;
+  margin: 0 auto;
+  @media (min-width: 768px) {
+    max-width: 100%;
+  }
+}
+
+.listItem {
+  margin: 1.1712em auto;
+  max-width: 170px;
+  clear: both;
+  width: 100%;
+  @media (min-width: 500px) {
+    float: left;
+    clear: none;
+    width: 149px;
+    margin-right: 1.1712em;
+  }
+  @media (min-width: 768px) {
+    width: 130px;
+  }
+  @media (min-width: 868px) {
+    width: 149px;
+  }
+
+  a {
+    opacity: .65;
+    transition: all 0.2s ease;
+    &:hover,
+    &:focus {
+      outline: 0 none;
+      opacity: 1;
+    }
+  }
+}
+
+.listItemItunesPreOrder {
+  width: 170px;
+  max-width: 170px;
+  float: none;
+  margin-top: 1.1712em;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 768px) {
+    float: left;
+    width: 179px;
+    max-width: 179px;
+  }
+  a {
+    opacity: 1;
+  }
+}
+
+.listItemGooglePlay {
+  @media (min-width: 500px) {
+    margin-right: 0;
+  }
+  @media (min-width: 1000px) {
+    width: 155px;
+  }
+}
+
+.listItemAmazon {
+  clear: both;
+  @media (min-width: 500px) {
+    clear: none;
+    float: none;
+    margin-top: 0;
+    margin: 0 auto 2.3424em auto;
+  }
+  @media (min-width: 600px) {
+    clear: both;
+    float: left;
+  }
+  @media (min-width: 768px) {
+    margin-top: 0;
+    margin-bottom: 2.3424em;
+  }
+  img {
+    border-radius: 8px;
+    border: solid 1px #fff;
+  }
+}
+

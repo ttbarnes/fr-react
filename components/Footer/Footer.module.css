@@ -1,5 +1,7 @@
 .footer {
-  overflow: hidden;
+  clear: both;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .container {

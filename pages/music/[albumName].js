@@ -1,8 +1,17 @@
 import ALBUMS from '../../data/albums.json';
+import Album from '../../components/Album';
 
-const Album = ({ album }) => {
+const AlbumPage = ({ album }) => {
   return (
-    <p>{album.name}</p>
+    <div className='container'>
+      <div className='include-bg-img'>
+        <div className='main-content container-small'>
+
+          <Album {...album} />
+
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -19,4 +28,4 @@ export async function getServerSideProps(context) {
 }
 
 
-export default Album;
+export default AlbumPage;

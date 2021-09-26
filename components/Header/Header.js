@@ -6,9 +6,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
 
-      <h1 className='sr-only'><Link href='/'>Fiona Ross</Link></h1>
-
-      <nav className={`container ${styles.nav}`}>
+      <nav className={styles.nav}>
         <ul className={styles.navList}>
           <li className={styles.navListItem}>
             <NavLink link='/' text='Home' />

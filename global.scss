@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
 @import './static/fonts/fontcustom';
 @import './icons.scss';
+@import './columns.scss';
 
 html,
 body {
@@ -33,13 +34,8 @@ dl {
   list-style-type: none;
 }
 
-.sr-only {
-  display: none;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+h1,h2,h3,h4,h5 {
+  margin-top: 0;
 }
 
 h4 {
@@ -54,6 +50,18 @@ h4 {
   }
 }
 
+h2 {
+  color: #E4E4E4;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 0.5856em;
+}
+
+p {
+  margin-top: 0;
+}
+
 a {
   color: #FFF;
 
@@ -65,4 +73,58 @@ a {
       border-color: #757575;
     }
   }
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.sr-only {
+  display: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  @media (min-width: 600px) {
+    padding-right: 2.928em;
+    padding-left: 2.928em;
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 125px;
+  }
+
+  @media (min-width: 1000px) {
+    padding-right: 2.3424em;
+    padding-left: 2.3424em;
+  }
+
+  @media (min-width: 1060px) {
+    padding-top: 126px;
+  }
+}
+
+.container-small {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main-content {
+  margin: 0 auto;
+}
+
+.include-bg-img .img-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+.include-bg-img .main-content {
+  position: relative;
+  z-index: 2;
 }
