@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import SocialLinks from '../SocialLinks';
+import SignUpForm from '../SignUpForm';
 import styles from './Footer.module.css';
 
 const Footer = () => (
@@ -12,7 +13,7 @@ const Footer = () => (
 
         <SocialLinks />
 
-        <p>Form here</p>
+        <SignUpForm title='Sign up for email updates' />
 
         <p className={styles.privacyPolicyLink}>
           <Link href='/privacy-policy'>Privacy Policy</Link>
