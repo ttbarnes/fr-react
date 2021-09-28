@@ -1,0 +1,31 @@
+.container {
+  clear: both;
+  padding-left: 1.1712em;
+  color: #fff;
+  clear: both;
+  background: #080808;
+  color: #E4E4E4;
+  padding: 1.1712em;
+  margin: 0 -1.1712em;
+  padding-left: 2.3424em;
+}
+
+.containerOl {
+   list-style-type: number;
+}
+
+.containerDl {
+   list-style-type: square;
+}
+  
+.listItem {
+  padding-bottom: 0.5856em;
+  color: #ADADAD;
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.listItemInner {
+  color: #E4E4E4;
+}

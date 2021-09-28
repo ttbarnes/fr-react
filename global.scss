@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  background: #000;
+  background: #121212;
   color: #C5C5C5;
   height: 100%;
   font-family: Source Sans Pro, Arial,sans-serif;
@@ -60,6 +60,10 @@ h2 {
 
 p {
   margin-top: 0;
+}
+
+p > b {
+  font-weight: bold;
 }
 
 a {
