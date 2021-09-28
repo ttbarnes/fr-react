@@ -15,16 +15,28 @@ const AlbumPage = ({ album }) => {
   );
 };
 
+const cleanAlbumNameFromData = (albumName) =>
+  albumName.replaceAll(',', '').toLowerCase();
+
 export async function getServerSideProps(context) {
   const { albumName } = context.query;
   
-  const albumNameDecoded = albumName.replaceAll('-', ' ');
+  const albumNameDecoded = albumName.replaceAll('-', ' ')
 
   const album = ALBUMS.find((album) =>
-    album.name.toLowerCase() === albumNameDecoded.toLowerCase()
+    cleanAlbumNameFromData(album.name) === albumNameDecoded.toLowerCase()
   );
 
-  return { props: { album } };
+  const formattedAlbumImageName = cleanAlbumNameFromData(album.name).replaceAll(' ', '-').toLowerCase();
+
+  return {
+    props: {
+      album: {
+        ...album,
+        formattedAlbumImageName
+      }
+    }
+  };
 }
 
 

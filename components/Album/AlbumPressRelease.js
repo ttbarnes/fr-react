@@ -1,11 +1,12 @@
 import styles from './AlbumPressRelease.module.scss';
 
 const AlbumPressRelease = ({ press }) => (
-  <ul className={styles.container}>
+  <ul>
     {press.map((pressHtml, index) => (
       <li
         key={index}
         dangerouslySetInnerHTML={{ __html: pressHtml }}
+        className={styles.listItem}
       />
     ))}
   </ul>

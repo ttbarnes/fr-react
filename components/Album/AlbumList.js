@@ -16,12 +16,12 @@ const AlbumList = ({ listType, list }) => {
       );
     } else if (listType === 'dl') {
       return (
-        <dl className={[styles.container, styles.containerOl].join(' ')}>
+        <dl className={[styles.container, styles.containerDl].join(' ')}>
           {list.map((item) => (
             <li
               key={item}
               className={styles.listItem}>
-                <span className={styles.listItemInner}>{item}</span>
+                <span>{item}</span>
             </li>
           ))}
         </dl>

@@ -88,6 +88,10 @@ img {
   display: none;
 }
 
+.main-content {
+  margin: 0 auto;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -115,8 +119,10 @@ img {
   margin: 0 auto;
 }
 
-.main-content {
-  margin: 0 auto;
+.row {
+  float: left;
+  width: 100%;
+  clear: both;
 }
 
 .include-bg-img .img-bg {
