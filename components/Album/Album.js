@@ -1,6 +1,7 @@
 import DownloadLinks from './DownloadLinks';
 import AlbumPressRelease from './AlbumPressRelease';
 import AlbumList from './AlbumList';
+import AlbumQuotes from './AlbumQuotes';
 import styles from './Album.module.scss'
 
 const Album = (album) => (
@@ -48,6 +49,10 @@ const Album = (album) => (
 
       <div className={`col-50-md ${styles.colLast}`}>
 
+        {album.quotes && (
+          <AlbumQuotes quotes={album.quotes} />
+        )}
+
         {(album.albumCredits && !album.tracklist) && (
           <AlbumList
             list={album.albumCredits}
@@ -61,6 +66,7 @@ const Album = (album) => (
               list={album.tracklist}
               listType='ol'
             />
+
             {album.tracklistNote && (
               <p>*{album.tracklistNote}</p>
             )}

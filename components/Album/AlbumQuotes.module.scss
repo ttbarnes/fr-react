@@ -1,0 +1,112 @@
+
+.listItem {
+  margin-bottom: 4.6848em;
+}
+
+.blockquote {
+  clear: both;
+  margin: 0;
+  font-size: 1.2em;
+  font-style: italic;
+  color: #e4e4e4;
+  line-height: 1.7em;
+  text-align: center;
+  padding: 1.1712em;
+  @media (min-width: 768px) {
+    font-size: 1.4em;
+    padding: 2.3424em 1.1712em;
+  }
+}
+.copy {
+  width: 80%;
+  vertical-align: baseline;
+}
+.quote {
+  color: #424242;
+  font-size: 3em;
+}
+@media (min-width: 600px) {
+  .quote {
+    font-size: 4em;
+  }
+}
+@media (min-width: 768px) {
+  .quote {
+    font-size: 5em;
+  }
+}
+.quoteFirst {
+  vertical-align: top;
+  margin-bottom: -0.1em;
+  margin-left: -0.45em;
+}
+@media (min-width: 600px) {
+  .quoteFirst {
+    margin-left: 0;
+  }
+}
+.quoteLast {
+  display: none;
+  vertical-align: bottom;
+  margin-bottom: -0.3em;
+}
+@media (min-width: 600px) {
+  .quoteLast {
+    display: inline-block;
+  }
+}
+.author {
+  display: block;
+  font-style: normal;
+  color: #c5c5c5;
+  margin-left: 5.2%;
+}
+.blockquote {
+  text-align: left;
+  padding: 0;
+  line-height: 1.3em;
+  @media (min-width: 768px) {
+    line-height: 1.7em;
+  }
+}
+
+.inner,
+.author {
+  font-size: 0.75em;
+}
+.copy {
+  text-align: left;
+  width: 100%;
+  padding-bottom: 0;
+}
+.inner {
+  float: left;
+  width: auto;
+  max-width: 89%;
+}
+.quote {
+  float: left;
+  width: auto;
+}
+.quoteFirst {
+  margin-left: -0.15em;
+  margin-right: 0;
+  width: 7%;
+}
+.quoteLast {
+  display: inline-block;
+  margin-top: 15px;
+}
+.inner {
+  max-width: 86%;
+}
+.quote {
+  font-size: 3em;
+}
+.quoteFirst {
+  width: 9%;
+}
+.author {
+  margin-left: 6.5%;
+  clear: both;
+}
