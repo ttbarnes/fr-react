@@ -1,5 +1,5 @@
-import ALBUMS from '../../data/albums.json';
-import Album from '../../components/Album';
+import ALBUMS from '../../../data/albums.json';
+import Album from '../../../components/Album';
 
 const AlbumPage = ({ albums }) => (
   <div className='container'>
@@ -22,7 +22,7 @@ const getImagePath = (albumName) =>
 
 export async function getServerSideProps(context) {
   const { albumName } = context.query;
-  
+
   const albumNameDecoded = albumName.replaceAll('-', ' ')
 
   const album = ALBUMS.find((album) =>
@@ -38,7 +38,7 @@ export async function getServerSideProps(context) {
 
   sortedAlbums.map((a) => {
     const album = a;
-    
+
     album.imageName = getImagePath(album.name);
     album.formattedName = albumName;
 

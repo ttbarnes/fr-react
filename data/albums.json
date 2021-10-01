@@ -49,7 +49,8 @@
         "copy": "<p>Her talents are simply extraordinary<\/p>",
         "author": "Kind of Jazz"
       }
-    ]
+    ],
+    "renderQuotes": true
   },
   {
     "id": 3,
@@ -163,6 +164,7 @@
         "copy": "A Twist of Brilliance - absolutely wonderful!",
         "author": "Tony Barnes"
       }
-    ]
+    ],
+    "renderQuotes": true
   }
 ]

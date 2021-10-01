@@ -23,8 +23,36 @@ body {
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: #E4E4E4;
+  color: #000;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background-color: #E4E4E4;
+  color: #000;
+  text-shadow: none;
+}
+
+::-webkit-selection {
+  background-color: #E4E4E4;
+  color: #000;
+  text-shadow: none;
+}
+
+
 a {
   text-decoration: none;
+  &.link-highlight-hover-border {
+    padding-bottom: 1px;
+    border-bottom: 1px solid #C5C5C5;
+    &:hover,
+    &:focus,
+    &:active {
+      border-bottom-color: #757575;
+    }
+  }
 }
 
 ul,
