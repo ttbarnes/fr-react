@@ -18,10 +18,11 @@ const App = ({ Component, pageProps }) => {
         <meta name='description' content={CONSTANTS.META_TAGS.DESCRIPTION} />
         <meta name='author' content={CONSTANTS.META_TAGS.AUTHOR} />
 
-        <meta name='viewport' content='height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0' />
+        <meta name='viewport' content='height=device-height,width=device-width,initial-scale=1.0' />
         <meta name='mobile-web-app-capable' content='yes' />
         <meta name='apple-mobile-web-app-capable' content='yes' />
         <meta name='apple-mobile-web-app-status-bar-style' content='black' />
+        <meta name='theme-color' content='#000' />
 
 
         <meta property='og:locale' content='en_GB' />
