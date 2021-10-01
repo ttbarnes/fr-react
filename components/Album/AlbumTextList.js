@@ -1,4 +1,4 @@
-import styles from './AlbumList.module.scss';
+import styles from './AlbumTextList.module.scss';
 
 const AlbumList = ({ listType, list }) => {
   if (list) {

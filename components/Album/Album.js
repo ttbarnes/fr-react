@@ -1,22 +1,23 @@
 import DownloadLinks from './DownloadLinks';
 import AlbumPressRelease from './AlbumPressRelease';
-import AlbumList from './AlbumList';
+import AlbumTextList from './AlbumTextList';
 import AlbumQuotes from './AlbumQuotes';
 import styles from './Album.module.scss'
 
 const Album = (album) => (
-  <div className='album-layout-1'>
+  <div className={styles.container}>
 
     <div className='row'>
 
       <div className={`col-50-md ${styles.colFirst}`}>
-        <img src={`/images/albums/${album.formattedAlbumImageName}.jpg`} alt={`Fiona Ross - ${album.name}`} />
+        <img src={`/images/albums/${album.imageName}.jpg`} alt={`Fiona Ross - ${album.name}`} />
       </div>
 
       <div className={`col-50-md ${styles.colLast}`}>
 
         <h2>{album.name}</h2>
-        {!album.comingSoon && (
+
+        {(!album.comingSoon && album.albumType === 'latest') && (
           <p className={styles.comingSoonDesktopOnly}>Out now</p>
         )}
 
@@ -35,7 +36,7 @@ const Album = (album) => (
         )}
 
         {(album.tracklist && album.albumCredits) && (
-          <AlbumList
+          <AlbumTextList
             list={album.albumCredits}
             listType='dl'
           />
@@ -54,7 +55,7 @@ const Album = (album) => (
         )}
 
         {(album.albumCredits && !album.tracklist) && (
-          <AlbumList
+          <AlbumTextList
             list={album.albumCredits}
             listType='ol'
           />
@@ -62,7 +63,7 @@ const Album = (album) => (
 
         {(album.albumCredits && album.tracklist) && (
           <div>
-            <AlbumList
+            <AlbumTextList
               list={album.tracklist}
               listType='ol'
             />

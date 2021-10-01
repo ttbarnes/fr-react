@@ -1,22 +1,24 @@
 import ALBUMS from '../../data/albums.json';
 import Album from '../../components/Album';
 
-const AlbumPage = ({ album }) => {
-  return (
-    <div className='container'>
-      <div className='include-bg-img'>
-        <div className='main-content container-small'>
+const AlbumPage = ({ albums }) => (
+  <div className='container'>
+    <div className='main-content container-small'>
 
-          <Album {...album} />
+      {albums.map((album) =>
+        <Album {...album} />
+      )}
 
-        </div>
-      </div>
     </div>
-  );
-};
+  </div>
+);
 
-const cleanAlbumNameFromData = (albumName) =>
-  albumName.replaceAll(',', '').toLowerCase();
+// strip commas and brackets
+const cleanAlbumName = (albumName) =>
+  albumName.replace(/,|\(|\)/g, '');
+
+const getImagePath = (albumName) =>
+  cleanAlbumName(albumName).replaceAll(' ', '-').toLowerCase();
 
 export async function getServerSideProps(context) {
   const { albumName } = context.query;
@@ -24,17 +26,25 @@ export async function getServerSideProps(context) {
   const albumNameDecoded = albumName.replaceAll('-', ' ')
 
   const album = ALBUMS.find((album) =>
-    cleanAlbumNameFromData(album.name) === albumNameDecoded.toLowerCase()
+    cleanAlbumName(album.name).toLowerCase() === albumNameDecoded.toLowerCase()
   );
 
-  const formattedAlbumImageName = cleanAlbumNameFromData(album.name).replaceAll(' ', '-').toLowerCase();
+  const allOtherAlbums = ALBUMS.filter((a) => a.name !== album.name);
+
+  const sortedAlbums = [
+    album,
+    ...allOtherAlbums
+  ];
+
+  sortedAlbums.map((album) => {
+    album.imageName = getImagePath(album.name);
+
+    return album;
+  });
 
   return {
     props: {
-      album: {
-        ...album,
-        formattedAlbumImageName
-      }
+      albums: sortedAlbums
     }
   };
 }
