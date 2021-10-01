@@ -16,7 +16,7 @@ const Album = (album) => {
 
   return (
     <div className={styles.container}>
-
+     
       <div className='row'>
 
         <div className={`col-50-md ${styles.colFirst}`}>
