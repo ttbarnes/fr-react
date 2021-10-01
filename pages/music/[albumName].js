@@ -36,8 +36,11 @@ export async function getServerSideProps(context) {
     ...allOtherAlbums
   ];
 
-  sortedAlbums.map((album) => {
+  sortedAlbums.map((a) => {
+    const album = a;
+    
     album.imageName = getImagePath(album.name);
+    album.formattedName = albumName;
 
     return album;
   });

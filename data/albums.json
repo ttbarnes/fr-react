@@ -135,7 +135,10 @@
       "google": "https://play.google.com/store/music/album/Fiona_Ross_Just_Me_And_Sometimes_Someone_Else?id=Bchqrcgk27cbmjuhsyalbnhszkm",
       "amazon": "https://www.amazon.co.uk/Just-Me-Sometimes-Someone-Else/dp/B06XPV8YJS/ref=sr_1_1?s=music&ie=UTF8&qid=1497417598&sr=8-1"
     },
-    "canOrderAudioCd": true
+    "canOrderAudioCd": true,
+    "renderQuotes": false,
+    "renderReviewsLink": true,
+    "renderPressLink": true
   },
   {
     "id": 1,

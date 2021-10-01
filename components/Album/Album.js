@@ -2,6 +2,7 @@ import DownloadLinks from './DownloadLinks';
 import AlbumPressRelease from './AlbumPressRelease';
 import AlbumTextList from './AlbumTextList';
 import AlbumQuotes from './AlbumQuotes';
+import CtaLink from './CtaLink';
 import styles from './Album.module.scss'
 
 const Album = (album) => (
@@ -22,6 +23,31 @@ const Album = (album) => (
         )}
 
         <DownloadLinks links={album.urls} />
+
+        <div className='row'>
+
+          {album.renderReviewsLink && (
+            <CtaLink
+              href={`/music/${album.formattedName}/reviews`}
+              text='Reviews'
+            />
+          )}
+
+          {album.renderPressLink && (
+            <CtaLink
+              href='/press'
+              text='Press'
+            />
+          )}
+
+          {album.writtenBy && (
+            <div
+              dangerouslySetInnerHTML={{ __html: album.writtenBy }}
+              className='row'
+            />
+          )}
+
+        </div>
 
       </div>
 
@@ -50,7 +76,7 @@ const Album = (album) => (
 
       <div className={`col-50-md ${styles.colLast}`}>
 
-        {album.quotes && (
+        {(album.renderQuotes && album.quotes) && (
           <AlbumQuotes quotes={album.quotes} />
         )}
 
