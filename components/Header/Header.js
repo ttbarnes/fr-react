@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import NavLink from './NavLink';
-import styles from './Header.module.css';
+import links from '../../data/nav-links';
+import styles from './Header.module.scss';
 
 const Header = () => {
   return (
@@ -8,41 +9,17 @@ const Header = () => {
 
       <nav className={styles.nav}>
         <ul className={styles.navList}>
-          <li className={styles.navListItem}>
-            <NavLink link='/' text='Home' />
-          </li>
-            <li className={styles.navListItem}>
-            <NavLink link='/music' text='Music' />
-          </li>
-          <li className={styles.navListItem}>
-            <NavLink link='/press' text='Press' />
-          </li>
-          <li className={styles.navListItem}>
-            <NavLink link='/gigs' text='Gigs' />
-          </li>
-          <li className={styles.navListItem}>
-            <NavLink link='/news' text='News' />
-          </li>
-          <li className={styles.navListItem}>
-            <NavLink link='/videos' text='Videos' />
-          </li>
-          <li className={styles.navListItem}>
-            <NavLink link='/about' text='About' />
-          </li>
-          <li className={styles.navListItem}>
-            <NavLink link='/gallery' text='Gallery' />
-          </li>
-          <li className={styles.navListItem}>
-            <NavLink link='/collaborators' text='Collaborators' />
-          </li>
-          <li className={styles.navListItem}>
-            <NavLink link='/journalism' text='Journalism' />
-          </li>
-          <li className={styles.navListItem}>
-            <NavLink link='/contact' text='Contact' />
-          </li>
+          {links.map((link) => (
+            <li
+              className={styles.navListItem}
+              key={link.route}
+            >
+              <NavLink link={link.route} text={link.text} />
+            </li>
+          ))}
         </ul>
       </nav>
+      
     </header>
   )
 };
