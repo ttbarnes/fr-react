@@ -14,7 +14,15 @@ const AlbumPage = ({ albums }) => {
   const metaImageHeight = CONSTANTS.ALBUM_COVER_IMAGE_SIZES[firstAlbum.imageName].HEIGHT;
 
   return (
-    <div className='container'>
+    <div className='container with-page-bg-img'>
+
+      <img
+        src={`/images/background/${firstAlbum.imageName}.png`}
+        alt=''
+        className={`page-img-bg ${firstAlbum.imageName}`}
+        aria-hidden='true'
+      />
+
       <div className='main-content container-small'>
 
         <Head>

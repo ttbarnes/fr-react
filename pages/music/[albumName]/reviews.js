@@ -2,7 +2,15 @@ import ALBUMS from '../../../data/albums.json';
 import BlockQuote from '../../../components/BlockQuote';
 
 const AlbumReviewsPage = ({ album }) => (
-  <div className='container'>
+  <div className='container with-page-bg-img'>
+  
+    <img
+      src={`/images/background/${album.imageName}.png`}
+      alt=''
+      className={`page-img-bg ${album.imageName}`}
+      aria-hidden='true'
+    />
+
     <div className='main-content container-large'>
 
       <h2>{album.name} reviews</h2>

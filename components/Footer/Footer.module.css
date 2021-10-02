@@ -2,6 +2,8 @@
   clear: both;
   width: 100%;
   overflow-x: hidden;
+  z-index: 3;
+  position: relative;
 }
 
 .container {
