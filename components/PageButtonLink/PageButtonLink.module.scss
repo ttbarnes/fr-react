@@ -1,0 +1,47 @@
+.container {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: .5856em;
+  margin-bottom: 1.7568em;
+}
+
+.link {
+  clear: both;
+  width: auto;
+  display: inline-block;
+  padding-right: .5856em;
+  line-height: normal;
+  text-align: left;
+  letter-spacing: 1px;
+  @media (min-width: 600px) {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    i {
+      opacity: 1;
+    }
+  }
+}
+
+.linkText {
+  float: left;
+}
+
+.linkIcon {
+  opacity: .4;
+  background: none;
+  margin-right: 0;
+  position: relative;
+  float: right;
+  top: -2px;
+  padding-top: .1em;
+  font-size: 1.1em;
+  margin-left: 5px;
+  transition: all 0s ease;
+  height: 27px;
+}  

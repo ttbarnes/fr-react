@@ -44,6 +44,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #FFF;
   &.link-highlight-hover-border {
     padding-bottom: 1px;
     border-bottom: 1px solid #C5C5C5;
@@ -74,7 +75,7 @@ h4 {
   font-weight: 300;
   color: #fff;
 
-  @media(min-width:768px) {
+  @media (min-width:768px) {
     font-size: 1.9em;
   }
 }
@@ -89,6 +90,7 @@ h2 {
 
 p {
   margin-top: 0;
+  margin-bottom: 2.3424em;
 }
 
 p > b {
@@ -108,6 +110,15 @@ a {
   }
 }
 
+p.page-heading {
+  color: #E4E4E4;
+  font-size: 1.9em;
+  margin-bottom: 1.1712em;
+  @media (min-width:768px) {
+    font-size: 2.3em;
+  }
+}
+
 img {
   width: 100%;
   max-width: 100%;
@@ -119,6 +130,7 @@ img {
 
 .main-content {
   margin: 0 auto;
+  min-height: 400px;
 }
 
 .container {
@@ -154,6 +166,10 @@ img {
   clear: both;
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 .include-bg-img .img-bg {
   position: fixed;
   top: 0;
@@ -170,5 +186,30 @@ img {
 
 blockquote p {
   margin-bottom: 0;
+}
+
+
+button,
+.button {
+  width: 100%;
+  opacity: 1;
+  display: block;
+  background: #3E3E3E;
+  color: #FFF;
+  letter-spacing: 1px;
+  transition: all .2s ease;
+  font-size: 1.1em;
+  padding: .5em 1.3em;
+
+  @media (min-width: 600px) {
+    font-size: 1.4em;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    background: #323232;
+  }
 }
 
