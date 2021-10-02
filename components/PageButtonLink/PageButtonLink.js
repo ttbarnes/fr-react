@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Link from 'next/link';
 import styles from './PageButtonLink.module.scss';
 
@@ -11,5 +12,15 @@ const PageButtonLink = ({ href, text, icon}) => (
     </Link>
   </div>
 );
+
+PageButtonLink.propTypes = {
+  href: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  icon: PropTypes.string
+}
+
+PageButtonLink.defaultProps = {
+  icon: 'icon-arrow-right'
+};
 
 export default PageButtonLink;

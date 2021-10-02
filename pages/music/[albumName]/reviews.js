@@ -1,5 +1,6 @@
 import ALBUMS from '../../../data/albums.json';
 import BlockQuote from '../../../components/BlockQuote';
+import PageButtonLink from '../../../components/PageButtonLink';
 
 const AlbumReviewsPage = ({ album }) => (
   <div className='container with-page-bg-img'>
@@ -26,6 +27,11 @@ const AlbumReviewsPage = ({ album }) => (
           </li>
         ))}
       </ul>
+
+      <PageButtonLink
+        href='/music'
+        text='Music'
+      />
 
     </div>
   </div>

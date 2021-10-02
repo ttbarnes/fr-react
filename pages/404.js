@@ -10,7 +10,6 @@ const NotFoundPage = () => (
         <PageButtonLink
           href='/'
           text='Start again'
-          icon='icon-arrow-right'
         />
 
     </div>

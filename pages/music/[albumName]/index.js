@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import ALBUMS from '../../../data/albums.json';
 import Album from '../../../components/Album';
+import PageButtonLink from '../../../components/PageButtonLink';
 import CONSTANTS from '../../../constants';
 
 const AlbumPage = ({ albums }) => {
@@ -48,6 +49,11 @@ const AlbumPage = ({ albums }) => {
         {albums.map((album) =>
           <Album {...album} />
         )}
+
+        <PageButtonLink
+          href='/press'
+          text='Press'
+        />
 
       </div>
     </div>
