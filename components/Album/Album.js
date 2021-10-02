@@ -25,7 +25,7 @@ const Album = (album) => {
 
         <div className={`col-50-md ${styles.colLast}`}>
 
-          <h2>{album.name}</h2>
+          <h2 className='uppercase'>{album.name}</h2>
 
           {(!album.comingSoon && album.albumType === 'latest') && (
             <p className={styles.comingSoonDesktopOnly}>Out now</p>
