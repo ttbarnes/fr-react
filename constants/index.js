@@ -34,8 +34,17 @@ const ALBUM_COVER_IMAGE_SIZES = {
   },
 };
 
+const SOCIAL_MEDIA_URLS = {
+  SPOTIFY: 'https://play.spotify.com/artist/59lPcyDIZJxmRqatvAjct8?play=true',
+  TWITTER: 'http://twitter.com/fifross',
+  FACEBOOK: 'http://facebook.com/fionarossmusic',
+  INSTAGRAM: 'https://www.instagram.com/fifi_ross',
+  YOUTUBE: 'https://www.youtube.com/channel/UC9srPEZZNgnsM23Q777HbzA'
+};
+
 export default {
   BASE_URL,
   META_TAGS,
-  ALBUM_COVER_IMAGE_SIZES
+  ALBUM_COVER_IMAGE_SIZES,
+  SOCIAL_MEDIA_URLS
 };
