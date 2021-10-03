@@ -4,7 +4,7 @@ import BurgerMenu from '../components/BurgerMenu';
 import StickySocialLinks from '../components/StickySocialLinks';
 import Footer from '../components/Footer';
 import CONSTANTS from '../constants';
-import styles from '../global.scss';
+import styles from '../styles/global.scss';
 
 const App = ({ Component, pageProps }) => {
   const metaImage = `${CONSTANTS.BASE_URL}/images/albums/${CONSTANTS.META_TAGS.OG_IMAGE}`;

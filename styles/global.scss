@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+@import './static/fonts/fontcustom';
+@import './typography.scss';
+@import './icons.scss';
+@import './columns.scss';
+@import './burger-menu.scss';
+@import './form.scss';
+@import './layout.scss';
+@import './mixins.scss';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #121212;
+  color: #C5C5C5;
+  height: 100%;
+  font-family: Source Sans Pro, Arial,sans-serif;
+  font-weight: normal;
+  font-weight: 300;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #E4E4E4;
+  color: #000;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background-color: #E4E4E4;
+  color: #000;
+  text-shadow: none;
+}
+
+::-webkit-selection {
+  background-color: #E4E4E4;
+  color: #000;
+  text-shadow: none;
+}
+
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.hidden {
+  @include hidden;
+} 
