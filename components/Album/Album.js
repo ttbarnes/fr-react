@@ -19,13 +19,19 @@ const Album = (album) => {
      
       <div className='row'>
 
+        <h2 className={`heading-uppercase ${styles.albumHeading} ${styles.albumHeadingMobile}`}>{album.name}</h2>
+
         <div className={`col-50-md ${styles.colFirst}`}>
-          <img src={`/images/albums/${album.imageName}.jpg`} alt={`Fiona Ross - ${album.name}`} />
+          <img
+            src={`/images/albums/${album.imageName}.jpg`}
+            alt={`Fiona Ross - ${album.name}`}
+            className={styles.image}
+          />
         </div>
 
         <div className={`col-50-md ${styles.colLast}`}>
 
-          <h2 className='uppercase'>{album.name}</h2>
+          <h3 className={`heading-uppercase ${styles.albumHeading} ${styles.albumHeadingDesktop}`}>{album.name}</h3>
 
           {(!album.comingSoon && album.albumType === 'latest') && (
             <p className={styles.comingSoonDesktopOnly}>Out now</p>
@@ -38,29 +44,35 @@ const Album = (album) => {
             {album.canOrderAudioCd && (
               <p className={styles.audioCdLink}>
                 <Link href={`/music/${album.formattedName}/audio-cd`}>
-                  <a className='link-highlight-hover-border'>Get a signed audio CD</a>
+                  <a className='link-highlight-hover-border'>Get a signed Audio CD</a>
                 </Link>
               </p>
             )}
 
-            {album.renderReviewsLink && (
-              <CtaLink
-                href={`/music/${album.formattedName}/reviews`}
-                text='Reviews'
-              />
-            )}
+            {(album.renderReviewsLink || album.renderPressLink) && (
+              <div className={styles.ctaLinksContainer}>
 
-            {album.renderPressLink && (
-              <CtaLink
-                href='/press'
-                text='Press'
-              />
+                {album.renderReviewsLink && (
+                  <CtaLink
+                    href={`/music/${album.formattedName}/reviews`}
+                    text='Reviews'
+                  />
+                )}
+
+                {album.renderPressLink && (
+                  <CtaLink
+                    href='/press'
+                    text='Press'
+                  />
+                )}
+
+              </div>
             )}
 
             {album.writtenBy && (
               <div
                 dangerouslySetInnerHTML={{ __html: album.writtenBy }}
-                className='row'
+                className={`row ${styles.writtenBy}`}
               />
             )}
 
@@ -81,6 +93,7 @@ const Album = (album) => {
 
             {(album.tracklist && album.albumCredits) && (
               <AlbumTextList
+                heading='Credits'
                 list={album.albumCredits}
                 listType='dl'
               />
@@ -100,20 +113,24 @@ const Album = (album) => {
 
             {(album.albumCredits && !album.tracklist) && (
               <AlbumTextList
+                heading='Credits'
                 list={album.albumCredits}
                 listType='dl'
+                withBackground
               />
             )}
 
             {(album.albumCredits && album.tracklist) && (
               <div>
                 <AlbumTextList
+                  heading='Tracklist'
                   list={album.tracklist}
                   listType='ol'
+                  withBackground
                 />
 
                 {album.tracklistNote && (
-                  <p>*{album.tracklistNote}</p>
+                  <p className={styles.trackListNote}>*{album.tracklistNote}</p>
                 )}
               </div>
             )}

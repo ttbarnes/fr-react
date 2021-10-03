@@ -46,9 +46,13 @@ const AlbumPage = ({ albums }) => {
           <meta name='twitter:image' content={metaImage} />
         </Head>
 
-        {albums.map((album) =>
-          <Album {...album} />
-        )}
+        <ul aria-label='Albums'>
+          {albums.map((album) => (
+            <li key={album.name}>
+              <Album {...album} />
+            </li>
+          ))}
+        </ul>
 
         <PageButtonLink
           href='/press'

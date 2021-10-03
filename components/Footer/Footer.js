@@ -8,7 +8,7 @@ const Footer = () => (
     <div className={styles.container}>
       <div className={styles.containerInner}>
 
-        <h4 className={styles.heading}>Follow Fiona</h4>
+        <h5 className={styles.heading}>Follow Fiona</h5>
 
         <SocialLinks />
 

@@ -6,7 +6,7 @@
   border-radius: 8px;
   background-color: #000;
   display: block;
-  opacity: 0.7;
+  opacity: 1;
   transition: all 0.2s ease;
   max-width: 170px;
   text-align: center;
@@ -16,6 +16,7 @@
     text-decoration: underline;
   }
   @media (min-width: 768px) {
+    opacity: 0.7;
     display: inline-block;
     margin-right: 0.5856em;
     margin-left: 0;

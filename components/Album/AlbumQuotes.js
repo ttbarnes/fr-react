@@ -2,9 +2,9 @@ import BlockQuote from '../BlockQuote';
 import styles from './AlbumQuotes.module.scss';
 
 const AlbumQuotes = ({ quotes }) => (
-  <ul>
+  <ul className={styles.container} aria-label='Quotes'>
     {quotes.map((quote, index) => (
-      <li key={index} className={styles.listItem}>
+      <li key={`${quote.author}-${index}`} className={styles.listItem}>
         <BlockQuote
           copy={quote.copy}
           author={quote.author}

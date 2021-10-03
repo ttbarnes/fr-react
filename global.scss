@@ -67,12 +67,12 @@ dl {
 
 h1,h2,h3,h4,h5 {
   margin-top: 0;
+  color: #E4E4E4;
+  font-weight: 300;
 }
 
 
 h2 {
-  color: #E4E4E4;
-  font-weight: 300;
   text-align: center;
   padding-bottom: 1.1712em;
   font-size: 1.9em;
@@ -84,18 +84,18 @@ h2 {
   @media (min-width: 1040px) {
     margin-bottom: 1.1712em;
   }
+}
 
-  &.uppercase {
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 0.5em;
-    padding-bottom: 0;
-    font-size: 1.3em;
-    text-align: left;
+.heading-uppercase {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  padding-bottom: 0;
+  font-size: 1.3em;
+  text-align: left;
 
-    @media (min-width: 768px) {
-      font-size: 1.5em;
-    }
+  @media (min-width: 768px) {
+    font-size: 1.5em;
   }
 }
 
@@ -103,16 +103,11 @@ h4 {
   font-size: 1.7em;
   margin-bottom: 0.5em;
   letter-spacing: 1px;
-  font-weight: 300;
   color: #fff;
 
   @media (min-width:768px) {
     font-size: 1.9em;
   }
-}
-
-h5 {
-  font-weight: 300;
 }
 
 p {
@@ -121,7 +116,7 @@ p {
 }
 
 p > b {
-  font-weight: 300;
+  font-weight: 500;
   color: #FFF;
 }
 
@@ -148,6 +143,7 @@ p.page-heading {
 }
 
 img {
+  display: block;
   width: 100%;
   max-width: 100%;
 }
@@ -164,6 +160,7 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2.4424em;
   @media (min-width: 600px) {
     padding-right: 2.928em;
     padding-left: 2.928em;

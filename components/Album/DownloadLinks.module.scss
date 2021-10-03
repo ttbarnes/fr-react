@@ -2,25 +2,32 @@
   float: none;
   display: block;
   width: 100%;
-  max-width: 322px;
-  margin: 0 auto;
+  margin: 0 auto 2.3424em auto;
+  @media (min-width: 600px) {
+    text-align: center;
+  }
   @media (min-width: 768px) {
+    text-align: left;
+    max-width: 322px;
     max-width: 100%;
+    margin-bottom: 0;
   }
 }
 
 .listItem {
   margin: 1.1712em auto;
-  max-width: 170px;
+  max-width: 200px;
   clear: both;
   width: 100%;
-  @media (min-width: 500px) {
-    float: left;
+  @media (min-width: 600px) {
+    display: inline-block;
+    vertical-align: middle;
     clear: none;
     width: 149px;
     margin-right: 1.1712em;
   }
   @media (min-width: 768px) {
+    float: left;
     width: 130px;
   }
   @media (min-width: 868px) {
@@ -28,8 +35,11 @@
   }
 
   a {
-    opacity: .65;
+    opacity: 1;
     transition: all 0.2s ease;
+    @media (min-width: 768px) {
+      opacity: .75;
+    }
     &:hover,
     &:focus {
       outline: 0 none;
@@ -56,7 +66,7 @@
 }
 
 .listItemGooglePlay {
-  @media (min-width: 500px) {
+  @media (min-width: 768px) {
     margin-right: 0;
   }
   @media (min-width: 1000px) {
@@ -68,21 +78,14 @@
   clear: both;
   @media (min-width: 500px) {
     clear: none;
-    float: none;
-    margin-top: 0;
-    margin: 0 auto 2.3424em auto;
-  }
-  @media (min-width: 600px) {
-    clear: both;
-    float: left;
   }
   @media (min-width: 768px) {
+    clear: both;
     margin-top: 0;
     margin-bottom: 2.3424em;
   }
   img {
     border-radius: 8px;
-    border: solid 1px #fff;
+    border: solid 1px #FFF;
   }
 }
-
