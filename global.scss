@@ -3,6 +3,7 @@
 @import './icons.scss';
 @import './columns.scss';
 @import './burger-menu.scss';
+@import './form.scss';
 
 html,
 body {
@@ -68,17 +69,6 @@ h1,h2,h3,h4,h5 {
   margin-top: 0;
 }
 
-h4 {
-  font-size: 1.7em;
-  margin-bottom: 0.5em;
-  letter-spacing: 1px;
-  font-weight: 300;
-  color: #fff;
-
-  @media (min-width:768px) {
-    font-size: 1.9em;
-  }
-}
 
 h2 {
   color: #E4E4E4;
@@ -107,6 +97,22 @@ h2 {
       font-size: 1.5em;
     }
   }
+}
+
+h4 {
+  font-size: 1.7em;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: #fff;
+
+  @media (min-width:768px) {
+    font-size: 1.9em;
+  }
+}
+
+h5 {
+  font-weight: 300;
 }
 
 p {
@@ -222,29 +228,3 @@ img {
 blockquote p {
   margin-bottom: 0;
 }
-
-
-button,
-.button {
-  width: 100%;
-  opacity: 1;
-  display: block;
-  background: #3E3E3E;
-  color: #FFF;
-  letter-spacing: 1px;
-  transition: all .2s ease;
-  font-size: 1.1em;
-  padding: .5em 1.3em;
-
-  @media (min-width: 600px) {
-    font-size: 1.4em;
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: none;
-    background: #323232;
-  }
-}
-

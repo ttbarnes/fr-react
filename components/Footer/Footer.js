@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import SocialLinks from '../SocialLinks';
-import SignUpForm from '../SignUpForm';
 import styles from './Footer.module.css';
 
 const Footer = () => (
@@ -9,11 +8,13 @@ const Footer = () => (
     <div className={styles.container}>
       <div className={styles.containerInner}>
 
-        <h4>Follow Fiona</h4>
+        <h4 className={styles.heading}>Follow Fiona</h4>
 
         <SocialLinks />
 
-        <SignUpForm title='Sign up for email updates' />
+        <h5 className={styles.emailUpdatesHeading}>
+          <a className={`link-highlight-hover-border ${styles.emailUpdatesLink}`} href={process.env.NEXT_PUBLIC_MAILCHIMP_URL} target='_blank' rel='noopener noreferrer'>Sign up for email updates</a>
+        </h5>
 
         <p className={styles.privacyPolicyLink}>
           <Link href='/privacy-policy'>Privacy Policy</Link>
