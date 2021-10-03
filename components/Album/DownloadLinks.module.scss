@@ -68,10 +68,14 @@
 .listItemGooglePlay {
   @media (min-width: 768px) {
     margin-right: 0;
+    // width: 154px;
   }
-  @media (min-width: 1000px) {
-    width: 155px;
+  @media (min-width: 868px) {
+    width: 154px;
   }
+  // @media (min-width: 1000px) {
+  //   width: 155px;
+  // }
 }
 
 .listItemAmazon {

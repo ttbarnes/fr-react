@@ -162,12 +162,13 @@ img {
   margin: 0 auto;
   padding: 0 2.4424em;
   @media (min-width: 600px) {
-    padding-right: 2.928em;
-    padding-left: 2.928em;
+    padding-top: 70px;
+    padding-right: 4em;
+    padding-left: 4em;
   }
 
   @media (min-width: 768px) {
-    padding-top: 125px;
+    padding-top: 115px;
   }
 
   @media (min-width: 1000px) {

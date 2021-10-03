@@ -6,7 +6,7 @@ const DownloadLinks = ({ links }) => {
       <ul className={styles.container}>
         {links.itunesPreOrder && (
           <li className={[styles.listItem, styles.listItemItunesPreOrder].join(' ')}>
-            <a href={links.itunesPreOrder} target='_blank'>
+            <a href={links.itunesPreOrder} target='_blank' rel='noopener noreferrer'>
               <img src='/images/icons/itunesPreOrder.svg' alt='Pre-order on iTunes' />
             </a>
           </li>
@@ -14,7 +14,7 @@ const DownloadLinks = ({ links }) => {
 
         {links.itunes && (
           <li className={styles.listItem}>
-            <a href={links.itunes} target='_blank'>
+            <a href={links.itunes} target='_blank' rel='noopener noreferrer'>
               <img src='/images/icons/itunes.svg' alt='Get it on iTunes' />
             </a>
           </li>
@@ -22,7 +22,7 @@ const DownloadLinks = ({ links }) => {
 
         {links.google && (
           <li className={[styles.listItem, styles.listItemGooglePlay].join(' ')}>
-            <a href={links.google} target='_blank'>
+            <a href={links.google} target='_blank' rel='noopener noreferrer'>
               <img src='/images/icons/google.svg' alt='Get it on Google Play' />
             </a>
           </li>
@@ -30,7 +30,7 @@ const DownloadLinks = ({ links }) => {
 
         {links.amazon && (
           <li className={[styles.listItem, styles.listItemAmazon].join(' ')}>
-            <a href={links.amazon} target='_blank'>
+            <a href={links.amazon} target='_blank' rel='noopener noreferrer'>
               <img src='/images/icons/amazon.png' alt='Get it on Amazon' />
             </a>
           </li>
