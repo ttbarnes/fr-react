@@ -4,25 +4,19 @@ import Album from '../../../components/Album';
 import PageButtonLink from '../../../components/PageButtonLink';
 import CONSTANTS from '../../../constants';
 
-const AlbumPage = ({ albums, contextQuery, contextParams }) => {
-  const firstAlbum = {};
-  // const firstAlbum = albums[0];
+const AlbumPage = ({ albums }) => {
+  const firstAlbum = albums[0];
 
-  // const metaTitle = `${firstAlbum.name} - Fiona Ross`;
-  // const metaDescription = firstAlbum.albumCredits ? firstAlbum.albumCredits[0] : CONSTANTS.META_TAGS.OG_DESCRIPTION;
-  // const metaUrl = `${CONSTANTS.BASE_URL}/music/${firstAlbum.formattedName}`;
-  // const metaImage = `${CONSTANTS.BASE_URL}/images/albums/${firstAlbum.imageName}.jpg`;
-  // const metaImageWidth = CONSTANTS.ALBUM_COVER_IMAGE_SIZES[firstAlbum.imageName].WIDTH;
-  // const metaImageHeight = CONSTANTS.ALBUM_COVER_IMAGE_SIZES[firstAlbum.imageName].HEIGHT;
+  const metaTitle = `${firstAlbum.name} - Fiona Ross`;
+  const metaDescription = firstAlbum.albumCredits ? firstAlbum.albumCredits[0] : CONSTANTS.META_TAGS.OG_DESCRIPTION;
+  const metaUrl = `${CONSTANTS.BASE_URL}/music/${firstAlbum.formattedName}`;
+  const metaImage = `${CONSTANTS.BASE_URL}/images/albums/${firstAlbum.imageName}.jpg`;
+  const metaImageWidth = CONSTANTS.ALBUM_COVER_IMAGE_SIZES[firstAlbum.imageName].WIDTH;
+  const metaImageHeight = CONSTANTS.ALBUM_COVER_IMAGE_SIZES[firstAlbum.imageName].HEIGHT;
 
   return (
     <div className='container with-page-bg-img'>
 
-      <div>albums count: {albums.length}</div>
-      <div>contextQuery: {JSON.stringify(contextQuery)}</div>
-      <div>contextParams: {JSON.stringify(contextParams)}</div>
-
-      {/*
         <Head>
         <title>{metaTitle}</title>
         <meta name='description' content={metaDescription} />
@@ -82,7 +76,7 @@ const encodeAlbumName = (albumName) =>
     .replace(/ /g, '-');
 
 const getImagePath = (albumName) =>
-  cleanAlbumName(albumName).replaceAll(' ', '-').toLowerCase();
+  cleanAlbumName(albumName).replace(/\s/g, '-').toLowerCase();
 
 export async function getServerSideProps(context) {
   const { albumName } = context.query;
@@ -90,7 +84,7 @@ export async function getServerSideProps(context) {
   let sortedAlbums = ALBUMS;
 
   if (albumName) {
-    const albumNameDecoded = albumName.replaceAll('-', ' ')
+    const albumNameDecoded = albumName.replace(/-/g, ' ')
 
     const album = ALBUMS.find((album) =>
       cleanAlbumName(album.name).toLowerCase() === albumNameDecoded.toLowerCase()
@@ -115,9 +109,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      albums: sortedAlbums,
-      contextQuery: context.query,
-      contextParams: context.params
+      albums: sortedAlbums
     }
   };
 }
