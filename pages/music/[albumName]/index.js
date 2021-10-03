@@ -4,7 +4,7 @@ import Album from '../../../components/Album';
 import PageButtonLink from '../../../components/PageButtonLink';
 import CONSTANTS from '../../../constants';
 
-const AlbumPage = ({ albums }) => {
+const AlbumPage = ({ albums, contextQuery, contextParams }) => {
   const firstAlbum = albums[0];
 
   const metaTitle = `${firstAlbum.name} - Fiona Ross`;
@@ -16,6 +16,10 @@ const AlbumPage = ({ albums }) => {
 
   return (
     <div className='container with-page-bg-img'>
+
+      <div>albums count: {albums.length}</div>
+      <div>contextQuery: {JSON.stringify(contextQuery)}</div>
+      <div>contextParams: {JSON.stringify(contextParams)}</div>
 
       <Head>
         <title>{metaTitle}</title>
@@ -78,33 +82,40 @@ const getImagePath = (albumName) =>
   cleanAlbumName(albumName).replaceAll(' ', '-').toLowerCase();
 
 export async function getServerSideProps(context) {
+  console.log('context  ', context);
   const { albumName } = context.query;
 
-  const albumNameDecoded = albumName.replaceAll('-', ' ')
+  let sortedAlbums = ALBUMS;
 
-  const album = ALBUMS.find((album) =>
-    cleanAlbumName(album.name).toLowerCase() === albumNameDecoded.toLowerCase()
-  );
+  if (albumName) {
+    const albumNameDecoded = albumName.replaceAll('-', ' ')
 
-  const allOtherAlbums = ALBUMS.filter((a) => a.name !== album.name);
+    const album = ALBUMS.find((album) =>
+      cleanAlbumName(album.name).toLowerCase() === albumNameDecoded.toLowerCase()
+    );
 
-  const sortedAlbums = [
-    album,
-    ...allOtherAlbums
-  ];
+    const allOtherAlbums = ALBUMS.filter((a) => a.name !== album.name);
 
-  sortedAlbums.map((a) => {
-    const album = a;
+    sortedAlbums = [
+      album,
+      ...allOtherAlbums
+    ];
 
-    album.imageName = getImagePath(album.name);
-    album.formattedName = encodeAlbumName(album.name);
+    sortedAlbums.map((a) => {
+      const album = a;
 
-    return album;
-  });
+      album.imageName = getImagePath(album.name);
+      album.formattedName = encodeAlbumName(album.name);
+
+      return album;
+    });
+  }
 
   return {
     props: {
-      albums: sortedAlbums
+      albums: sortedAlbums,
+      contextQuery: context.query,
+      contextParams: context.params
     }
   };
 }
