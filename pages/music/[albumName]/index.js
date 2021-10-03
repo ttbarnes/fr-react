@@ -89,29 +89,29 @@ export async function getServerSideProps(context) {
 
   let sortedAlbums = ALBUMS;
 
-  // if (albumName) {
-  //   const albumNameDecoded = albumName.replaceAll('-', ' ')
+  if (albumName) {
+    const albumNameDecoded = albumName.replaceAll('-', ' ')
 
-  //   const album = ALBUMS.find((album) =>
-  //     cleanAlbumName(album.name).toLowerCase() === albumNameDecoded.toLowerCase()
-  //   );
+    const album = ALBUMS.find((album) =>
+      cleanAlbumName(album.name).toLowerCase() === albumNameDecoded.toLowerCase()
+    );
 
-  //   const allOtherAlbums = ALBUMS.filter((a) => a.name !== album.name);
+    const allOtherAlbums = ALBUMS.filter((a) => a.name !== album.name);
 
-  //   sortedAlbums = [
-  //     album,
-  //     ...allOtherAlbums
-  //   ];
+    sortedAlbums = [
+      album,
+      ...allOtherAlbums
+    ];
 
-  //   sortedAlbums.map((a) => {
-  //     const album = a;
+    sortedAlbums.map((a) => {
+      const album = a;
 
-  //     album.imageName = getImagePath(album.name);
-  //     album.formattedName = encodeAlbumName(album.name);
+      album.imageName = getImagePath(album.name);
+      album.formattedName = encodeAlbumName(album.name);
 
-  //     return album;
-  //   });
-  // }
+      return album;
+    });
+  }
 
   return {
     props: {
