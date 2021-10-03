@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './AlbumTextList.module.scss';
 
@@ -7,7 +8,7 @@ const AlbumTextList = ({
   list,
   withBackground
 }) => {
-  if (list) {
+  if (list && list.length) {
 
     const listClassNames = withBackground ? `${styles.list} ${styles.listWithBackground}` : styles.list;
 
@@ -41,11 +42,13 @@ const AlbumTextList = ({
             aria-label={heading}
           >
             {list.map((item) => (
-              <li
-                key={`${listType}-${item}`}
-                className={styles.listItem}>
-                  <span>{item}</span>
-              </li>
+              <React.Fragment key={`${listType}-${item}`}>
+                <dt  />
+                <dd
+                  className={styles.listItem}>
+                    <span>{item}</span>
+                </dd>
+              </React.Fragment>
             ))}
           </dl>
 
@@ -62,7 +65,7 @@ AlbumTextList.propTypes = {
   listType: PropTypes.string.isRequired,
   list: PropTypes.arrayOf(PropTypes.string).isRequired,
   withBackground: PropTypes.bool
-}
+};
 
 AlbumTextList.defaultProps = {
   withBackground: false

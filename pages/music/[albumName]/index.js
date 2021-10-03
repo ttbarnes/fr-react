@@ -17,6 +17,28 @@ const AlbumPage = ({ albums }) => {
   return (
     <div className='container with-page-bg-img'>
 
+      <Head>
+        <title>{metaTitle}</title>
+        <meta name='description' content={metaDescription} />
+
+        <meta property='og:title' content={metaTitle} />
+        <meta property='og:description' content={metaDescription} />
+        <meta property='og:url' content={metaUrl} />
+
+        <meta property='og:image' content={metaImage} />
+        <meta property='og:image:type' content='image/jpeg' />
+        <meta property='og:image:width' content={metaImageWidth} />
+        <meta property='og:image:height' content={metaImageHeight} />
+
+        <meta name='twitter:title' content={metaTitle} />
+        <meta name='twitter:description' content={metaDescription} />
+        <meta property='twitter:url' content={metaUrl} />
+
+        <meta name='twitter:image' content={metaImage} />
+      </Head>
+
+      <h1 className='hidden'>Albums</h1>
+
       <img
         src={`/images/background/${firstAlbum.imageName}.png`}
         alt=''
@@ -25,26 +47,6 @@ const AlbumPage = ({ albums }) => {
       />
 
       <div className='main-content container-small'>
-
-        <Head>
-          <title>{metaTitle}</title>
-          <meta name='description' content={metaDescription} />
-
-          <meta property='og:title' content={metaTitle} />
-          <meta property='og:description' content={metaDescription} />
-          <meta property='og:url' content={metaUrl} />
-
-          <meta property='og:image' content={metaImage} />
-          <meta property='og:image:type' content='image/jpeg' />
-          <meta property='og:image:width' content={metaImageWidth} />
-          <meta property='og:image:height' content={metaImageHeight} />
-
-          <meta name='twitter:title' content={metaTitle} />
-          <meta name='twitter:description' content={metaDescription} />
-          <meta property='twitter:url' content={metaUrl} />
-         
-          <meta name='twitter:image' content={metaImage} />
-        </Head>
 
         <ul aria-label='Albums'>
           {albums.map((album) => (

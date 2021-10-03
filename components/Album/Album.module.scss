@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 .container {
   float: left;
   clear: both;
@@ -34,14 +36,20 @@
   margin-bottom: 1.5em;
   font-size: 1.8em;
   @media (min-width: 768px) {
-    display: none;
+    @include hidden;
   }
 }
 
 .albumHeadingDesktop {
-  display: none;
+  @include hidden;
   @media (min-width: 768px) {
     display: block;
+    position: relative;
+    clip: initial;
+    height: initial;
+    width: initial;
+    margin: inherit;
+    margin-bottom: 0.5em;
   }
 }
 

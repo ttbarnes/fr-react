@@ -1,13 +1,14 @@
+import PropTypes from 'prop-types';
 import styles from './DownloadLinks.module.scss'
 
-const DownloadLinks = ({ links }) => { 
+const DownloadLinks = ({ links, albumName }) => { 
   if (links) {
     return (
       <ul className={styles.container}>
         {links.itunesPreOrder && (
           <li className={[styles.listItem, styles.listItemItunesPreOrder].join(' ')}>
             <a href={links.itunesPreOrder} target='_blank' rel='noopener noreferrer'>
-              <img src='/images/icons/itunesPreOrder.svg' alt='Pre-order on iTunes' />
+              <img src='/images/icons/itunesPreOrder.svg' alt={`Pre-order ${albumName} on iTunes`} />
             </a>
           </li>
         )}
@@ -15,7 +16,7 @@ const DownloadLinks = ({ links }) => {
         {links.itunes && (
           <li className={styles.listItem}>
             <a href={links.itunes} target='_blank' rel='noopener noreferrer'>
-              <img src='/images/icons/itunes.svg' alt='Get it on iTunes' />
+              <img src='/images/icons/itunes.svg' alt={`Get ${albumName} it on iTunes`} />
             </a>
           </li>
         )}
@@ -23,7 +24,7 @@ const DownloadLinks = ({ links }) => {
         {links.google && (
           <li className={[styles.listItem, styles.listItemGooglePlay].join(' ')}>
             <a href={links.google} target='_blank' rel='noopener noreferrer'>
-              <img src='/images/icons/google.svg' alt='Get it on Google Play' />
+              <img src='/images/icons/google.svg' alt={`Get ${albumName} it on Google Play`} />
             </a>
           </li>
         )}
@@ -31,7 +32,7 @@ const DownloadLinks = ({ links }) => {
         {links.amazon && (
           <li className={[styles.listItem, styles.listItemAmazon].join(' ')}>
             <a href={links.amazon} target='_blank' rel='noopener noreferrer'>
-              <img src='/images/icons/amazon.png' alt='Get it on Amazon' />
+              <img src='/images/icons/amazon.png' alt={`Get ${albumName} it on Amazon`} />
             </a>
           </li>
         )}
@@ -41,5 +42,15 @@ const DownloadLinks = ({ links }) => {
 
   return null;
 }
+
+DownloadLinks.propTypes = {
+  links: PropTypes.shape({
+    itunesPreOrder: PropTypes.string,
+    itunes: PropTypes.string,
+    google: PropTypes.string,
+    amazon: PropTypes.string
+  }).isRequired,
+  albumName: PropTypes.string.isRequired
+};
 
 export default DownloadLinks;

@@ -37,7 +37,10 @@ const Album = (album) => {
             <p className={styles.comingSoonDesktopOnly}>Out now</p>
           )}
 
-          <DownloadLinks links={album.urls} />
+          <DownloadLinks
+            links={album.urls}
+            albumName={album.name}
+          />
 
           <div className='row'>
 

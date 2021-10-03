@@ -3,12 +3,12 @@ import SocialLinks from '../SocialLinks';
 import styles from './Footer.module.css';
 
 const Footer = () => (
-  <footer className={styles.footer}>
+  <footer className={styles.footer} role='contentinfo'>
 
     <div className={styles.container}>
       <div className={styles.containerInner}>
 
-        <h5 className={styles.heading}>Follow Fiona</h5>
+        <h4 className={styles.heading}>Follow Fiona</h4>
 
         <SocialLinks />
 

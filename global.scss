@@ -4,6 +4,7 @@
 @import './columns.scss';
 @import './burger-menu.scss';
 @import './form.scss';
+@import './mixins.scss';
 
 html,
 body {
@@ -148,9 +149,9 @@ img {
   max-width: 100%;
 }
 
-.sr-only {
-  display: none;
-}
+.hidden {
+  @include hidden;
+} 
 
 .main-content {
   margin: 0 auto;
