@@ -1,46 +1,59 @@
+import CONSTANTS from '../constants';
+
 const links = [
   {
-    route: '/',
+    route: CONSTANTS.BASE_URL,
+    pathname: '/',
     text: 'Home'
   },
   {
-    route: '/music',
+    route: `${CONSTANTS.BASE_URL}/music`,
+    pathname: '/music',
     text: 'Music'
   },
   {
-    route: '/press',
+    route: `${CONSTANTS.BASE_URL}/press`,
+    pathname: '/press',
     text: 'Press'
   },
   {
-    route: '/gigs',
+    route: `${CONSTANTS.BASE_URL}/gigs`,
+    pathname: '/gigs',
     text: 'Gigs'
   },
   {
-    route: '/news',
+    route: `${CONSTANTS.BASE_URL}/news`,
+    pathname: '/news',
     text: 'News'
   },
   {
-    route: '/videos',
+    route: `${CONSTANTS.BASE_URL}/videos`,
+    pathname: '/videos',
     text: 'Videos'
   },
   {
-    route: '/about',
+    route: `${CONSTANTS.BASE_URL}/about`,
+    pathname: '/about',
     text: 'About'
   },
   {
-    route: '/gallery',
+    route: `${CONSTANTS.BASE_URL}/gallery`,
+    pathname: '/gallery',
     text: 'Gallery'
   },
   {
-    route: '/collaborators',
+    route: `${CONSTANTS.BASE_URL}/collaborators`,
+    pathname: '/collaborators',
     text: 'Collaborators'
   },
   {
-    route: '/journalism',
+    route: `${CONSTANTS.BASE_URL}/journalism`,
+    pathname: '/journalism',
     text: 'Journalism'
   },
   {
-    route: '/contact',
+    route: `${CONSTANTS.BASE_URL}/contact`,
+    pathname: '/contact',
     text: 'Contact'
   }
 ];

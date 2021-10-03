@@ -14,7 +14,11 @@ const Header = () => {
               className={styles.navListItem}
               key={link.route}
             >
-              <NavLink link={link.route} text={link.text} />
+              <NavLink
+                link={link.route}
+                pathname={link.pathname}
+                text={link.text}
+              />
             </li>
           ))}
         </ul>

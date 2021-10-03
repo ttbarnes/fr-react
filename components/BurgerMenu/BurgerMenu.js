@@ -13,6 +13,7 @@ const BurgerMenu = () => (
           >
             <NavLink
               link={link.route}
+              pathname={link.pathname}
               text={link.text}
             />
           </li>

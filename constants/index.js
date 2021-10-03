@@ -1,4 +1,4 @@
-const BASE_URL = 'https://fionaross.co.uk';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const META_TAGS = {
   TITLE: 'Fiona Ross - Jazz Vocalist, Pianist, Composer, Producer and Journalist',

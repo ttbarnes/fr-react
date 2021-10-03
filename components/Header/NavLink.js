@@ -2,17 +2,17 @@ import Link from 'next/link';
 import { useRouter } from 'next/router'
 import styles from './NavLink.module.css';
 
-const NavLink = ({ link, text}) => {
+const NavLink = ({ link, pathname, text }) => {
   const router = useRouter();
 
-  const { pathname } = router;
+  const { pathname: routerPath } = router;
 
   let isActive;
 
-  if (link === '/' && pathname === '/') {
+  if (pathname === '/' && routerPath === '/') {
     isActive = true;
-  } else if (link !== '/') {
-    isActive = pathname.includes(link);
+  } else if (pathname !== '/') {
+    isActive = routerPath.includes(pathname);
   }
 
   const linkClassName = isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink;
