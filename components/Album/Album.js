@@ -4,6 +4,7 @@ import AlbumPressRelease from './AlbumPressRelease';
 import AlbumTextList from './AlbumTextList';
 import AlbumQuotes from './AlbumQuotes';
 import CtaLink from './CtaLink';
+import CONSTANTS from '../../constants';
 import styles from './Album.module.scss'
 
 const Album = (album) => {
@@ -64,7 +65,7 @@ const Album = (album) => {
 
                 {album.renderPressLink && (
                   <CtaLink
-                    href='/press'
+                    href={`${CONSTANTS.BASE_URL}/press`}
                     text='Press'
                   />
                 )}

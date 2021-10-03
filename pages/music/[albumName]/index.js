@@ -36,7 +36,6 @@ const AlbumPage = ({ albums }) => {
 
         <meta name='twitter:image' content={metaImage} />
       </Head>
-      */}
 
       <h1 className='hidden'>Albums</h1>
 
