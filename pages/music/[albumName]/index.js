@@ -70,6 +70,10 @@ const AlbumPage = ({ albums }) => {
 const cleanAlbumName = (albumName) =>
   albumName.replace(/,|\(|\)/g, '');
 
+const encodeAlbumName = (albumName) =>
+  cleanAlbumName(albumName)
+    .replace(/ /g, '-');
+
 const getImagePath = (albumName) =>
   cleanAlbumName(albumName).replaceAll(' ', '-').toLowerCase();
 
@@ -93,7 +97,7 @@ export async function getServerSideProps(context) {
     const album = a;
 
     album.imageName = getImagePath(album.name);
-    album.formattedName = albumName;
+    album.formattedName = encodeAlbumName(album.name);
 
     return album;
   });

@@ -227,3 +227,11 @@ img {
 blockquote p {
   margin-bottom: 0;
 }
+
+
+dl dd {
+  display: list-item;
+  list-style-type: square;
+  list-style-position: inside;
+  margin: 0;
+}

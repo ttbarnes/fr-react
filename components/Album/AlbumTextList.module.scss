@@ -18,15 +18,17 @@
   clear: both;
   color: #E4E4E4;
   padding: 1.1712em;
-  padding-left: 2.3424em;
+  padding-left: 0;
 }
 
 .listWithBackground {
   background: #080808;
+  padding-left: 1.1712em;
 }
 
 .listOl {
    list-style-type: number;
+   padding-left: 2.3424em;
 }
 
 .listDl {
