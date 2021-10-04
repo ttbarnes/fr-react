@@ -91,6 +91,16 @@ export async function getServerSideProps(context) {
       cleanAlbumName(album.name).toLowerCase() === albumNameDecoded.toLowerCase()
     );
 
+    if (!album) {
+      return {
+        redirect: {
+          permanent: false,
+          destination: '/error',
+        },
+        props: {},
+      };
+    }
+
     const allOtherAlbums = ALBUMS.filter((a) => a.name !== album.name);
 
     sortedAlbums = [
