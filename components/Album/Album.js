@@ -47,7 +47,7 @@ const Album = (album) => {
 
             {album.canOrderAudioCd && (
               <p className={styles.audioCdLink}>
-                <Link href={`/music/${album.formattedName}/audio-cd`}>
+                <Link href={`${CONSTANTS.BASE_URL}/music/album/${album.id}/audio-cd`}>
                   <a className='link-highlight-hover-border'>Get a signed Audio CD</a>
                 </Link>
               </p>
