@@ -50,7 +50,8 @@
         "author": "Kind of Jazz"
       }
     ],
-    "renderQuotes": true
+    "renderQuotes": true,
+    "hasBackgroundImage": false
   },
   {
     "id": 3,
@@ -93,7 +94,8 @@
       "That Moment",
       "I Broke The Rules*"
     ],
-    "tracklistNote": "live vocal take recorded in a stairwell"
+    "tracklistNote": "live vocal take recorded in a stairwell",
+    "hasBackgroundImage": true
   },
   {
     "id": 2,
@@ -139,7 +141,8 @@
     "canOrderAudioCd": true,
     "renderQuotes": false,
     "renderReviewsLink": true,
-    "renderPressLink": true
+    "renderPressLink": true,
+    "hasBackgroundImage": true
   },
   {
     "id": 1,
@@ -165,6 +168,7 @@
         "author": "Tony Barnes"
       }
     ],
-    "renderQuotes": true
+    "renderQuotes": true,
+    "hasBackgroundImage": true
   }
 ]

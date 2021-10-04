@@ -39,12 +39,14 @@ const AlbumPage = ({ albums }) => {
 
       <h1 className='hidden'>Albums</h1>
 
-      <img
-        src={`/images/background/${firstAlbum.imageName}.png`}
-        alt=''
-        className={`page-img-bg ${firstAlbum.imageName}`}
-        aria-hidden='true'
-      />
+      {firstAlbum.hasBackgroundImage && (
+        <img
+          src={`/images/background/${firstAlbum.imageName}.png`}
+          alt=''
+          className={`page-img-bg ${firstAlbum.imageName}`}
+          aria-hidden='true'
+        />
+      )}
 
       <div className='main-content container-small'>
 
