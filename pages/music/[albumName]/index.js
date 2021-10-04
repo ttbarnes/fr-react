@@ -17,7 +17,7 @@ const AlbumPage = ({ albums }) => {
   return (
     <div className='container with-page-bg-img'>
 
-        <Head>
+      <Head>
         <title>{metaTitle}</title>
         <meta name='description' content={metaDescription} />
 

@@ -1,41 +1,73 @@
+import Head from 'next/head';
 import ALBUMS from '../../../data/albums.json';
 import BlockQuote from '../../../components/BlockQuote';
 import PageButtonLink from '../../../components/PageButtonLink';
+import CONSTANTS from '../../../constants';
 
-const AlbumReviewsPage = ({ album }) => (
-  <div className='container with-page-bg-img'>
-  
-    <img
-      src={`/images/background/${album.imageName}.png`}
-      alt=''
-      className={`page-img-bg ${album.imageName}`}
-      aria-hidden='true'
-    />
+const AlbumReviewsPage = ({ album }) => {
+  const metaTitle = `${album.name} - Reviews - Fiona Ross`;
+  const metaDescription = album.albumCredits ? album.albumCredits[0] : CONSTANTS.META_TAGS.OG_DESCRIPTION;
+  const metaUrl = `${CONSTANTS.BASE_URL}/music/${album.formattedName}`;
+  const metaImage = `${CONSTANTS.BASE_URL}/images/albums/${album.imageName}.jpg`;
+  const metaImageWidth = CONSTANTS.ALBUM_COVER_IMAGE_SIZES[album.imageName].WIDTH;
+  const metaImageHeight = CONSTANTS.ALBUM_COVER_IMAGE_SIZES[album.imageName].HEIGHT;
 
-    <div className='main-content container-large'>
+  return (
+    <div className='container with-page-bg-img'>
 
-      <h2>{album.name} reviews</h2>
+      <Head>
+        <title>{metaTitle}</title>
+        <meta name='description' content={metaDescription} />
 
-      <ul>
-        {album.quotes.map((quote) => (
-          <li key={quote.author}>
-            <BlockQuote
-              copy={quote.copy}
-              author={quote.author}
-              isLarge
-            />
-          </li>
-        ))}
-      </ul>
+        <meta property='og:title' content={metaTitle} />
+        <meta property='og:description' content={metaDescription} />
+        <meta property='og:url' content={metaUrl} />
 
-      <PageButtonLink
-        href='/music'
-        text='Music'
+        <meta property='og:image' content={metaImage} />
+        <meta property='og:image:type' content='image/jpeg' />
+        <meta property='og:image:width' content={metaImageWidth} />
+        <meta property='og:image:height' content={metaImageHeight} />
+
+        <meta name='twitter:title' content={metaTitle} />
+        <meta name='twitter:description' content={metaDescription} />
+        <meta property='twitter:url' content={metaUrl} />
+
+        <meta name='twitter:image' content={metaImage} />
+      </Head>
+    
+      <img
+        src={`/images/background/${album.imageName}.png`}
+        alt=''
+        className={`page-img-bg ${album.imageName}`}
+        aria-hidden='true'
       />
 
+      <div className='main-content container-large'>
+
+        {/* <h2>{album.name} reviews</h2> */}
+        <h1 className='text-align-center'>{album.name} reviews</h1>
+
+        <ul>
+          {album.quotes.map((quote) => (
+            <li key={quote.author}>
+              <BlockQuote
+                copy={quote.copy}
+                author={quote.author}
+                isLarge
+              />
+            </li>
+          ))}
+        </ul>
+
+        <PageButtonLink
+          href='/music'
+          text='Music'
+        />
+
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 
 // strip commas and brackets
