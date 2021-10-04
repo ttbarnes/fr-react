@@ -48,11 +48,21 @@ const getImagePath = (albumName) =>
 export async function getServerSideProps(context) {
   const { albumName } = context.query;
 
-  const albumNameDecoded = albumName.replaceAll('-', ' ')
+  const albumNameDecoded = albumName.replace(/-/g, ' ')
 
   const album = ALBUMS.find((album) =>
     cleanAlbumName(album.name).toLowerCase() === albumNameDecoded.toLowerCase()
   );
+
+  if (!album) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: '/error',
+      },
+      props: {},
+    };
+  }
 
   album.imageName = getImagePath(album.name);
   album.formattedName = albumName;
