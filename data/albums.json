@@ -10,7 +10,6 @@
     "albumType": "latest",
     "urls": {
       "amazon": "https://www.amazon.co.uk/Fierce-Non-Compliant-Fiona-Ross/dp/B07QKQWSGH/ref=sr_1_2?keywords=Fiona+Ross&qid=1555570754&s=dmusic&search-type=ss&sr=1-2",
-      "google": "https://play.google.com/store/music/album?id=B7cmvie5mp332djprrneodjyxyu&tid=song-Tpekek25ups2t6tuvxa7nk6ppzq&hl=en",
       "itunes": "https://itunes.apple.com/us/album/fierce-and-non-compliant/1460549860"
     },
     "canOrderAudioCd": true,
@@ -64,7 +63,6 @@
     },
     "urls": {
       "itunes": "https://itunes.apple.com/us/album/black-white-and-a-little-bit-of-grey/id1299378578?ls=1&app=itunes",
-      "google": "https://play.google.com/store/music/album/Fiona_Ross_Black_White_and_a_Little_Bit_of_Grey?id=Bm4iwcyboijfqgm5ydfa3wev4mu",
       "amazon": "https://www.amazon.co.uk/Black-White-Little-Bit-Grey/dp/B076MQQQPX/ref=sr_1_2?s=dmusic&ie=UTF8&qid=1510867212&sr=1-2-mp3-albums-bar-strip-0&keywords=fiona+ross"
     },
     "canOrderAudioCd": true,
@@ -135,7 +133,6 @@
     ],
     "urls": {
       "itunes": "https://itunes.apple.com/us/album/just-me-and-sometimes-someone-else/id1216328709?ls=1&app=itunes",
-      "google": "https://play.google.com/store/music/album/Fiona_Ross_Just_Me_And_Sometimes_Someone_Else?id=Bchqrcgk27cbmjuhsyalbnhszkm",
       "amazon": "https://www.amazon.co.uk/Just-Me-Sometimes-Someone-Else/dp/B06XPV8YJS/ref=sr_1_1?s=music&ie=UTF8&qid=1497417598&sr=8-1"
     },
     "canOrderAudioCd": true,
@@ -156,7 +153,6 @@
     },
     "urls": {
       "itunes": "https://geo.itunes.apple.com/gb/album/a-twist-of-blue/id1169582869?mt=1&app=music",
-      "google": "https://play.google.com/store/music/album/Fiona_Ross_A_Twist_of_Blue?id=Bfol6vaou2yj7ywqsm7hcc7ssie",
       "amazon": "https://www.amazon.co.uk/dp/B01M6A1BFR"
     },
     "quotes": [

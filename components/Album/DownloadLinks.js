@@ -21,14 +21,6 @@ const DownloadLinks = ({ links, albumName }) => {
           </li>
         )}
 
-        {links.google && (
-          <li className={[styles.listItem, styles.listItemGooglePlay].join(' ')}>
-            <a href={links.google} target='_blank' rel='noopener noreferrer'>
-              <img src='/images/icons/google.svg' alt={`Get ${albumName} it on Google Play`} />
-            </a>
-          </li>
-        )}
-
         {links.amazon && (
           <li className={[styles.listItem, styles.listItemAmazon].join(' ')}>
             <a href={links.amazon} target='_blank' rel='noopener noreferrer'>

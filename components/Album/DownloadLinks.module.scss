@@ -23,8 +23,7 @@
     display: inline-block;
     vertical-align: middle;
     clear: none;
-    width: 149px;
-    margin-right: 1.1712em;
+    margin-right: 1em;
   }
   @media (min-width: 768px) {
     float: left;
@@ -32,6 +31,7 @@
   }
   @media (min-width: 785px) {
     width: 130px;
+    margin-right: .8em;
   }
   @media (min-width: 868px) {
     width: 149px;
@@ -68,27 +68,12 @@
   }
 }
 
-.listItemGooglePlay {
-  @media (min-width: 768px) {
-    margin-right: 0;
-    // width: 154px;
-  }
-  @media (min-width: 868px) {
-    width: 154px;
-  }
-  // @media (min-width: 1000px) {
-  //   width: 155px;
-  // }
-}
-
 .listItemAmazon {
   clear: both;
   @media (min-width: 500px) {
     clear: none;
   }
   @media (min-width: 768px) {
-    clear: both;
-    margin-top: 0;
     margin-bottom: 2.3424em;
   }
   img {
