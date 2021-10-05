@@ -25,8 +25,8 @@ const AlbumPage = ({ albums }) => {
 
         <meta property='og:image' content={metaImage} />
         <meta property='og:image:type' content='image/jpeg' />
-        <meta property='og:image:width' content={SOCIAL_MEDA_IMAGE_SIZE.WIDTH} />
-        <meta property='og:image:height' content={SOCIAL_MEDA_IMAGE_SIZE.HEIGHT} />
+        <meta property='og:image:width' content={CONSTANTS.SOCIAL_MEDA_IMAGE_SIZE.WIDTH} />
+        <meta property='og:image:height' content={CONSTANTS.SOCIAL_MEDA_IMAGE_SIZE.HEIGHT} />
 
         <meta name='twitter:title' content={metaTitle} />
         <meta name='twitter:description' content={metaDescription} />
