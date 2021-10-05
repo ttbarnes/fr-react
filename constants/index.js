@@ -15,24 +15,10 @@ const META_TAGS = {
   MICROSOFT_VERFICATION: 'D7C8745E72774627634DE53DDB0DA645'
 };
 
-const ALBUM_COVER_IMAGE_SIZES = {
-  'fierce-and-non-compliant': {
-    WIDTH: 600,
-    HEIGHT: 600
-  },
-  'just-me-and-sometimes-someone-else': {
-    WIDTH: 600,
-    HEIGHT: 600
-  },
-  'black-white-and-a-little-bit-of-grey': {
-    WIDTH: 1250,
-    HEIGHT: 1250
-  },
-  'a-twist-of-blue': {
-    WIDTH: 600,
-    HEIGHT: 600
-  },
-};
+const SOCIAL_MEDA_IMAGE_SIZE = {
+  WIDTH: 1024,
+  HEIGHT: 512
+}
 
 const SOCIAL_MEDIA_URLS = {
   SPOTIFY: 'https://play.spotify.com/artist/59lPcyDIZJxmRqatvAjct8?play=true',
@@ -45,6 +31,6 @@ const SOCIAL_MEDIA_URLS = {
 export default {
   BASE_URL,
   META_TAGS,
-  ALBUM_COVER_IMAGE_SIZES,
+  SOCIAL_MEDA_IMAGE_SIZE,
   SOCIAL_MEDIA_URLS
 };

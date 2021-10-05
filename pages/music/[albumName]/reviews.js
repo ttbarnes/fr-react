@@ -8,9 +8,7 @@ const AlbumReviewsPage = ({ album }) => {
   const metaTitle = `${album.name} - Reviews - Fiona Ross`;
   const metaDescription = album.albumCredits ? album.albumCredits[0] : CONSTANTS.META_TAGS.OG_DESCRIPTION;
   const metaUrl = `${CONSTANTS.BASE_URL}/music/${album.formattedName}`;
-  const metaImage = `${CONSTANTS.BASE_URL}/images/albums/${album.imageName}.jpg`;
-  const metaImageWidth = CONSTANTS.ALBUM_COVER_IMAGE_SIZES[album.imageName].WIDTH;
-  const metaImageHeight = CONSTANTS.ALBUM_COVER_IMAGE_SIZES[album.imageName].HEIGHT;
+  const metaImage = `${CONSTANTS.BASE_URL}/images/albums/social/${firstAlbum.imageName}.png`;
 
   return (
     <div className='container with-page-bg-img'>
@@ -25,8 +23,8 @@ const AlbumReviewsPage = ({ album }) => {
 
         <meta property='og:image' content={metaImage} />
         <meta property='og:image:type' content='image/jpeg' />
-        <meta property='og:image:width' content={metaImageWidth} />
-        <meta property='og:image:height' content={metaImageHeight} />
+        <meta property='og:image:width' content={SOCIAL_MEDA_IMAGE_SIZE.WIDTH} />
+        <meta property='og:image:height' content={SOCIAL_MEDA_IMAGE_SIZE.HEIGHT} />
 
         <meta name='twitter:title' content={metaTitle} />
         <meta name='twitter:description' content={metaDescription} />
