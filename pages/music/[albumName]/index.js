@@ -43,6 +43,9 @@ const AlbumPage = ({ albums }) => {
           alt=''
           className={`page-img-bg ${firstAlbum.imageName}`}
           aria-hidden='true'
+          style={{
+            opacity: firstAlbum.backgroundImageOpacity ? firstAlbum.backgroundImageOpacity : 1
+          }}
         />
       )}
 

@@ -4,21 +4,26 @@ import styles from './AlbumTextList.module.scss';
 
 const AlbumTextList = ({
   heading,
-  listType,
   list,
-  withBackground
+  listType,
+  start,
+  withBackground,
+  alwaysShowHeading,
 }) => {
   if (list && list.length) {
+    const headingClassName = alwaysShowHeading ? `heading-uppercase ${styles.heading} ${styles.headingAlways}` : `heading-uppercase ${styles.heading}`;
+
     const listClassNames = withBackground ? `${styles.list} ${styles.listWithBackground}` : styles.list;
 
     if (listType === 'ol') {
       return (
         <div className={styles.container}>
-          <h4 className={`heading-uppercase ${styles.heading}`}>{heading}</h4>
+          <h4 className={headingClassName}>{heading}</h4>
 
           <ol
             className={[listClassNames, styles.listOl].join(' ')}
             aria-label={heading}
+            start={start}
           >
             {list.map(item => (
               <li
@@ -34,11 +39,12 @@ const AlbumTextList = ({
     } else if (listType === 'dl') {
       return (
         <div className={styles.container}>
-          <h4 className={`heading-uppercase ${styles.heading}`}>{heading}</h4>
+          <h4 className={headingClassName}>{heading}</h4>
 
           <dl
             className={[listClassNames, styles.listDl].join(' ')}
             aria-label={heading}
+            start={start}
           >
             {list.map((item) => (
               <React.Fragment key={`${listType}-${item}`}>

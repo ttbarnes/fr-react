@@ -100,6 +100,7 @@ const Album = (album) => {
                 heading='Credits'
                 list={album.albumCredits}
                 listType='dl'
+                alwaysShowHeading
               />
             )}
 
@@ -131,11 +132,25 @@ const Album = (album) => {
                   list={album.tracklist}
                   listType='ol'
                   withBackground
+                  alwaysShowHeading
                 />
 
                 {album.tracklistNote && (
                   <p className={styles.trackListNote}>*{album.tracklistNote}</p>
                 )}
+              </div>
+            )}
+
+            {album.liveBonusTracks && (
+              <div>
+                <AlbumTextList
+                  heading='Live Bonus Tracks'
+                  list={album.liveBonusTracks}
+                  start={album.liveBonusTracksStartNumber}
+                  listType='ol'
+                  withBackground
+                  alwaysShowHeading
+                />
               </div>
             )}
 
