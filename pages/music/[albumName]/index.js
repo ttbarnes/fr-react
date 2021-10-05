@@ -59,7 +59,7 @@ const AlbumPage = ({ albums }) => {
         </ul>
 
         <PageButtonLink
-          href='/press'
+          href={`${CONSTANTS.BASE_URL}/press`}
           text='Press'
         />
 
