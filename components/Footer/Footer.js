@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import SocialLinks from '../SocialLinks';
+import CONSTANTS from '../../constants';
 import styles from './Footer.module.css';
 
 const Footer = () => (
@@ -17,7 +18,7 @@ const Footer = () => (
         </h5>
 
         <p className={styles.privacyPolicyLink}>
-          <Link href='/privacy-policy'>Privacy Policy</Link>
+          <Link href={`${CONSTANTS.BASE_URL}/privacy-policy`}>Privacy Policy</Link>
         </p>
 
       </div>
