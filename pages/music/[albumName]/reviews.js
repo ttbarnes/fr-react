@@ -75,7 +75,7 @@ const cleanAlbumName = (albumName) =>
   albumName.replace(/,|\(|\)/g, '');
 
 const getImagePath = (albumName) =>
-  cleanAlbumName(albumName).replaceAll(' ', '-').toLowerCase();
+  cleanAlbumName(albumName).replace(/\s/g, '-').toLowerCase();
 
 export async function getServerSideProps(context) {
   const { albumName } = context.query;
