@@ -9,7 +9,6 @@ const AlbumTextList = ({
   withBackground
 }) => {
   if (list && list.length) {
-
     const listClassNames = withBackground ? `${styles.list} ${styles.listWithBackground}` : styles.list;
 
     if (listType === 'ol') {

@@ -22,13 +22,18 @@
 }
 
 .listWithBackground {
-  background: #080808;
-  padding-left: 1.1712em;
+  @media (min-width: 768px) {
+    background: #080808;
+    padding-left: 1.1712em;
+  }
 }
 
 .listOl {
    list-style-type: number;
-   padding-left: 2.3424em;
+     padding-left: 1.1712em;
+   @media (min-width: 768px) {
+     padding-left: 2.3424em;
+   }
 }
 
 .listDl {
