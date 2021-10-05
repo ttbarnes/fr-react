@@ -86,7 +86,8 @@ export async function getServerSideProps(context) {
     cleanAlbumName(album.name).toLowerCase() === albumNameDecoded.toLowerCase()
   );
 
-  if (!album) {
+  if (!album
+    || (album && !album.renderReviewsPage)) {
     return {
       redirect: {
         permanent: false,

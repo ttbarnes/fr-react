@@ -142,7 +142,8 @@
     "renderQuotes": false,
     "renderReviewsLink": true,
     "renderPressLink": true,
-    "hasBackgroundImage": true
+    "hasBackgroundImage": true,
+    "renderReviewsPage": true
   },
   {
     "id": 1,
