@@ -1,11 +1,11 @@
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const NEXT_PUBLIC_BASE_URL_REACT = process.env.NEXT_PUBLIC_BASE_URL_REACT;
 
 const META_TAGS = {
   TITLE: 'Fiona Ross - Jazz Vocalist, Pianist, Composer, Producer and Journalist',
   DESCRIPTION: 'Award Winning Vocalist, Pianist, Composer, Producer and Journalist. Fierce and Non Compliant out now',
   KEYWORDS: 'Fiona Ross, jazz, vocalist, pianist, composer, musician, singer, songwriter, producer, journalist, london',
   AUTHOR: 'Fiona Ross',
-  OG_IMAGE: 'fb-1200w.jpg',
   OG_DESCRIPTION: 'It\’s just me doing my thing',
   TWITTER_CARD: 'summary_large_image',
   FACEBOOK_APP_ID: '1779328982334234',
