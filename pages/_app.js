@@ -15,8 +15,6 @@ const App = ({ Component, pageProps }) => {
         <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
         <title>{CONSTANTS.META_TAGS.TITLE}</title>
 
-        <meta name='googlebot' content='noindex' />
-
         <meta name='description' content={CONSTANTS.META_TAGS.DESCRIPTION} />
         <meta name='author' content={CONSTANTS.META_TAGS.AUTHOR} />
 

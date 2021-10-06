@@ -22,7 +22,8 @@ const AlbumReviewsPage = ({ album }) => {
         <meta property='og:url' content={metaUrl} />
 
         <meta property='og:image' content={metaImage} />
-        <meta property='og:image:type' content='image/jpeg' />
+        <meta property='og:image:secure_url' content={metaImage} />
+        <meta property='og:image:type' content='image/png' />
         <meta property='og:image:width' content={CONSTANTS.SOCIAL_MEDA_IMAGE_SIZE.WIDTH} />
         <meta property='og:image:height' content={CONSTANTS.SOCIAL_MEDA_IMAGE_SIZE.HEIGHT} />
 
@@ -42,7 +43,6 @@ const AlbumReviewsPage = ({ album }) => {
 
       <div className='main-content container-large'>
 
-        {/* <h2>{album.name} reviews</h2> */}
         <h1 className='text-align-center'>{album.name} reviews</h1>
 
         <ul>
