@@ -9,8 +9,8 @@
     },
     "albumType": "latest",
     "urls": {
-      "amazon": "#",
-      "itunes": "#"
+      "amazon": "https://music.amazon.com/albums/B09GJF6975",
+      "itunes": "https://music.apple.com/us/album/red-flags-and-high-heels/1586242155"
     },
     "canOrderAudioCd": true,
     "isOutOfStock": false,
