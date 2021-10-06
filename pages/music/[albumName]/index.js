@@ -10,7 +10,7 @@ const AlbumPage = ({ albums }) => {
   const metaTitle = `${firstAlbum.name} - Fiona Ross`;
   const metaDescription = firstAlbum.albumCredits ? firstAlbum.albumCredits[0] : CONSTANTS.META_TAGS.OG_DESCRIPTION;
   const metaUrl = `${CONSTANTS.BASE_URL}/music/${firstAlbum.formattedName}`;
-  const metaImage = `${CONSTANTS.NEXT_PUBLIC_BASE_URL_REACT}/images/albums/social/${firstAlbum.imageName}.png`;
+  const metaImage = `${CONSTANTS.BASE_URL_REACT}/images/albums/social/${firstAlbum.imageName}.png`;
 
   return (
     <div className='container with-page-bg-img'>

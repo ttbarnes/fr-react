@@ -1,5 +1,5 @@
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-const NEXT_PUBLIC_BASE_URL_REACT = process.env.NEXT_PUBLIC_BASE_URL_REACT;
+const BASE_URL_REACT = process.env.NEXT_PUBLIC_BASE_URL_REACT;
 
 const META_TAGS = {
   TITLE: 'Fiona Ross - Jazz Vocalist, Pianist, Composer, Producer and Journalist',
@@ -30,6 +30,7 @@ const SOCIAL_MEDIA_URLS = {
 
 export default {
   BASE_URL,
+  BASE_URL_REACT,
   META_TAGS,
   SOCIAL_MEDA_IMAGE_SIZE,
   SOCIAL_MEDIA_URLS
