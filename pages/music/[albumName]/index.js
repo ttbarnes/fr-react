@@ -24,7 +24,7 @@ const AlbumPage = ({ albums }) => {
         <meta property='og:url' content={metaUrl} />
 
         <meta property='og:image' content={metaImage} />
-        <meta property='og:image:type' content='image/jpeg' />
+        <meta property='og:image:type' content='image/png' />
         <meta property='og:image:width' content={CONSTANTS.SOCIAL_MEDA_IMAGE_SIZE.WIDTH} />
         <meta property='og:image:height' content={CONSTANTS.SOCIAL_MEDA_IMAGE_SIZE.HEIGHT} />
 
