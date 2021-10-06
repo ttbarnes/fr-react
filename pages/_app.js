@@ -7,7 +7,6 @@ import CONSTANTS from '../constants';
 import styles from '../styles/global.scss';
 
 const App = ({ Component, pageProps }) => {
-  const metaImage = `${CONSTANTS.BASE_URL}/images/albums/${CONSTANTS.META_TAGS.OG_IMAGE}`;
 
   return (
     <div>
@@ -29,12 +28,10 @@ const App = ({ Component, pageProps }) => {
         <meta name='msapplication-TileImage' content='/ms-icon-144x144.png' />
         <meta name='theme-color' content='#000' />
 
-
         <meta property='og:locale' content='en_GB' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content={CONSTANTS.BASE_URL} />
         <meta property='fb:app_id' content={CONSTANTS.META_TAGS.FACEBOOK_APP_ID} />
-
 
         <meta name='twitter:card' content={CONSTANTS.META_TAGS.TWITTER_CARD} />
         <meta property='twitter:domain' content={CONSTANTS.BASE_URL} />
@@ -42,17 +39,6 @@ const App = ({ Component, pageProps }) => {
         <meta property='og:title' content={CONSTANTS.META_TAGS.TITLE} />
         <meta property='og:description' content={CONSTANTS.META_TAGS.DESCRIPTION} />
         <meta property='og:url' content={CONSTANTS.BASE_URL} />
-
-        <meta property='og:image' content={metaImage} />
-        <meta property='og:image:type' content='image/jpeg' />
-        <meta property='og:image:width' content='1200' />
-        <meta property='og:image:height' content='630' />
-
-        <meta name='twitter:title' content={CONSTANTS.META_TAGS.TITLE} />
-        <meta name='twitter:description' content={CONSTANTS.META_TAGS.DESCRIPTION} />
-        <meta property='twitter:url' content={CONSTANTS.BASE_URL} />
-
-        <meta name='twitter:image' content={metaImage} />
 
         <meta name='google-site-verification' content={CONSTANTS.META_TAGS.GOOGLE_SITE_VERIFICATION_1} />
         <meta name='google-site-verification' content={CONSTANTS.META_TAGS.GOOGLE_SITE_VERIFICATION_2} />
