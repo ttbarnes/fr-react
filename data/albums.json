@@ -9,8 +9,12 @@
     },
     "albumType": "latest",
     "urls": {
+      "bandcamp": "https://fionarossjazz.bandcamp.com/album/red-flags-and-high-heels",
+      "spotify": "https://open.spotify.com/album/6XlN5MUmI89wOj83uP0DzW",
+      "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_kjXIhI5at1Qz7X3kmkv6Zl7Vpm2JBk6nc",
       "amazon": "https://music.amazon.com/albums/B09GJF6975",
-      "itunes": "https://music.apple.com/us/album/red-flags-and-high-heels/1586242155"
+      "itunes": "https://music.apple.com/gb/album/red-flags-and-high-heels/1586242155",
+      "appleMusic": "https://music.apple.com/gb/album/red-flags-and-high-heels/1586242155"
     },
     "canOrderAudioCd": true,
     "isOutOfStock": false,
@@ -62,8 +66,12 @@
       "appCover": "./images/albums/fierce-and-non-compliant.jpg"
     },
     "urls": {
-      "amazon": "https://www.amazon.co.uk/Fierce-Non-Compliant-Fiona-Ross/dp/B07QKQWSGH/ref=sr_1_2?keywords=Fiona+Ross&qid=1555570754&s=dmusic&search-type=ss&sr=1-2",
-      "itunes": "https://itunes.apple.com/us/album/fierce-and-non-compliant/1460549860"
+      "bandcamp": "https://fionarossjazz.bandcamp.com/album/fierce-and-non-compliant",
+      "spotify": "https://open.spotify.com/album/2awVG5RCU2PpMy3kddCHQ9",
+      "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_mZoMiTr4nyt9ELn-BIXXAy5QqoySBMLAU",
+      "amazon": "https://music.amazon.com/albums/B07QKQWSGH",
+      "itunes": "https://itunes.apple.com/gb/album/fierce-and-non-compliant/1460549860",
+      "appleMusic": "https://itunes.apple.com/gb/album/fierce-and-non-compliant/1460549860"
     },
     "canOrderAudioCd": true,
     "isOutOfStock": false,
@@ -115,8 +123,12 @@
       "appCover": "./images/albums/black-white-and-a-little-bit-of-grey-cover.png"
     },
     "urls": {
-      "itunes": "https://itunes.apple.com/us/album/black-white-and-a-little-bit-of-grey/id1299378578?ls=1&app=itunes",
-      "amazon": "https://www.amazon.co.uk/Black-White-Little-Bit-Grey/dp/B076MQQQPX/ref=sr_1_2?s=dmusic&ie=UTF8&qid=1510867212&sr=1-2-mp3-albums-bar-strip-0&keywords=fiona+ross"
+      "bandcamp": "https://fionarossjazz.bandcamp.com/album/black-white-and-a-little-bit-of-grey",
+      "spotify": "https://open.spotify.com/album/1X0rnGKYZEMM5QzFm59AFR",
+      "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_lac6j1vqHw-hyShaLBqPaVI5Cf11PmH6M",
+      "amazon": "https://music.amazon.com/albums/B08NXFMGBT",
+      "itunes": "https://itunes.apple.com/gb/album/black-white-and-a-little-bit-of-grey/id1299378578",
+      "appleMusic": "https://itunes.apple.com/gb/album/black-white-and-a-little-bit-of-grey/id1299378578"
     },
     "canOrderAudioCd": true,
     "description": "'Black, White and a Little Bit of Grey', explores the story of a husband, a wife, and a mistress: a web of emotions, of desires, of regrets, of ecstasy. Situations are not always as clear-cut as they may appear as allegiances shift and betrayals become serpentine - not everything is black and white. Sometimes - when the victim becomes hazy, when pain and passion become intertwined — there's 'a Little Bit of Grey.",
@@ -185,8 +197,12 @@
       }
     ],
     "urls": {
-      "itunes": "https://itunes.apple.com/us/album/just-me-and-sometimes-someone-else/id1216328709?ls=1&app=itunes",
-      "amazon": "https://www.amazon.co.uk/Just-Me-Sometimes-Someone-Else/dp/B06XPV8YJS/ref=sr_1_1?s=music&ie=UTF8&qid=1497417598&sr=8-1"
+      "bandcamp": "https://fionarossjazz.bandcamp.com/album/just-me-and-sometimes-someone-else",
+      "spotify": "https://open.spotify.com/album/46Xwii7jz7pcdwU9x6Jb4h",
+      "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_mLZ2C1OLROymsWlSIi3yOoiqxCJYJj2GI",
+      "amazon": "https://music.amazon.com/albums/B06XPV8YJS",
+      "itunes": "https://itunes.apple.com/gb/album/just-me-and-sometimes-someone-else/id1216328709",
+      "appleMusic": "https://itunes.apple.com/gb/album/just-me-and-sometimes-someone-else/id1216328709"
     },
     "canOrderAudioCd": true,
     "renderQuotes": false,
@@ -205,8 +221,12 @@
       "appCover": "./images/albums/twist-of-blue-app-cover.png"
     },
     "urls": {
-      "itunes": "https://geo.itunes.apple.com/gb/album/a-twist-of-blue/id1169582869?mt=1&app=music",
-      "amazon": "https://www.amazon.co.uk/dp/B01M6A1BFR"
+      "bandcamp": "https://fionarossjazz.bandcamp.com/album/twist-of-blue",
+      "spotify": "https://open.spotify.com/album/0g8SUm9MhOcbTTIMWt5YsT",
+      "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_keCsE5DJXjAzdAnDBIsQTVz5ERAAY1lN4",
+      "amazon": "https://music.amazon.com/albums/B01M6A1BFR",
+      "itunes": "https://music.apple.com/gb/album/a-twist-of-blue/1169582869",
+      "appleMusic": "https://music.apple.com/gb/album/a-twist-of-blue/1169582869"
     },
     "quotes": [
       {
