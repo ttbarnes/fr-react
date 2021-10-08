@@ -6,7 +6,7 @@ import NavLink from './NavLink';
 const BurgerMenu = () => (
   <div aria-hidden='true'>
     <Menu width={250}>
-      <ul className='bm-ul'>
+      <ul className='no-list-style bm-ul'>
         {links.map((link) => (
           <li
             key={link.route}

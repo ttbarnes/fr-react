@@ -4,7 +4,7 @@ import styles from './DownloadLinks.module.scss'
 const DownloadLinks = ({ links, albumName }) => { 
   if (links) {
     return (
-      <ul className={styles.container}>
+      <ul className={`no-list-style ${styles.container}`}>
 
         {links.bandcamp && (
           <li className={[styles.listItem, styles.listItemBandCamp].join(' ')}>

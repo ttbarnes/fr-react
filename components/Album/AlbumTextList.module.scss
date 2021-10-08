@@ -24,7 +24,6 @@
 .list {
   clear: both;
   padding-left: 1.1712em;
-  clear: both;
   color: #E4E4E4;
   padding: 1.1712em;
   padding-left: 0;
@@ -38,11 +37,11 @@
 }
 
 .listOl {
-   list-style-type: number;
-     padding-left: 1.1712em;
-   @media (min-width: 768px) {
-     padding-left: 2.3424em;
-   }
+  list-style-type: number;
+  padding-left: 1.1712em;
+  @media (min-width: 768px) {
+    padding-left: 2.3424em;
+  }
 }
 
 .listDl {

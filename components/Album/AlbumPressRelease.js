@@ -1,7 +1,7 @@
 import styles from './AlbumPressRelease.module.scss';
 
 const AlbumPressRelease = ({ press }) => (
-  <ul>
+  <ul className='no-list-style'>
     {press.map((pressHtml, index) => (
       <li
         key={index}

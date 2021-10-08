@@ -73,6 +73,13 @@ const Album = (album) => {
               </div>
             )}
 
+            {album.name === 'A Twist of Blue' && (
+              <div>
+                <br />
+                <br />
+              </div>
+            )}
+
             {album.writtenBy && (
               <div
                 dangerouslySetInnerHTML={{ __html: album.writtenBy }}

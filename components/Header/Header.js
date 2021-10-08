@@ -8,7 +8,7 @@ const Header = () => {
     <header className={styles.header} role='banner'>
 
       <nav className={styles.nav}>
-        <ul className={styles.navList}>
+        <ul className={`no-list-style ${styles.navList}`}>
           {links.map((link) => (
             <li
               className={styles.navListItem}

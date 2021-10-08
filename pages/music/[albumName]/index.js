@@ -52,7 +52,7 @@ const AlbumPage = ({ albums }) => {
 
       <div className='main-content container-small'>
 
-        <ul aria-label='Albums'>
+        <ul className='no-list-style' aria-label='Albums'>
           {albums.map((album) => (
             <li key={album.name}>
               <Album {...album} />

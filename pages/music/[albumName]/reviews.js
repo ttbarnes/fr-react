@@ -45,7 +45,7 @@ const AlbumReviewsPage = ({ album }) => {
 
         <h1 className='text-align-center'>{album.name} reviews</h1>
 
-        <ul>
+        <ul className='no-list-style'>
           {album.quotes.map((quote) => (
             <li key={quote.author}>
               <BlockQuote

@@ -4,7 +4,7 @@ import styles from './SocialLinks.module.scss';
 const SocialLinks = ({
   isSticky
 }) => (
-  <ul className='nav-links social-links-hover-rotate' aria-label='Social media links' role='list'>
+  <ul className='no-list-style nav-links social-links-hover-rotate' aria-label='Social media links' role='list'>
 
     <li className={isSticky ? `${styles.listItem} ${styles.isSticky}` : styles.listItem}>
       <a
