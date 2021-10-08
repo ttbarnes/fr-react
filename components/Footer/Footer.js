@@ -14,7 +14,7 @@ const Footer = () => (
         <SocialLinks />
 
         <h5 className={styles.emailUpdatesHeading}>
-          <a className={`link-highlight-hover-border ${styles.emailUpdatesLink}`} href={process.env.NEXT_PUBLIC_MAILCHIMP_URL} target='_blank' rel='noopener noreferrer'>Sign up for email updates</a>
+          <a className={`link-highlight-hover-border ${styles.emailUpdatesLink}`} href={process.env.NEXT_PUBLIC_MAILCHIMP_URL} target='_blank' rel='noopener noreferrer'>Gigs and announcements</a>
         </h5>
 
         <p className={styles.privacyPolicyLink}>
