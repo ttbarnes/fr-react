@@ -30,10 +30,14 @@
   }
   @media (min-width: 850px) {
     float: left;
-    width: 45%;
+    width: 44%;
     &:nth-child(odd) {
       clear: both;
     }
+  }
+
+  @media (min-width: 875px) {
+    width: 45%;
   }
 
   a {
