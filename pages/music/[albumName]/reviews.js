@@ -39,6 +39,7 @@ const AlbumReviewsPage = ({ album }) => {
         alt=''
         className={`page-img-bg ${album.imageName}`}
         aria-hidden='true'
+        role='presentation'
       />
 
       <div className='main-content container-large'>

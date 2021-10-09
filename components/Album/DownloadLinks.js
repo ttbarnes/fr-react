@@ -8,48 +8,49 @@ const DownloadLinks = ({ links, albumName }) => {
 
         {links.bandcamp && (
           <li className={[styles.listItem, styles.listItemBandCamp].join(' ')}>
-            <a href={links.bandcamp} target='_blank' rel='noopener noreferrer'>
-              <img src='/images/icons/bandcamp.png' alt='Available at Bandcamp' />
+            <a href={links.bandcamp} target='_blank' rel='noopener noreferrer' aria-label={`${albumName} available at Bandcamp`}>
+              <img src='/images/icons/bandcamp.png' alt='' />
+              
             </a>
           </li>
         )}
 
         {links.spotify && (
           <li className={[styles.listItem, styles.listItemSpotify].join(' ')}>
-            <a href={links.spotify} target='_blank' rel='noopener noreferrer'>
-              <img src='/images/icons/spotify.png' alt='Listen on Spotify' />
-            </a>
+            <a href={links.spotify} target='_blank' rel='noopener noreferrer' aria-label={`${albumName} listen on Spotify`}>
+              <img src='/images/icons/spotify.png' alt='' />
+              </a>
           </li>
         )}
 
         {links.youtubeMusic && (
           <li className={[styles.listItem, styles.listItemYouTubeMusic].join(' ')}>
-            <a href={links.youtubeMusic} target='_blank' rel='noopener noreferrer'>
-              <img src='/images/icons/youtube-music.png' alt='Listen on YouTube Music' />
+            <a href={links.youtubeMusic} target='_blank' rel='noopener noreferrer' aria-label={`Listen to ${albumName} on YouTube Music`}>
+              <img src='/images/icons/youtube-music.png' alt='' />
             </a>
           </li>
         )}
 
         {links.amazon && (
           <li className={[styles.listItem, styles.listItemAmazon].join(' ')}>
-            <a href={links.amazon} target='_blank' rel='noopener noreferrer'>
-              <img src='/images/icons/amazon-music.png' alt='Available on Amazon' />
+            <a href={links.amazon} target='_blank' rel='noopener noreferrer' aria-label={`${albumName} available on Amazon`}>
+              <img src='/images/icons/amazon-music.png' alt='' />
             </a>
           </li>
         )}
 
         {links.itunes && (
           <li className={styles.listItem}>
-            <a href={links.itunes} target='_blank' rel='noopener noreferrer'>
-              <img src='/images/icons/apple-itunes.svg' alt='Get it on iTunes Store' />
+            <a href={links.itunes} target='_blank' rel='noopener noreferrer' aria-label={`Get ${albumName} on iTunes Store`}>
+              <img src='/images/icons/apple-itunes.svg' alt='' />
             </a>
           </li>
         )}
 
         {links.appleMusic && (
           <li className={styles.listItem}>
-            <a href={links.appleMusic} target='_blank' rel='noopener noreferrer'>
-              <img src='/images/icons/apple-music.svg' alt='Listen on Apple Music' />
+            <a href={links.appleMusic} target='_blank' rel='noopener noreferrer' aria-label={`Listen to ${albumName} on Apple Music`}>
+              <img src='/images/icons/apple-music.svg' alt='' />
             </a>
           </li>
         )}

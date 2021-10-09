@@ -1,3 +1,5 @@
+@import '../../styles/mixins.scss';
+
 .footer {
   clear: both;
   width: 100%;
@@ -29,11 +31,13 @@
 }
 
 .heading {
+  @include h4;
   padding-left: 0.5856em;
 }
 
 .emailUpdatesHeading {
   margin-top: 2em;
+  font-size: .825em;
   padding-left: 1.3em;
 }
 

@@ -9,3 +9,15 @@
   position: absolute;
   width: 1px; 
 }
+
+
+@mixin h4 {
+  font-size: 1.7em;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+  color: #fff;
+
+  @media (min-width:768px) {
+    font-size: 1.9em;
+  }
+}

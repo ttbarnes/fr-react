@@ -1,3 +1,5 @@
+@import './mixins.scss';
+
 h1,h2,h3,h4,h5 {
   margin-top: 0;
   color: #E4E4E4;
@@ -36,14 +38,7 @@ h2 {
 }
 
 h4 {
-  font-size: 1.7em;
-  margin-bottom: 0.5em;
-  letter-spacing: 1px;
-  color: #fff;
-
-  @media (min-width:768px) {
-    font-size: 1.9em;
-  }
+  @include h4;
 }
 
 a {

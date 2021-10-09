@@ -14,7 +14,7 @@ const SocialLinks = ({
         rel='noopener noreferrer'
         aria-label='Bandcamp'
       >
-        <img src='/images/icons/b-c.png' alt='Bandcamp' className={styles.listItemImageIcon} />
+        <img src='/images/icons/b-c.png' alt='' className={styles.listItemImageIcon} />
         <span className={styles.text}>Bandcamp</span>
       </a>
     </li>
