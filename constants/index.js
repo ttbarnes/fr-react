@@ -21,6 +21,7 @@ const SOCIAL_MEDA_IMAGE_SIZE = {
 }
 
 const SOCIAL_MEDIA_URLS = {
+  BANDCAMP: 'https://fionarossjazz.bandcamp.com',
   SPOTIFY: 'https://play.spotify.com/artist/59lPcyDIZJxmRqatvAjct8?play=true',
   TWITTER: 'http://twitter.com/fifross',
   FACEBOOK: 'http://facebook.com/fionarossmusic',

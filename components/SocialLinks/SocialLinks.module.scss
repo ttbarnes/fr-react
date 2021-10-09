@@ -14,7 +14,8 @@
   &:hover,
   &:focus,
   &:active {
-    .listItemIcon {
+    .listItemIcon,
+    .listItemImageIcon {
       transform: rotate(360deg);
     }
   }
@@ -23,6 +24,14 @@
 .listItemIcon {
   margin-top: -2px;
   margin-right: 0.55em;
+  transition: all 0.4s ease;
+}
+
+.listItemImageIcon {
+  max-width: 28px;
+  margin-right: 9px;
+  display: inline-block;
+  vertical-align: middle;
   transition: all 0.4s ease;
 }
 
@@ -45,7 +54,8 @@
     &:focus,
     &:active {
       opacity: 1;
-      .listItemIcon {
+      .listItemIcon,
+      .listItemImageIcon {
         transform: rotate(360deg);
       }
     }

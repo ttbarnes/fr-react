@@ -9,6 +9,19 @@ const SocialLinks = ({
     <li className={isSticky ? `${styles.listItem} ${styles.isSticky}` : styles.listItem}>
       <a
         className={styles.listItemLink}
+        href={CONSTANTS.SOCIAL_MEDIA_URLS.BANDCAMP}
+        target='_blank'
+        rel='noopener noreferrer'
+        aria-label='Bandcamp'
+      >
+        <img src='/images/icons/b-c.png' alt='Bandcamp' className={styles.listItemImageIcon} />
+        <span className={styles.text}>Bandcamp</span>
+      </a>
+    </li>
+
+    <li className={isSticky ? `${styles.listItem} ${styles.isSticky}` : styles.listItem}>
+      <a
+        className={styles.listItemLink}
         href={CONSTANTS.SOCIAL_MEDIA_URLS.SPOTIFY}
         target='_blank'
         rel='noopener noreferrer'
@@ -18,6 +31,7 @@ const SocialLinks = ({
         <span className={styles.text}>Spotify</span>
       </a>
     </li>
+
 
     <li className={isSticky ? `${styles.listItem} ${styles.isSticky}` : styles.listItem}>
       <a
