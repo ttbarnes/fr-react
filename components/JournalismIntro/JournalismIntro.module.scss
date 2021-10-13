@@ -1,0 +1,14 @@
+.container {
+  max-width: 695px;
+  float: none;
+  margin: 0 auto 2.3424em auto;
+  line-height: 1.7em;
+  @media (min-width: 768px) {
+    margin-bottom: 4em;
+  }
+}
+
+.introCopyLink {
+  color: #fff;
+  word-break: break-word;
+}

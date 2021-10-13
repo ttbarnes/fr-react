@@ -20,7 +20,7 @@ const Album = (album) => {
      
       <div className='row'>
 
-        <h2 className={`heading-uppercase ${styles.albumHeading} ${styles.albumHeadingMobile}`}>{album.name}</h2>
+        <h2 className={`heading-uppercase-small ${styles.albumHeading} ${styles.albumHeadingMobile}`}>{album.name}</h2>
 
         <div className={`col-50-md ${styles.colFirst}`}>
           <img
@@ -32,7 +32,7 @@ const Album = (album) => {
 
         <div className={`col-50-md ${styles.colLast}`}>
 
-          <h3 className={`heading-uppercase ${styles.albumHeading} ${styles.albumHeadingDesktop}`}>{album.name}</h3>
+          <h3 className={`heading-uppercase-small ${styles.albumHeading} ${styles.albumHeadingDesktop}`}>{album.name}</h3>
 
           {(!album.comingSoon && album.albumType === 'latest') && (
             <p className={styles.comingSoonDesktopOnly}>Out now</p>

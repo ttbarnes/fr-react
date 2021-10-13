@@ -1,7 +1,7 @@
 import styles from './JournalismList.module.scss'
 
 const JournalismList = ({ articles }) => (
-  <ul className={`grid-layout-4-4 ${styles.container}`}>
+  <ul className='grid-layout-4-4 text-align-center'>
     {articles.map((article) => (
       <li
         key={article.title}
@@ -20,7 +20,7 @@ const JournalismList = ({ articles }) => (
             rel='noopener noreferrer'
             className={styles.listItemLink}
           >
-            <div className={styles.listItemInnerHoverContent}>
+            <div>
               <p className={styles.title}>{article.title}</p>
               <p className={styles.copy}>{article.copy}</p>
               <p className={styles.readMore}>Read more</p>
