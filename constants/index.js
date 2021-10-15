@@ -15,10 +15,22 @@ const META_TAGS = {
   MICROSOFT_VERFICATION: 'D7C8745E72774627634DE53DDB0DA645'
 };
 
+const PAGE = {
+  ABOUT: {
+    TITLE: `About - ${META_TAGS.AUTHOR}`,
+    DESCRIPTION: 'Award winning vocalist, pianist, composer and producer',
+    URL: `${BASE_URL_REACT}/about`
+  },
+  JOURNALISM: {
+    TITLE: `Journalism - ${META_TAGS.AUTHOR}`,
+    URL: `${BASE_URL_REACT}/journalism`
+  }
+};
+
 const SOCIAL_MEDA_IMAGE_SIZE = {
   WIDTH: 1024,
   HEIGHT: 512
-}
+};
 
 const SOCIAL_MEDIA_URLS = {
   BANDCAMP: 'https://fionarossjazz.bandcamp.com',
@@ -33,6 +45,7 @@ export default {
   BASE_URL,
   BASE_URL_REACT,
   META_TAGS,
+  PAGE,
   SOCIAL_MEDA_IMAGE_SIZE,
   SOCIAL_MEDIA_URLS
 };

@@ -1,4 +1,5 @@
 import { gql } from '@apollo/client';
+import Head from 'next/head';
 import client from '../../apollo-client';
 import BlockQuote from '../../components/BlockQuote';
 import MemberOfList from '../../components/MemberOfList';
@@ -11,17 +12,29 @@ const AboutPage = ({ articles }) => {
   return (
     <div className='container with-page-bg-img'>
 
+      <Head>
+        <title>{CONSTANTS.PAGE.ABOUT.TITLE}</title>
+
+        <meta property='og:title' content={CONSTANTS.PAGE.ABOUT.TITLE} />
+        <meta property='og:description' content={CONSTANTS.PAGE.ABOUT.DESCRIPTION} />
+        <meta property='og:url' content={CONSTANTS.PAGE.ABOUT.URL} />
+
+        <meta name='twitter:title' content={CONSTANTS.PAGE.ABOUT.TITLE} />
+        <meta name='twitter:description' content={CONSTANTS.PAGE.ABOUT.DESCRIPTION} />
+        <meta property='twitter:url' content={CONSTANTS.PAGE.ABOUT.URL} />
+      </Head>
+
+      <img
+        src={'/images/background/about-page.png'}
+        alt=''
+        className='page-img-bg'
+        aria-hidden='true'
+        role='presentation'
+      />
+
       <div className='main-content'>
         <div className={styles.container}>
           <h1 className='heading-uppercase text-align-center'>About Fiona</h1>
-
-          <img
-            src={'/images/background/about-page.png'}
-            alt=''
-            className='page-img-bg'
-            aria-hidden='true'
-            role='presentation'
-          />
 
           <div className={styles.centralQuote}>
             <BlockQuote
