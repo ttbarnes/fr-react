@@ -1,0 +1,44 @@
+
+.container {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.centralQuote {
+  margin-bottom: 1.1712em;
+  @media (min-width: 600px) {
+    margin-bottom: 4.6848em;
+  }
+  blockquote {
+    padding-top: 1.1712em !important;
+    padding-bottom: 0.5856em !important;
+    @media (min-width: 600px) {
+      padding-top: 4.6848em !important;
+      width: 75%;
+      &:first-child {
+        padding-top: 2.3424em !important;
+      }introQuote
+      &::last-child {
+        padding-top: 4.6848em !important;
+      }
+    }
+  }
+}
+
+.textContentContainer {
+  font-size: 1.1em;
+  color: #A7A7A7;
+  line-height: 1.6em;
+}
+
+.organisationsSupportContainer,
+.memberOfContainer {
+  margin-bottom: 3em;
+  @media (min-width: 768px) {
+    margin-bottom: 5em;
+  }
+}
+
+.memberOfTitle {
+  margin-bottom: 1em;
+}

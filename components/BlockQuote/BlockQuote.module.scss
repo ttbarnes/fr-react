@@ -108,27 +108,10 @@
   clear: both;
 }
 
-
+.blockquoteMedium,
 .blockquoteLarge {
   color: #C5C5C5;
-  position: relative;
-  margin-bottom: 6em;
-  @media (min-width: 600px) {
-    font-size: 1.2em;
-  }
-
-  .quote {
-    font-size: 5em;
-  }
-
-  .inner,
-  .author {
-    font-size: inherit;
-  }
-
-  .copy {
-    text-align: center;
-  }
+  margin: 6em auto;
 
   p {
     margin-bottom: 2.3424em;
@@ -137,18 +120,102 @@
     }
   }
 
+  .quote {
+    font-size: 5em;
+  }
+
+  .author {
+    text-align: center;
+    color: #A7A7A7;
+    margin-left: 0;
+    padding-top: .8em;
+  }
+}
+
+.blockquoteMedium {
+  max-width: 710px;
+  @media (min-width: 600px) {
+    font-size: 1em;
+  }
+
+  .inner,
+  .author {
+    font-size: inherit;
+  }
+}
+
+.blockquoteLarge {
+  @media (min-width: 600px) {
+    font-size: 1.2em;
+  }
+
+  .inner,
+  .author {
+    font-size: inherit;
+  }
+}
+
+/*
+  currently specific to About page.
+*/
+.centered {
+  position: relative;
+  .copy {
+    text-align: center;
+  }
+
   .quoteFirst {
     text-align: right;
   }
+
   .quoteLast {
     position: absolute;
     bottom: 80px;
     right: 50px;
   }
+}
 
-  .author {
-    text-align: center;
-    color: #E4E4E4;
-    margin-left: 0;
+.highlightQuote {
+  text-align: center;
+
+  .inner {
+    float: none;
+  }
+
+  .copy {
+    font-size: 1.1em;
+    color: #FFF;
+    @media (min-width: 600px) {
+      font-size: 1.3em;
+    }
+  }
+
+  .quoteLast {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.shortQuote {
+  width: 90%;
+  max-width: 340px;
+  margin-top: 0;
+  margin-bottom: 5em;
+  @media (min-width: 600px) {
+    max-width: 100%;
+  }
+  @media (min-width: 768px) {
+    max-width: 380px;
+  }
+}
+
+.longQuote {
+  max-width: 800px;
+  line-height: 2.2em;
+  @media (min-width: 768px) {
+    margin-bottom: 8em;
+  }
+  .quoteFirst {
+    width: auto;
   }
 }

@@ -101,6 +101,24 @@ blockquote p {
   margin-bottom: 0;
 }
 
+blockquote span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .text-align-center {
   text-align: center;
+}
+
+.highlight,
+p span.quote {
+  color: #FFF;
+}
+
+p span.quote {
+  font-style: italic;
+}
+
+.long-copy-line-height {
+  line-height: 1.8em;
 }

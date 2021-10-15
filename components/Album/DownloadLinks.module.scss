@@ -47,7 +47,8 @@
       opacity: .8;
     }
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       outline: 0 none;
       opacity: 1;
     }

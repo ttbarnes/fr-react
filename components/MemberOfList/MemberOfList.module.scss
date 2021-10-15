@@ -1,0 +1,21 @@
+.listItem {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 0.5856em;
+  margin-bottom: 2.3424em;
+  max-width: 140px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.listItemLink {
+  opacity: .8;
+  transition: all 0.2s ease;
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1;
+  }
+}
