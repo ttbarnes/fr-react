@@ -15,6 +15,14 @@ const AboutPage = ({ articles }) => {
         <div className={styles.container}>
           <h1 className='heading-uppercase text-align-center'>About Fiona</h1>
 
+          <img
+            src={'/images/background/about-page.png'}
+            alt=''
+            className='page-img-bg'
+            aria-hidden='true'
+            role='presentation'
+          />
+
           <div className={styles.centralQuote}>
             <BlockQuote
               copy='It’s just me doing my thing'

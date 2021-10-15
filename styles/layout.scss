@@ -55,6 +55,7 @@
   left: 0;
   margin: 0 auto;
   z-index: 1;
+  width: auto;
   &.black-white-and-a-little-bit-of-grey {
     display: none;
     @media (min-width: 1000px) {
