@@ -12,6 +12,8 @@ const JournalismList = ({ articles }) => (
           <img
             src={article.image.cloudinaryUrl}
             className={styles.listItemImage}
+            aria-hidden='true'
+            role='presentation'
           />
 
           <a
@@ -19,11 +21,12 @@ const JournalismList = ({ articles }) => (
             target='_blank'
             rel='noopener noreferrer'
             className={styles.listItemLink}
+            aria-label={article.title}
           >
             <div>
-              <p className={styles.title}>{article.title}</p>
-              <p className={styles.copy}>{article.copy}</p>
-              <p className={styles.readMore}>Read more</p>
+              <p className={styles.title} aria-hidden='true'>{article.title}</p>
+              <p className={styles.copy} aria-hidden='true'>{article.copy}</p>
+              <p className={styles.readMore} aria-hidden='true'>Read more</p>
             </div>
           </a>
         </div>

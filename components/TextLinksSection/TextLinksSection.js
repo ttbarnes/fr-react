@@ -9,7 +9,7 @@ const TextLinksSection = ({
 }) => (
   <div className='row'>
 
-    <h3 className={styles.heading}>{heading}</h3>
+    <h2 className={`h3-size ${styles.heading}`}>{heading}</h2>
 
     {subText && (
       <p className={styles.subText}>{subText}</p>
@@ -17,7 +17,7 @@ const TextLinksSection = ({
 
     <ul
       className='no-list-style'
-      aria-labelledby={heading}
+      aria-label={heading}
     >
       {groups.map((group) => {
         const {
@@ -32,9 +32,9 @@ const TextLinksSection = ({
               key={links[0].url}
               className={styles.groupMultiple}
             >
-              <h4 className={`h3-size ${styles.heading} ${styles.groupHeading}`}><span className='text-uppercase'>{groupHeading}</span> - {groupHeadingSubText}</h4>
+              <h3 className={`h3-size ${styles.heading} ${styles.groupHeading}`}><span className='text-uppercase'>{groupHeading}</span> - {groupHeadingSubText}</h3>
 
-              <ul className='no-list-style' aria-labelledby={`${heading} - ${groupHeading} - ${groupHeadingSubText}`}>
+              <ul className='no-list-style' aria-label={`${heading} - ${groupHeading} - ${groupHeadingSubText}`}>
                 {links.map((link) => {
                   const { url, isMailTo } = link;
 
