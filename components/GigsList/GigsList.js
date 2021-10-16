@@ -4,20 +4,28 @@ import styles from './GigsList.module.scss';
 
 const GigsList = ({ gigs }) => (
   <React.Fragment>
-    {gigs.map((year) => (
-      <ul className='no-list-style'>
+    {gigs.map((year, index) => (
+      <ul
+        key={year.year}
+        className={`no-list-style row ${styles.yearList}`}
+      >
         <li>
-          <h2 className='text-align-center'>{year.year} gigs</h2>
+          {index !== 0 && (
+            <h2 className={`text-align-center ${styles.yearHeading}`}>{year.year} gigs</h2>
+          )}
 
           <ul className='no-list-style'>
             {year.gigs.map((gig) => (
-              <li className={styles.listItem}>
+              <li
+                key={gig.title}
+                className={styles.listItem}
+              >
                 <div className={styles.listItemInner}>
-                  <h3>{gig.title} - {gig.venue}</h3>
+                  <h3 className={`h4-size ${styles.listItemHeading}`}>{gig.title} - {gig.venue}</h3>
 
-                  <p>{gig.location}</p>
+                  <p className={styles.listItemParagraph}>{gig.location}</p>
 
-                  <p className={styles.listItemDate}>
+                  <p className={`${styles.listItemParagraph} ${styles.listItemDate}`}>
                     {format(new Date(gig.date), 'MMM do')}
                     {gig.time && (
                       <span>&nbsp;-&nbsp;{gig.time}</span>

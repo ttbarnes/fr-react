@@ -1,0 +1,7 @@
+// custom heading margin is to counter the list items date minus margin-top
+.heading {
+  margin-bottom: 1em;
+  @media (min-width: 1000px) {
+    margin-bottom: 2em; // counter the date minus margin-top
+  }
+}

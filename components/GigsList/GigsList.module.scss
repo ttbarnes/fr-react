@@ -1,7 +1,16 @@
+.yearList {
+  margin-bottom: 2em;
+}
+
+.yearHeading {
+  padding: 2em 0 1em 0;
+}
+
 .listItem {
   padding: 1.1712em;
+  margin-bottom: 2.5em;
 
-  @media (min-width: 1000px) {
+@media (min-width: 1000px) {
     float: left;
     width: 50%;
     max-width: 50%;
@@ -9,6 +18,10 @@
     &:nth-child(odd) {
       clear: both;
     }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -21,16 +34,29 @@
   padding: 1.1712em;
 }
 
+.listItemHeading {
+  @media (min-width:768px) {
+    margin-bottom: .2em;
+  }
+}
+
+.listItemParagraph {
+  margin-bottom: 1.5em;
+  @media (min-width:768px) {
+    margin-bottom: 2.3424em;
+  }
+}
+
 .listItemDate {
   text-transform: uppercase;
-  margin-bottom: 0;
   @media (min-width: 1000px) {
     position: absolute;
+    top: -37px;
     right: 0;
     padding: 0.5856em 1em;
     background: #2A2A2A;
     color: #C5C5C5;
     max-height: 44px;
-    top: -37px;
+    margin-bottom: 0;
   }
 }

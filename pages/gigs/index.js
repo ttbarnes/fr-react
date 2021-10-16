@@ -3,6 +3,7 @@ import Head from 'next/head';
 import client from '../../apollo-client';
 import GigsList from '../../components/GigsList';
 import PageButtonLink from '../../components/PageButtonLink';
+import styles from './Gigs.module.scss';
 import CONSTANTS from '../../constants';
 
 const GigsPage = ({ gigs }) => (
@@ -21,7 +22,11 @@ const GigsPage = ({ gigs }) => (
     <div className='main-content'>
       <h1 className='hidden'>Gigs</h1>
 
-      <GigsList gigs={gigs} />
+      <h1 className={`text-align-center ${styles.heading}`}>{gigs[0].year} gigs </h1>
+
+      <div className=''>
+        <GigsList gigs={gigs} />
+      </div>
 
       <PageButtonLink
         href={`${CONSTANTS.BASE_URL}/news`}
