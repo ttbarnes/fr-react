@@ -34,7 +34,7 @@ const AboutPage = ({ articles }) => {
 
       <div className='main-content'>
         <div className={styles.container}>
-          <h1 className='heading-uppercase text-align-center'>About Fiona</h1>
+          <h1 className='text-align-center'>About Fiona</h1>
 
           <div className={styles.centralQuote}>
             <BlockQuote

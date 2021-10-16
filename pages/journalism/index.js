@@ -20,7 +20,7 @@ const JournalismPage = ({ articles }) => (
     </Head>
 
     <div className='main-content'>
-      <h1 className='heading-uppercase text-align-center'>Journalism by Fiona</h1>
+      <h1 className='text-align-center'>Journalism by Fiona</h1>
 
       <JournalismIntro />
 

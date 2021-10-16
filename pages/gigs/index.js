@@ -19,8 +19,7 @@ const GigsPage = ({ gigs }) => (
     </Head>
 
     <div className='main-content'>
-      {/* todo: shouldn't need heading-uppercase now */}
-      <h1 className='heading-uppercase text-align-center hidden'>Gigs</h1>
+      <h1 className='hidden'>Gigs</h1>
 
       <GigsList gigs={gigs} />
 

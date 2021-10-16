@@ -11,7 +11,7 @@ const AlbumTextList = ({
   alwaysShowHeading,
 }) => {
   if (list && list.length) {
-    const headingClassName = alwaysShowHeading ? `heading-uppercase ${styles.heading} ${styles.headingAlways}` : `heading-uppercase ${styles.heading}`;
+    const headingClassName = alwaysShowHeading ? `${styles.heading} ${styles.headingAlways}` : styles.heading;
 
     const listClassNames = withBackground ? `${styles.list} ${styles.listWithBackground}` : styles.list;
 
