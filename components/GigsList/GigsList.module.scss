@@ -1,0 +1,36 @@
+.listItem {
+  padding: 1.1712em;
+
+  @media (min-width: 1000px) {
+    float: left;
+    width: 50%;
+    max-width: 50%;
+    margin-bottom: 2.3424em;
+    &:nth-child(odd) {
+      clear: both;
+    }
+  }
+}
+
+.listItemInner {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  vertical-align: top;
+  background: #2A2A2A;
+  padding: 1.1712em;
+}
+
+.listItemDate {
+  text-transform: uppercase;
+  margin-bottom: 0;
+  @media (min-width: 1000px) {
+    position: absolute;
+    right: 0;
+    padding: 0.5856em 1em;
+    background: #2A2A2A;
+    color: #C5C5C5;
+    max-height: 44px;
+    top: -37px;
+  }
+}

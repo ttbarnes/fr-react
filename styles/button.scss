@@ -1,0 +1,43 @@
+button,
+.button {
+  width: 100%;
+  opacity: 1;
+  display: block;
+  background: #3E3E3E;
+  color: #FFF;
+  letter-spacing: 1px;
+  transition: all .2s ease;
+  font-size: 1.1em;
+  padding: .5em 1.3em;
+  font-family: Source Sans Pro, Arial,sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+
+  @media (min-width: 600px) {
+    font-size: 1.4em;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    background: #323232;
+  }
+}
+
+
+.button-black {
+  display: inline-block;
+  background: #000;
+  color: #FFF;
+  width: auto;
+  padding: .8em 1.2em;
+  font-size: 1em;
+  text-decoration: underline;
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+    background: #000;
+  }
+}

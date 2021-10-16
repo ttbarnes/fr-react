@@ -6,37 +6,35 @@ import JournalismList from '../../components/JournalismList';
 import PageButtonLink from '../../components/PageButtonLink';
 import CONSTANTS from '../../constants';
 
-const JournalismPage = ({ articles }) => {
-  return (
-    <div className='container with-page-bg-img'>
+const JournalismPage = ({ articles }) => (
+  <div className='container with-page-bg-img'>
 
-      <Head>
-        <title>{CONSTANTS.PAGE.JOURNALISM.TITLE}</title>
+    <Head>
+      <title>{CONSTANTS.PAGE.JOURNALISM.TITLE}</title>
 
-        <meta property='og:title' content={CONSTANTS.PAGE.JOURNALISM.TITLE} />
-        <meta property='og:url' content={CONSTANTS.PAGE.JOURNALISM.URL} />
+      <meta property='og:title' content={CONSTANTS.PAGE.JOURNALISM.TITLE} />
+      <meta property='og:url' content={CONSTANTS.PAGE.JOURNALISM.URL} />
 
-        <meta name='twitter:title' content={CONSTANTS.PAGE.JOURNALISM.TITLE} />
-        <meta property='twitter:url' content={CONSTANTS.PAGE.JOURNALISM.URL} />
-      </Head>
+      <meta name='twitter:title' content={CONSTANTS.PAGE.JOURNALISM.TITLE} />
+      <meta property='twitter:url' content={CONSTANTS.PAGE.JOURNALISM.URL} />
+    </Head>
 
-      <div className='main-content'>
-        <h1 className='heading-uppercase text-align-center'>Journalism by Fiona</h1>
+    <div className='main-content'>
+      <h1 className='heading-uppercase text-align-center'>Journalism by Fiona</h1>
 
-        <JournalismIntro />
+      <JournalismIntro />
 
-        <JournalismList articles={articles} />
+      <JournalismList articles={articles} />
 
-        <PageButtonLink
-          href={`${CONSTANTS.BASE_URL}/contact`}
-          text='Contact'
-        />
-
-      </div>
+      <PageButtonLink
+        href={`${CONSTANTS.BASE_URL}/contact`}
+        text='Contact'
+      />
 
     </div>
-  );
-};
+
+  </div>
+);
 
 export async function getServerSideProps() {
   const { data } = await client.query({
