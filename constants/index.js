@@ -24,6 +24,10 @@ const PAGE = {
   JOURNALISM: {
     TITLE: `Journalism - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/journalism`
+  },
+  CONTACT: {
+    TITLE: `Contact - ${META_TAGS.AUTHOR}`,
+    URL: `${BASE_URL_REACT}/contact`
   }
 };
 

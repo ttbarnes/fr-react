@@ -1,0 +1,95 @@
+import PropTypes from 'prop-types';
+import Link from './Link';
+import styles from './TextLinksSection.module.scss';
+
+const TextLinksSection = ({
+  heading,
+  subText,
+  groups
+}) => (
+  <div className='row'>
+
+    <h3 className={styles.heading}>{heading}</h3>
+
+    {subText && (
+      <p className={styles.subText}>{subText}</p>
+    )}
+
+    <ul
+      className='no-list-style'
+      aria-labelledby={heading}
+    >
+      {groups.map((group) => {
+        const {
+          groupHeading,
+          groupHeadingSubText,
+          links
+        } = group;
+
+        if (groups.length > 1 ) {
+          return (
+            <li
+              key={links[0].url}
+              className={styles.groupMultiple}
+            >
+              <h4 className={`h3-size ${styles.heading} ${styles.groupHeading}`}><span className='text-uppercase'>{groupHeading}</span> - {groupHeadingSubText}</h4>
+
+              <ul className='no-list-style' aria-labelledby={`${heading} - ${groupHeading} - ${groupHeadingSubText}`}>
+                {links.map((link) => {
+                  const { url, isMailTo } = link;
+
+                  return (
+                    <li
+                      key={link.url}
+                      className={`${styles.listItem} ${styles.listItemNested}`}
+                    >
+                      <Link
+                        url={url}
+                        isMailTo={isMailTo}
+                      />
+                    </li>
+                  )
+                })}
+              </ul>
+            </li>
+          );
+        }
+
+        const firstAndOnlyLink = links[0];
+        const { url, isMailTo } = firstAndOnlyLink;
+            
+        return (
+          <li
+            key={url}
+            className={`${styles.listItem} ${styles.group}`}
+          >
+            <Link
+              url={url}
+              isMailTo={isMailTo}
+            />
+          </li>
+        )
+      })}
+    </ul>
+  
+  </div>
+);
+
+TextLinksSection.propTypes = {
+  heading: PropTypes.string.isRequired,
+  subText: PropTypes.string,
+  groups: PropTypes.arrayOf(PropTypes.shape({
+    links: PropTypes.arrayOf(PropTypes.shape({
+      groupHeading: PropTypes.string,
+      groupHeadingSubText: PropTypes.string,
+      url: PropTypes.string.isRequired,
+      isMailTo: PropTypes.bool
+    }))
+  })).isRequired
+};
+
+TextLinksSection.defaultProps = {
+  withBackground: false
+};
+
+export default TextLinksSection;

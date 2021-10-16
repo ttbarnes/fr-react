@@ -1,0 +1,14 @@
+.container {
+  max-width: 780px;
+  @media (min-width: 600px) {
+    padding: 0 2.3424em;
+  }
+
+  @media (min-width: 1000px) {
+    padding: 0;
+  }
+}
+
+.heading {
+  margin-bottom: 1.5em;
+}
