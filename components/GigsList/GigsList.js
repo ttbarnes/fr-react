@@ -1,18 +1,21 @@
 import React from 'react';
 import { format } from 'date-fns';
+import YearHeading from './YearHeading';
+import GigHeading from './GigHeading';
 import styles from './GigsList.module.scss';
 
 const GigsList = ({ gigs }) => (
   <React.Fragment>
-    {gigs.map((year, index) => (
+    {gigs.map((year, yearIndex) => (
       <ul
         key={year.year}
         className={`no-list-style row ${styles.yearList}`}
       >
         <li>
-          {index !== 0 && (
-            <h2 className={`text-align-center ${styles.yearHeading}`}>{year.year} gigs</h2>
-          )}
+          <YearHeading
+            index={yearIndex}
+            year={year.year}
+          />
 
           <ul className='no-list-style'>
             {year.gigs.map((gig) => (
@@ -21,7 +24,11 @@ const GigsList = ({ gigs }) => (
                 className={styles.listItem}
               >
                 <div className={styles.listItemInner}>
-                  <h3 className={`h4-size ${styles.listItemHeading}`}>{gig.title} - {gig.venue}</h3>
+
+                  <GigHeading
+                    yearIndex={yearIndex}
+                    title={`${gig.title} - ${gig.venue}`}
+                  />
 
                   <p className={styles.listItemParagraph}>{gig.location}</p>
 
@@ -37,7 +44,9 @@ const GigsList = ({ gigs }) => (
                       href={gig.ticketsUrl}
                       className='button button-black'
                       target='_blank'
-                      rel='noopener noreferrer'>Tickets
+                      rel='noopener noreferrer'
+                      aria-label={`Get tickets for ${gig.title}`}
+                    >Tickets
                     </a>
                   </div>
 

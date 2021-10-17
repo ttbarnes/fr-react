@@ -20,8 +20,6 @@ const GigsPage = ({ gigs }) => (
     </Head>
 
     <div className='main-content'>
-      <h1 className='hidden'>Gigs</h1>
-
       <h1 className={`text-align-center ${styles.heading}`}>{gigs[0].year} gigs </h1>
 
       <div className=''>
