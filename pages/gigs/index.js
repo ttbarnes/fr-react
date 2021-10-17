@@ -22,9 +22,7 @@ const GigsPage = ({ gigs }) => (
     <div className='main-content'>
       <h1 className={`text-align-center ${styles.heading}`}>{gigs[0].year} gigs </h1>
 
-      <div className=''>
-        <GigsList gigs={gigs} />
-      </div>
+      <GigsList gigs={gigs} />
 
       <PageButtonLink
         href={`${CONSTANTS.BASE_URL}/news`}
@@ -51,7 +49,7 @@ export async function getServerSideProps() {
           }
         }
       }
-    `,
+    `
   });
 
   const { gigsByYear } = data;

@@ -49,7 +49,7 @@ export async function getServerSideProps() {
           }
         }
       }
-    `,
+    `
   });
 
   const { journalism } = data;
