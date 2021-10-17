@@ -21,6 +21,10 @@ const PAGE = {
     DESCRIPTION: 'Award winning vocalist, pianist, composer and producer',
     URL: `${BASE_URL_REACT}/about`
   },
+  CONTACT: {
+    TITLE: `Contact - ${META_TAGS.AUTHOR}`,
+    URL: `${BASE_URL_REACT}/contact`
+  },
   GIGS: {
     TITLE: `Gigs - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/gigs`
@@ -29,9 +33,9 @@ const PAGE = {
     TITLE: `Journalism - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/journalism`
   },
-  CONTACT: {
-    TITLE: `Contact - ${META_TAGS.AUTHOR}`,
-    URL: `${BASE_URL_REACT}/contact`
+  PRESS: {
+    TITLE: `Press - ${META_TAGS.AUTHOR}`,
+    URL: `${BASE_URL_REACT}/press`
   }
 };
 

@@ -1,0 +1,36 @@
+.listItem {
+  padding: 1.1712em;
+}
+
+.listItemInner {
+  background: #2A2A2A;
+}
+
+.listItemLink {
+  display: block;
+  padding: 1.1712em;
+}
+
+.author {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 1em;
+  color: #FFF;
+  margin-bottom: 0.5856em;
+}
+
+.title {
+  font-size: 1em;
+  text-transform: initial;
+  margin-bottom: .5em;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.excerpt {
+  color: #C5C5C5;
+  font-size: 0.9em;
+  margin-bottom: 0;
+}

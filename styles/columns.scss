@@ -16,8 +16,8 @@
   }
 }
 
-.col-50-xs {
-  @media (max-width: 768px) {
+.col-50-lg {
+  @media (min-width: 1000px) {
     float: left;
     width: 50%;
   }
