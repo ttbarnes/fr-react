@@ -36,6 +36,10 @@ const PAGE = {
   PRESS: {
     TITLE: `Press - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/press`
+  },
+  VIDEOS: {
+    TITLE: `Videos - ${META_TAGS.AUTHOR}`,
+    URL: `${BASE_URL_REACT}/videos`
   }
 };
 
