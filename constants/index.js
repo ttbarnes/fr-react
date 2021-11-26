@@ -21,6 +21,10 @@ const PAGE = {
     DESCRIPTION: 'Award winning vocalist, pianist, composer and producer',
     URL: `${BASE_URL_REACT}/about`
   },
+  COLLABORATORS: {
+    TITLE: `Collaborators - ${META_TAGS.AUTHOR}`,
+    URL: `${BASE_URL_REACT}/collaborators`
+  },
   CONTACT: {
     TITLE: `Contact - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/contact`
