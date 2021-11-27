@@ -60,3 +60,16 @@ img {
 iframe {
   width: 100%;
 }
+
+.hide-md {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.show-md {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+}

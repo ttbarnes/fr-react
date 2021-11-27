@@ -1,0 +1,21 @@
+.list {
+  list-style-type: none;
+  padding-top: .5em;
+}
+
+.listItem {
+  float: left;
+  clear: both;
+  margin-right: 1.1712em;
+  margin-bottom: 1.5em;
+  @media (min-width: 768px) {
+    clear: none;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.icon {
+  background-color: #282828;
+  margin-right: 0.55em;
+}

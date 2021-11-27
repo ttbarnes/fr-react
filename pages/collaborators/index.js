@@ -3,7 +3,6 @@ import Head from 'next/head';
 import client from '../../apollo-client';
 import PageButtonLink from '../../components/PageButtonLink';
 import CollaboratorsList from '../../components/CollaboratorsList';
-// import styles from './Collaborators.module.scss';
 import CONSTANTS from '../../constants';
 
 const CollaboratorsPage = ({ collaborators }) => (
@@ -39,6 +38,7 @@ export async function getServerSideProps() {
     query: gql`
       {
         collaborators {
+          _id
           name
           avatar {
             cloudinaryUrl

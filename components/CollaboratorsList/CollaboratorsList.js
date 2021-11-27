@@ -1,5 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './CollaboratorsList.module.scss';
+import CONSTANTS from '../../constants';
 
 const CollaboratorsList = ({ collaborators }) => (
   <React.Fragment>
@@ -8,7 +10,7 @@ const CollaboratorsList = ({ collaborators }) => (
         <li
           className={`col-50-xs col-25-md col-hover ${styles.collaboratorsListItem}`}
           key={collab.name}>
-          <a href='#'>
+          <Link href={`${CONSTANTS.BASE_URL}/collaborators/${collab.urlName}`}>
             <div className={styles.inner}>
               <img
                 src={collab.avatar.cloudinaryUrl}
@@ -19,7 +21,7 @@ const CollaboratorsList = ({ collaborators }) => (
                 <h4 className={styles.heading}>{collab.name}</h4>
               </div>
             </div>
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

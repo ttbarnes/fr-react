@@ -1,0 +1,50 @@
+.container {
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+.colLeft {
+  max-width: 250px;
+  margin-bottom: 2.3424em;
+  @media (min-width: 768px) {
+    float: left;
+    margin-right: 2.3424em;
+    margin-bottom: 1.1712em;
+  }
+  @media (min-width: 1000px) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.colRight {
+  clear: both;
+  @media (min-width: 768px) {
+    clear: none;
+    padding-left: 287.5px;
+  }
+}
+
+.headingSm,
+.headingMd {
+  margin-bottom: 0;
+}
+
+.row {
+  margin-bottom: 2.3424em;
+}
+
+.collabOn {
+  padding-left: 1em;
+  margin-top: 1.1712em;
+  @media (min-width: 768px) {
+    margin-top: 0.5856em;
+  }
+}
+
+.collabOnListItem {
+  margin-bottom: 0.5856em;
+  font-style: italic;
+  color: #FFF;
+}
+
