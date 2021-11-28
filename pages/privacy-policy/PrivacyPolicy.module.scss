@@ -1,0 +1,68 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #C5C5C5;
+  @media (min-width: 768px) {
+    padding-top: 3.5136em;
+  }
+}
+
+.h2,
+.h3,
+.h4 {
+  padding-bottom: 0;
+  margin: 1.1712em 0;
+}
+
+.p,
+.listItem {
+  margin-bottom: 0.5856em;
+}
+
+.contactDetails {
+  margin-bottom: 1.1712em;
+}
+
+.h2,
+.h3,
+.h4,
+.link,
+.strong,
+.contactDetails {
+  font-weight: lighter;
+  color: #fff;
+}
+
+.h2 {
+  margin-top: 4.6848em;
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @media (min-width: 500px) {
+    font-size: 1.9em;
+  }
+  @media (min-width: 600px) {
+    font-size: 2.3em;
+  }
+  @media (min-width: 500px) {
+    font-size: 1.5em;
+  }
+  @media (min-width: 600px) {
+    font-size: 1.5em;
+  }
+}
+
+.list {
+  margin-top: 1.1712em;
+  margin-bottom: 1.1712em;
+  margin-left: 1.1712em;
+}
+
+.listItem {
+  list-style-type: initial;
+}
+
+.privacyPolicy {
+  padding-top: 7em;
+}
