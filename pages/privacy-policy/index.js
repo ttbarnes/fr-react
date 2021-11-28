@@ -20,7 +20,7 @@ const PrivacyPolicyPage = ({ articles }) => (
       <div className={`long-copy-line-height ${styles.container}`}>
         <h1>Therapy Records Terms of Service</h1>
 
-        <h3 className={styles.h3}>1. Terms</h3>
+        <h2 className={styles.h3}>1. Terms</h2>
         <p className={styles.p}>By accessing the website at <a className={`link-highlight-hover-border ${styles.link}`} href='http://fionaross.co.uk' target='_blank' rel='noopener noreferrer'>http://fionaross.co.uk</a>, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.</p>
         <h3 className={styles.h3}>2. Use License</h3>
         <ol className={styles.list}>
