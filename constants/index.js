@@ -37,6 +37,10 @@ const PAGE = {
     TITLE: `Journalism - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/journalism`
   },
+  NEWS: {
+    TITLE: `News - ${META_TAGS.AUTHOR}`,
+    URL: `${BASE_URL_REACT}/news`
+  },
   PRIVACY_POLICY: {
     TITLE: `Privacy Policy - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/privacy-policy`

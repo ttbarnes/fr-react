@@ -59,6 +59,17 @@ a {
   }
 }
 
+.link-highlight-hover-border a {
+  padding-bottom: 1px;
+  border-bottom: 1px solid #C5C5C5;
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom-color: #757575;
+    color: #FFF;
+  }
+}
+
 ul,
 ol,
 dl {
