@@ -2,25 +2,29 @@
   float: none;
   margin: 0 auto;
   margin-bottom: 2.3424em;
+  width: 250px;
   min-width: 250px;
   @media (min-width: 600px) {
     height: 250px;
     max-height: 250px;
     max-width: 250px;
-  }
-  @media (min-width: 768px) {
     display: inline-block;
     vertical-align: top;
-    width: 25%;
+    width: 50%;
     margin: 0;
     height: 250px;
     max-height: 250px;
+  }
+  @media (min-width: 768px) {
+    width: 25%;
+    max-width: 25%;
   }
   @media (min-width: 1130px) {
     display: block;
     float: left;
     height: 290px;
     max-height: 290px;
+    max-width: 25%;
   }
 }
 
@@ -40,7 +44,7 @@
   width: 100%;
   left: 0;
   top: 0;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
   height: 100%;
   color: #FFF;
   z-index: 2;

@@ -5,10 +5,10 @@ import CONSTANTS from '../../constants';
 
 const CollaboratorsList = ({ collaborators }) => (
   <React.Fragment>
-    <ul className='grid-layout-4-4 grid-col-hover'>
+    <ul className='grid-layout-4-4'>
       {collaborators.map((collab) => (
         <li
-          className={`col-50-xs col-25-md col-hover ${styles.collaboratorsListItem}`}
+          className={`col-50-xs col-25-md no-list-style ${styles.collaboratorsListItem}`}
           key={collab.name}>
           <Link href={`${CONSTANTS.BASE_URL}/collaborators/${collab.urlName}`}>
             <div className={styles.inner}>
