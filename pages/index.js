@@ -77,7 +77,7 @@ const HomePage = () => (
         </h3>
 
         <div className={styles.iframeContainer}>
-          <iframe src="https://www.youtube.com/embed/Fi3fFgw1IlU" title="Red Flags and High Heels Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="400" height="415" frameborder="0"></iframe>
+          <iframe src="https://www.youtube.com/embed/Fi3fFgw1IlU" title="Red Flags and High Heels Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" width="400" height="415" frameBorder="0"></iframe>
         </div>
 
         <p>
