@@ -5,6 +5,13 @@
   }
 }
 
+.col-40-lg {
+  @media (min-width: 1000px) {
+    float: left;
+    width: 40%;
+  }
+}
+
 .col-50-xs {
   @media (max-width: 768px) {
     float: left;
@@ -16,6 +23,20 @@
   @media (min-width: 850px) {
     float: left;
     width: 50%;
+  }
+}
+
+.col-60-lg {
+  @media (min-width: 1000px) {
+    float: left;
+    width: 60%;
+  }
+}
+
+.col-80-lg {
+  @media (min-width: 768px) {
+    float: left;
+    width: 80%;
   }
 }
 

@@ -8,9 +8,8 @@ const BlockQuote = ({
   isHighlight,
   isShort,
   centered,
-  isLong,
+  isLong
 }) => {
-
   let containerClassName = styles.blockquote;
 
   if (isMedium) {

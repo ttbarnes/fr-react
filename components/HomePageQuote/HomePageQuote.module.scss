@@ -1,0 +1,120 @@
+.blockquote {
+  position: relative;
+  padding: 0;
+  text-align: center;
+  font-size: 1.1em;
+  margin-right: 0;
+  margin-bottom: 2.3424em;
+  margin-left: 0;
+  line-height: 1.7em;
+  @media (min-width: 500px) {
+    margin-left: -2em;
+  }
+  @media (min-width: 600px) {
+    margin: 0 0 1em 0;
+  }
+  @media (min-width: 768px) {
+    text-align: center;
+    margin-left: 0;
+  }
+  @media (min-width: 1000px) {
+    font-size: 1.4em;
+    text-align: left;
+  }
+}
+
+.blockquoteLast {
+  margin-bottom: 0;
+}
+
+.copy,
+.author,
+.quoteFirst,
+.quoteLast {
+  display: inline-block;
+}
+
+.copy {
+  color: #fff;
+  line-height: 1.72em;
+  text-align: left;
+  width: 76%;
+  font-size: 1.1em;
+  font-style: italic;
+  @media (min-width: 600px) {
+    text-align: left;
+    margin-left: -39px;
+    padding: 0px 5px;
+    width: 91%;
+  }
+  @media (min-width: 1000px) {
+    width: 91%;
+    max-width: 91%;
+    padding: 0;
+    font-size: 0.9em;
+  }
+}
+
+
+.author {
+  font-size: 0.8em;
+  margin-left: -4px;
+  line-height: 2.3em;
+  text-align: left;
+  padding-left: 15.5%;
+  display: block;
+  @media (min-width: 600px) {
+    padding-left: 5%;
+  }
+  @media (min-width: 1000px) {
+    display: inline-block;
+    padding-left: 0;
+  }
+}
+
+.quoteFirst,
+.quoteLast {
+  font-style: italic;
+  position: relative;
+  color: #424242;
+}
+
+.quoteFirst {
+  margin-left: 0;
+  top: 5px;
+  left: -20px;
+  font-size: 4em;
+  @media (min-width: 600px) {
+    left: -9%;
+  }
+  @media (min-width: 768px) {
+    top: -4px;
+  }
+  @media (min-width: 1000px) {
+    left: -15%;
+    font-size: 4em;
+  }
+}
+
+.quoteLast {
+  top: -15px;
+  left: 90%;
+  opacity: 0.5;
+  min-width: 55px;
+  font-size: 4em;
+  display: none;
+  @media (min-width: 600px) {
+    display: block;
+    position: absolute;
+    left: initial;
+    right: 0;
+    top: 60%;
+  }
+  @media (min-width: 768px) {
+    right: 3%;
+  }
+}
+
+.last-blockquote {
+  margin-bottom: 0;
+}
