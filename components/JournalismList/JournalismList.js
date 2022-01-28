@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styles from './JournalismList.module.scss'
 
 const JournalismList = ({ articles }) => (
@@ -10,11 +9,11 @@ const JournalismList = ({ articles }) => (
       >
 
         <div className={styles.listItemInner}>
-          <Image
+          <img
             src={article.image.cloudinaryUrl}
             className={styles.listItemImage}
             aria-hidden='true'
-            role='presentation'
+            alt=''
           />
 
           <a

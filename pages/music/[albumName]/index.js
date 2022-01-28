@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import ALBUMS from '../../../data/albums.json';
 import Album from '../../../components/Album';
 import PageButtonLink from '../../../components/PageButtonLink';
@@ -40,7 +39,7 @@ const AlbumPage = ({ albums }) => {
       <h1 className='hidden'>Albums</h1>
 
       {firstAlbum.hasBackgroundImage && (
-        <Image
+        <img
           src={`/images/background/${firstAlbum.imageName}.png`}
           alt=''
           className={`page-img-bg ${firstAlbum.imageName}`}

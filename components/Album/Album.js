@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import DownloadLinks from './DownloadLinks';
 import AlbumPressRelease from './AlbumPressRelease';
 import AlbumTextList from './AlbumTextList';
@@ -24,7 +23,7 @@ const Album = (album) => {
         <h2 className={`${styles.albumHeading} ${styles.albumHeadingMobile}`}>{album.name}</h2>
 
         <div className={`col-50-md ${styles.colFirst}`}>
-          <Image
+          <img
             src={`/images/albums/${album.imageName}.jpg`}
             alt={`Fiona Ross - ${album.name}`}
             className={styles.image}

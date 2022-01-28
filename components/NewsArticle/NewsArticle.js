@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Image from 'next/image';
 import styles from './NewsArticle.module.scss';
 
 const NewsArticle = ({
@@ -71,7 +70,7 @@ const NewsArticle = ({
                     className={sectionImagesListItemClassName(section.images)}
                   >
                     <div className={styles.imgWrap}>
-                      <Image
+                      <img
                         className={`${styles.image} ${styles.articleSectionImage}`}
                         src={image.cloudinaryUrl} alt=''
                       />

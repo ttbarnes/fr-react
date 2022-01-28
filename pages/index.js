@@ -25,6 +25,7 @@ const HomePage = () => (
       className={`page-img-bg ${styles.bgImage}`}
       aria-hidden='true'
       role='presentation'
+      layout='fill'
     />
 
     <div className='main-content container-small'>
@@ -41,6 +42,8 @@ const HomePage = () => (
             alt=''
             aria-hidden='true'
             role='presentation'
+            width={348}
+            height={425}
           />
         </div>
 

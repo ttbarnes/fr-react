@@ -20,8 +20,8 @@ const NavLink = ({ link, pathname, text }) => {
   return (
     <Link href={link}>
       <a className={linkClassName}>
-      <span className={styles.navLinkInner}>{text}</span>
-    </a>
+        <span className={styles.navLinkInner}>{text}</span>
+      </a>
     </Link>
   );
 };
