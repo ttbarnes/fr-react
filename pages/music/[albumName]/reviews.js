@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import ALBUMS from '../../../data/albums.json';
 import BlockQuote from '../../../components/BlockQuote';
 import PageButtonLink from '../../../components/PageButtonLink';
@@ -34,7 +35,7 @@ const AlbumReviewsPage = ({ album }) => {
         <meta name='twitter:image' content={metaImage} />
       </Head>
     
-      <img
+      <Image
         src={`/images/background/${album.imageName}.png`}
         alt=''
         className={`page-img-bg ${album.imageName}`}

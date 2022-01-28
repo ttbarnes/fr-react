@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './MemberOfList.module.scss';
 
 const MemberOfList = () => (
@@ -13,7 +14,7 @@ const MemberOfList = () => (
         aria-label='PRS for Music'
         className={styles.listItemLink}
       >
-        <img src='./images/about/prs.png' alt='' />
+        <Image src='./images/about/prs.png' alt='' />
       </a>
     </li>
 
@@ -25,7 +26,7 @@ const MemberOfList = () => (
         aria-label='The Music Producers Guild'
         className={styles.listItemLink}
       >
-        <img src='./images/about/mpg.png' alt='' />
+        <Image src='./images/about/mpg.png' alt='' />
       </a>
     </li>
 
@@ -37,7 +38,7 @@ const MemberOfList = () => (
         aria-label='The Ivors Academy'
         className={styles.listItemLink}
       >
-        <img src='./images/about/basca.png' alt='' />
+        <Image src='./images/about/basca.png' alt='' />
       </a>
     </li>
 
@@ -49,7 +50,7 @@ const MemberOfList = () => (
         aria-label='PPL'
         className={styles.listItemLink}
       >
-        <img src='./images/about/ppl.png' alt='' />
+        <Image src='./images/about/ppl.png' alt='' />
       </a>
     </li>
 
@@ -61,7 +62,7 @@ const MemberOfList = () => (
         aria-label='Insomniac Club'
         className={styles.listItemLink}
       >
-        <img src='./images/about/insomniac.png' alt='' />
+        <Image src='./images/about/insomniac.png' alt='' />
       </a>
     </li>
   </ul>

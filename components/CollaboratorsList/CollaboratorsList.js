@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './CollaboratorsList.module.scss';
 import CONSTANTS from '../../constants';
 
@@ -12,7 +13,7 @@ const CollaboratorsList = ({ collaborators }) => (
           key={collab.name}>
           <Link href={`${CONSTANTS.BASE_URL}/collaborators/${collab.urlName}`}>
             <div className={styles.inner}>
-              <img
+              <Image
                 src={collab.avatar.cloudinaryUrl}
                 alt={collab.name}
                 className={styles.image}

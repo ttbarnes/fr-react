@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 import styles from './DownloadLinks.module.scss'
 
 const DownloadLinks = ({ links, albumName }) => { 
@@ -9,7 +10,7 @@ const DownloadLinks = ({ links, albumName }) => {
         {links.bandcamp && (
           <li className={[styles.listItem, styles.listItemBandCamp].join(' ')}>
             <a href={links.bandcamp} target='_blank' rel='noopener noreferrer' aria-label={`${albumName} available at Bandcamp`}>
-              <img src='/images/icons/bandcamp.png' alt='' />
+              <Image src='/images/icons/bandcamp.png' alt='' />
               
             </a>
           </li>
@@ -18,7 +19,7 @@ const DownloadLinks = ({ links, albumName }) => {
         {links.spotify && (
           <li className={[styles.listItem, styles.listItemSpotify].join(' ')}>
             <a href={links.spotify} target='_blank' rel='noopener noreferrer' aria-label={`${albumName} listen on Spotify`}>
-              <img src='/images/icons/spotify.png' alt='' />
+              <Image src='/images/icons/spotify.png' alt='' />
               </a>
           </li>
         )}
@@ -26,7 +27,7 @@ const DownloadLinks = ({ links, albumName }) => {
         {links.youtubeMusic && (
           <li className={[styles.listItem, styles.listItemYouTubeMusic].join(' ')}>
             <a href={links.youtubeMusic} target='_blank' rel='noopener noreferrer' aria-label={`Listen to ${albumName} on YouTube Music`}>
-              <img src='/images/icons/youtube-music.png' alt='' />
+              <Image src='/images/icons/youtube-music.png' alt='' />
             </a>
           </li>
         )}
@@ -34,7 +35,7 @@ const DownloadLinks = ({ links, albumName }) => {
         {links.amazon && (
           <li className={[styles.listItem, styles.listItemAmazon].join(' ')}>
             <a href={links.amazon} target='_blank' rel='noopener noreferrer' aria-label={`${albumName} available on Amazon`}>
-              <img src='/images/icons/amazon-music.png' alt='' />
+              <Image src='/images/icons/amazon-music.png' alt='' />
             </a>
           </li>
         )}
@@ -42,7 +43,7 @@ const DownloadLinks = ({ links, albumName }) => {
         {links.itunes && (
           <li className={styles.listItem}>
             <a href={links.itunes} target='_blank' rel='noopener noreferrer' aria-label={`Get ${albumName} on iTunes Store`}>
-              <img src='/images/icons/apple-itunes.svg' alt='' />
+              <Image src='/images/icons/apple-itunes.svg' alt='' />
             </a>
           </li>
         )}
@@ -50,7 +51,7 @@ const DownloadLinks = ({ links, albumName }) => {
         {links.appleMusic && (
           <li className={styles.listItem}>
             <a href={links.appleMusic} target='_blank' rel='noopener noreferrer' aria-label={`Listen to ${albumName} on Apple Music`}>
-              <img src='/images/icons/apple-music.svg' alt='' />
+              <Image src='/images/icons/apple-music.svg' alt='' />
             </a>
           </li>
         )}

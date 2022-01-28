@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 import Head from 'next/head';
+import Image from 'next/image';
 import client from '../../apollo-client';
 import BlockQuote from '../../components/BlockQuote';
 import MemberOfList from '../../components/MemberOfList';
@@ -23,7 +24,7 @@ const AboutPage = ({ articles }) => (
       <meta property='twitter:url' content={CONSTANTS.PAGE.ABOUT.URL} />
     </Head>
 
-    <img
+    <Image
       src={'/images/background/about-page.png'}
       alt=''
       className='page-img-bg'

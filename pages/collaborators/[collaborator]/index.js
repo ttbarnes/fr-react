@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 import Head from 'next/head';
+import Image from 'next/image';
 import client from '../../../apollo-client';
 import CONSTANTS from '../../../constants';
 import CollaboratorUrls from '../../../components/CollaboratorUrls';
@@ -32,7 +33,7 @@ const CollaboratorPage = ({ collaborator }) => {
 
 
         <div className={styles.colLeft}>
-          <img
+          <Image
             src={collaborator.avatar.cloudinaryUrl}
             alt={collaborator.name}
           />

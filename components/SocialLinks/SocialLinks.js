@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import CONSTANTS from '../../constants';
 import styles from './SocialLinks.module.scss';
 
@@ -14,7 +15,7 @@ const SocialLinks = ({
         rel='noopener noreferrer'
         aria-label='Bandcamp'
       >
-        <img src='/images/icons/b-c.png' alt='' className={styles.listItemImageIcon} />
+        <Image src='/images/icons/b-c.png' alt='' className={styles.listItemImageIcon} />
         <span className={styles.text}>Bandcamp</span>
       </a>
     </li>

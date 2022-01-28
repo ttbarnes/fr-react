@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 import styles from './NewsArticle.module.scss';
 
 const NewsArticle = ({
@@ -38,10 +39,10 @@ const NewsArticle = ({
       <h2>{title}</h2>
 
       {/*
-                <p className={styles.date}>
-                {format(new Date(fromUnixTime(article.createdAt)), 'MMM do')}
-              </p>
-              */}
+        <p className={styles.date}>
+        {format(new Date(fromUnixTime(article.createdAt)), 'MMM do')}
+      </p>
+      */}
 
       {sections && sections.map((section, index) => (
         <ul
@@ -70,7 +71,7 @@ const NewsArticle = ({
                     className={sectionImagesListItemClassName(section.images)}
                   >
                     <div className={styles.imgWrap}>
-                      <img
+                      <Image
                         className={`${styles.image} ${styles.articleSectionImage}`}
                         src={image.cloudinaryUrl} alt=''
                       />

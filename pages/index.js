@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import CONSTANTS from '../constants';
 import HomePageQuote from '../components/HomePageQuote';
 import PageButtonLink from '../components/PageButtonLink';
@@ -18,7 +19,7 @@ const HomePage = () => (
       <meta property='twitter:url' content={CONSTANTS.PAGE.HOME.URL} />
     </Head>
 
-    <img
+    <Image
       src={'/images/background/red-flags-and-high-heels.png'}
       alt=''
       className={`page-img-bg ${styles.bgImage}`}
@@ -35,7 +36,7 @@ const HomePage = () => (
 
       <div className={`row ${styles.imageAndQuotesContainer}`}>
         <div className={`col-40-lg ${styles.imageContainer}`}>
-          <img
+          <Image
             src='/images/home/Fiona-Ross.jpg'
             alt=''
             aria-hidden='true'
