@@ -8,7 +8,8 @@ const BlockQuote = ({
   isHighlight,
   isShort,
   centered,
-  isLong
+  isLong,
+  shorterLineHeight
 }) => {
   let containerClassName = styles.blockquote;
 
@@ -34,6 +35,10 @@ const BlockQuote = ({
 
   if (isLong) {
     containerClassName = `${containerClassName} ${styles.longQuote}`;
+  }
+
+  if (shorterLineHeight) {
+    containerClassName = `${containerClassName} ${styles.shortLineHeight}`;
   }
 
   return (

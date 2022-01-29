@@ -1,5 +1,10 @@
 .listItem {
   float: left;
+  clear: both;
   margin-right: 1.1712em;
   margin-bottom: 0.5856em;
+
+  @media (min-width: 768px) {
+    clear: none;
+  }
 }

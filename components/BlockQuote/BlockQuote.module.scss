@@ -4,7 +4,7 @@
   font-size: 1.2em;
   font-style: italic;
   color: #e4e4e4;
-  line-height: 1.7em;
+  line-height: 2em;
   text-align: center;
   padding: 1.1712em;
   @media (min-width: 768px) {
@@ -60,9 +60,9 @@
 .blockquote {
   text-align: left;
   padding: 0;
-  line-height: 1.3em;
+  line-height: 1.5em;
   @media (min-width: 768px) {
-    line-height: 1.7em;
+    line-height: 2em;
   }
 }
 
@@ -211,11 +211,14 @@
 
 .longQuote {
   max-width: 800px;
-  line-height: 2.2em;
   @media (min-width: 768px) {
-    margin-bottom: 8em;
+    line-height: 2.2em;
   }
   .quoteFirst {
     width: auto;
   }
+}
+
+.shortLineHeight {
+  line-height: 1.5em;
 }

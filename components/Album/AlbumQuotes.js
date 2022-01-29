@@ -8,6 +8,7 @@ const AlbumQuotes = ({ quotes }) => (
         <BlockQuote
           copy={quote.copy}
           author={quote.author}
+          shorterLineHeight
         />
       </li>
     ))}

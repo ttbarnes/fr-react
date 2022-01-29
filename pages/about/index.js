@@ -102,7 +102,7 @@ const AboutPage = ({ articles }) => (
 
           <div className={`row ${styles.memberOfContainer}`}>
 
-            <p className={styles.memberOfTitle}>Fiona is also a member of:</p>
+            <p>Fiona is also a member of:</p>
 
             <MemberOfList />
 
