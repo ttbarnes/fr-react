@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import TextLinksSection from '../../components/TextLinksSection';
 import CONSTANTS from '../../constants';
 import styles from './Contact.module.scss';
@@ -17,8 +16,8 @@ const ContactPage = () => (
       <meta property='twitter:url' content={CONSTANTS.PAGE.CONTACT.URL} />
     </Head>
 
-    <Image
-      src={'/images/background/contact-page.png'}
+    <img
+      src={'/images/background/sofa.png'}
       alt=''
       className='page-img-bg'
       aria-hidden='true'

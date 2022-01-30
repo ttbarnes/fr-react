@@ -1,6 +1,7 @@
 import { gql } from '@apollo/client';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import ALBUMS from '../../data/albums.json';
 import CONSTANTS from '../../constants';
 import {
@@ -11,7 +12,7 @@ import {
 import styles from './Music.module.scss';
 
 const MusicPage = ({ albums }) => (
-  <div className='container'>
+  <div className='container with-page-bg-img'>
 
     <Head>
       <title>{CONSTANTS.PAGE.MUSIC.TITLE}</title>
@@ -23,6 +24,14 @@ const MusicPage = ({ albums }) => (
       <meta property='twitter:url' content={CONSTANTS.PAGE.MUSIC.URL} />
     </Head>
 
+    <img
+      src={'/images/background/sofa.png'}
+      alt=''
+      className='page-img-bg'
+      aria-hidden='true'
+      role='presentation'
+    />
+
     <div className='main-content container-small'>
     
       <ul className='no-list-style' aria-label='Albums'>
@@ -32,11 +41,17 @@ const MusicPage = ({ albums }) => (
             className={styles.listItem}
           >
             <Link href={`/music/${album.formattedName}`}>
-              <a>
-                <img
-                  src={`/images/albums/${album.imageName}.jpg`}
-                  alt={`Fiona Ross - ${album.name}`}
-                />
+              <a className={styles.listItemLink}>
+                <div className={styles.imageContainer}>
+                  <Image
+                    src={`/images/albums/${album.imageName}.jpg`}
+                    alt={`Fiona Ross - ${album.name}`}
+                    layout='responsive'
+                    width='403'
+                    height='403'
+                    className={styles.image}
+                  />
+                </div>
               </a>
             </Link>
           </li>
