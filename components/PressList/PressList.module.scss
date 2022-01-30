@@ -1,5 +1,12 @@
 .listItem {
   padding: 1.1712em;
+  &:first-child {
+    padding-top: 0;
+    @media (min-width: 1000px) {
+      padding-top: 1.1712em;
+      border: 0;
+    }
+  }
 }
 
 .listItemInner {
