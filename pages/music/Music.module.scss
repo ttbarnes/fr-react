@@ -1,0 +1,8 @@
+.listItem {
+  float: left;
+  width: 50%;
+  padding: 1em;
+  &:nth-child(odd) {
+    clear: both;
+  }
+}

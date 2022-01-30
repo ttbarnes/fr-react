@@ -3,6 +3,12 @@ import ALBUMS from '../../../data/albums.json';
 import Album from '../../../components/Album';
 import PageButtonLink from '../../../components/PageButtonLink';
 import CONSTANTS from '../../../constants';
+import {
+  cleanAlbumName,
+  encodeAlbumName,
+  getImagePath,
+  mapAlbums
+} from '../../../helpers/albums';
 
 const AlbumPage = ({ albums }) => {
   const firstAlbum = albums[0];
@@ -71,28 +77,16 @@ const AlbumPage = ({ albums }) => {
   );
 };
 
-// strip commas and brackets
-const cleanAlbumName = (albumName) =>
-  albumName.replace(/,|\(|\)/g, '');
-
-const encodeAlbumName = (albumName) =>
-  cleanAlbumName(albumName)
-    .replace(/ /g, '-');
-
-const getImagePath = (albumName) =>
-  cleanAlbumName(albumName).replace(/\s/g, '-').toLowerCase();
-
 export async function getServerSideProps(context) {
   const { albumName } = context.query;
 
-  let sortedAlbums = ALBUMS;
+  let mappedAlbums = ALBUMS;
 
   if (albumName) {
     const albumNameDecoded = albumName.replace(/-/g, ' ')
 
     const album = ALBUMS.find((album) =>
-      cleanAlbumName(album.name).toLowerCase() === albumNameDecoded.toLowerCase()
-    );
+      cleanAlbumName(album.name).toLowerCase() === albumNameDecoded.toLowerCase());
 
     if (!album) {
       return {
@@ -106,24 +100,15 @@ export async function getServerSideProps(context) {
 
     const allOtherAlbums = ALBUMS.filter((a) => a.name !== album.name);
 
-    sortedAlbums = [
+    mappedAlbums = mapAlbums([
       album,
       ...allOtherAlbums
-    ];
-
-    sortedAlbums.map((a) => {
-      const album = a;
-
-      album.imageName = getImagePath(album.name);
-      album.formattedName = encodeAlbumName(album.name);
-
-      return album;
-    });
+    ]);
   }
 
   return {
     props: {
-      albums: sortedAlbums
+      albums: mappedAlbums
     }
   };
 }

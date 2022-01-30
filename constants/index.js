@@ -41,6 +41,10 @@ const PAGE = {
     TITLE: `Journalism - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/journalism`
   },
+  MUSIC: {
+    TITLE: `Music - ${META_TAGS.AUTHOR}`,
+    URL: `${BASE_URL_REACT}/music`
+  },
   NEWS: {
     TITLE: `News - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/news`
