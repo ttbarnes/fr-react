@@ -29,21 +29,34 @@
 .imageContainer {
   margin-bottom: 3em;
   max-width: 400px;
+  @media (min-width: 850px) {
+    float: left;
+    width: 40%;
+  }
   @media (min-width: 1000px) {
     margin-bottom: 0;
   }
 }
 
 .quotesContainer {
-  max-width: 460px;
-  @media (min-width: 1000px) {
+  max-width: 420px;
+  @media (min-width: 850px) {
+    width: 100%;
     max-width: 100%;
     float: right;
+    padding-left: 1.5em;
+  }
+  @media (min-width: 1000px) {
+    max-width: 420px;
+    padding-left: 0;
   }
 }
 
 .videoContainer {
-  margin-bottom: 6em;
+  margin-bottom: 4em;
+  @media (min-width: 768px) {
+    margin-bottom: 6em;
+  }
 }
 
 .videoHeading {

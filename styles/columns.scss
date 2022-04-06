@@ -26,6 +26,13 @@
   }
 }
 
+.col-60-md {
+  @media (min-width: 850px) {
+    float: left;
+    width: 60%;
+  }
+}
+
 .col-60-lg {
   @media (min-width: 1000px) {
     float: left;

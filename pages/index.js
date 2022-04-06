@@ -47,7 +47,7 @@ const HomePage = () => (
           />
         </div>
 
-        <div className='col-60-lg'>
+        <div className='col-60-md'>
 
           <div className={`col-80-lg ${styles.quotesContainer}`}>
             <HomePageQuote
