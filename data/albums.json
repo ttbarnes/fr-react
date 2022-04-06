@@ -1,9 +1,51 @@
 [
   {
+    "id": 6,
+    "name": "7 Songs in 7 Days",
+    "encodedName": "7-Songs-in-7-Days",
+    "releaseDate": "25th March 2022",
+    "images": {
+      "thumb": "./images/albums/thumb/7-songs-in-7-days.jpg"
+    },
+    "albumType": "latest",
+    "urls": {
+      "bandcamp": "https://fionarossjazz.bandcamp.com/album/7-songs-in-7-days",
+      "spotify": "https://open.spotify.com/album/4z39eDzCzOuvPkRwmcKzdW?si=9l5yUwjXSluTR40eJAo3jg",
+      "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_kU3o7pB_ajR4yMiqv9NEnFj8cZWuI0wPg",
+      "amazon": "https://www.amazon.co.uk/music/player/albums/B09V3C2R9R",
+      "appleMusic": "https://music.apple.com/gb/album/7-songs-in-7-days/1613335157"
+    },
+    "canOrderAudioCd": false,
+    "isOutOfStock": false,
+    "albumCredits": [
+      "All songs written, arranged and produced by Fiona Ross",
+      "Fiona Ross (Vocals and Piano)",
+      "Gibbi Bettini (Guitar and recording engineer)",
+      "Dave Boa (Trumpet)",
+      "Mixed at Highfield Studio by Warren Woodcraft",
+      "Mastered by Nick Watson at Fluid Mastering",
+      "Cover photography by Monika S Jakubowska"
+    ],
+    "tracklist": [
+      "#MondayMood",
+      "#TuesdayThoughts",
+      "The Choices You Made #wednesdywisdom",
+      "How I'm Supposed To Feel #thursdayvibes",
+      "The Best Version of Me #fridayfeeling",
+      "When You Walked In The Room #saturdaynight",
+      "Take Time To Breathe #sundaymorning"
+    ],
+    "hasBackgroundImage": true,
+    "backgroundImageOpacity": 0.05
+  },
+  {
     "id": 5,
     "name": "Red Flags and High Heels",
     "releaseDate": "6th October 2021",
-    "albumType": "latest",
+    "images": {
+      "thumb": "./images/albums/thumb/red-flags-and-high-heels.jpg",
+      "appCover": "./images/albums/red-flags-and-high-heels.jpg"
+    },
     "urls": {
       "bandcamp": "https://fionarossjazz.bandcamp.com/album/red-flags-and-high-heels",
       "spotify": "https://open.spotify.com/album/6XlN5MUmI89wOj83uP0DzW",
