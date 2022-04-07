@@ -29,6 +29,10 @@ const PAGE = {
     TITLE: `Contact - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/contact`
   },
+  GALLERY: {
+    TITLE: `Gallery - ${META_TAGS.AUTHOR}`,
+    URL: `${BASE_URL_REACT}/gallery`
+  },
   GIGS: {
     TITLE: `Gigs - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/gigs`

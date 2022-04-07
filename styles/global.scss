@@ -22,6 +22,9 @@ body {
   font-family: Source Sans Pro, Arial,sans-serif;
   font-weight: normal;
   font-weight: 300;
+  &.ReactModal__Body--open {
+    overflow-y: hidden;
+  }
 }
 
 * {
@@ -90,4 +93,12 @@ iframe {
 .image-max-width-700 {
   display: block;
   max-width: 700px;
+}
+
+.react-swipeable-view-container {
+  height: 100%;
+}
+
+.react-swipeable-view-container {
+  transition: all .1s ease !important;
 }
