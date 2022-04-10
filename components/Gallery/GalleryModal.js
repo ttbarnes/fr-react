@@ -32,14 +32,10 @@ const GalleryModal = ({
       <div className={styles.swipeableContainer}>
         <BindKeyboardSwipeableViews
           enableMouseEvents
-          springConfig={{
-            duration: '3s',
-            delay: '1s'
-          }}
           index={selectedImageIndex}
           onChangeIndex={(newIndex) => {
-            const newCurrentImage = images[newIndex];
-            onSetSelectedImage(newCurrentImage);
+            const newSelectedImage = images[newIndex];
+            onSetSelectedImage(newSelectedImage);
           }}
         >
             {images.map((image) => (
@@ -62,7 +58,11 @@ const GalleryModal = ({
         </BindKeyboardSwipeableViews>
       </div>
 
-      <ArrowNavButtons />
+      <ArrowNavButtons
+        images={images}
+        selectedImageIndex={selectedImageIndex}
+        onSetSelectedImage={onSetSelectedImage}
+      />
 
       <CloseButton onSetModalOpen={onSetModalOpen} />
 
