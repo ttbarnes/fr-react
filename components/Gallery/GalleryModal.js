@@ -7,13 +7,13 @@ import CloseButton from './CloseButton';
 import styles from './GalleryModal.module.scss';
 
 
-const slideRenderer = (images, selectedImageIndex) => {
+const slideRenderer = (key, images, selectedImageIndex) => {
   const image = images[selectedImageIndex];
 
   let imgClassName = styles.modalImage;
   return (
     <div
-      key={image.url}
+      key={`${key}-${image.url}`}
       className={styles.modalImageListItem}
     >
       <div>
@@ -68,7 +68,7 @@ const GalleryModal = ({
             onSetSelectedImage(newSelectedImage);
           }}
           slideRenderer={({key, index}) => {
-            return slideRenderer(images, selectedImageIndex)
+            return slideRenderer(key, images, selectedImageIndex)
           }}
         />
       </div>
