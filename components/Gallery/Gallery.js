@@ -27,6 +27,7 @@ const Gallery = ({
       <>
         <GalleryList
           images={images}
+          jsEnabled={jsEnabled}
           onSetSelectedImage={setSelectedImage}
           onSetModalOpen={setModalOpen}
         />
@@ -42,7 +43,15 @@ const Gallery = ({
     );
   }
 
-  return null;
+  return (
+    <>
+      <GalleryList
+        jsEnabled={jsEnabled}
+        images={images}
+        onSetSelectedImage={setSelectedImage}
+      />
+    </>
+  );
 };
 
 export default Gallery;

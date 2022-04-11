@@ -25,9 +25,12 @@ const slideRenderer = (key, images, selectedImageIndex) => {
       </div>
 
       <div className={styles.swipeableImageOverlay} />
-      <div className={styles.photoCredit}>
-        <p>Photo by {image.caption}</p>
-      </div>
+
+      {image.caption && (
+        <div className={styles.caption}>
+          <p>Photo by {image.caption}</p>
+        </div>
+      )}
     </div>
   );
 };
