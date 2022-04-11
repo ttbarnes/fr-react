@@ -1,9 +1,11 @@
+import styles from './Gallerylist.module.scss';
+
 const GalleryList = ({
   images,
   onSetModalOpen,
   onSetSelectedImage
 }) => (
-  <ul className='no-list-style'>
+  <ul className={`no-list-style ${styles.list}`}>
     {images.map((image) => (
       <li
         key={image.url}
@@ -11,14 +13,12 @@ const GalleryList = ({
           onSetSelectedImage(image);
           onSetModalOpen(true);
         }}
-        style={{
-          float: 'left',
-          width: '25%'
-        }}
+        className={styles.listItem}
       >
         <img
           src={`/images/gallery/${image.url}`}
           alt={`Photo by ${image.caption}`}
+          className={styles.listItemImage}
         />
       </li>
     ))}

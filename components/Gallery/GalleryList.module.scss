@@ -1,0 +1,25 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.listItem {
+  max-width: 25%;
+  max-height: 200px;
+  padding: 1em;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.listItemImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all .4s ease;
+  opacity: .85;
+  &:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
