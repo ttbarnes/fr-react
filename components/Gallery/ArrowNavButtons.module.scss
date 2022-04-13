@@ -7,18 +7,28 @@
   margin: auto 0;
   background: 0;
   border: 0;
+  display: none;
   &:hover,
   &:focus {
     background: none;
+  }
+  @media (min-width: 850px) {
+    display: block;
   }
 }
 
 .previousButton {
   left: 0;
+  > span {
+    left: 1em;
+  }
 }
 
 .nextButton {
   right: 0;
+  > span {
+    right: 1em;
+  }
 }
 
 
