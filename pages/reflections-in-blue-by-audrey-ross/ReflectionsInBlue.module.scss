@@ -1,0 +1,70 @@
+.container {
+  @media (min-width: 1000px) {
+    padding-right: 2em;
+    padding-left: 2em;
+  }
+}
+
+.intro {
+  @media (min-width: 768px) {
+    padding-bottom: 2.3424em;
+  }
+}
+
+.colRight {
+  @media (min-width: 768px) {
+    padding-left: 2.3424em;
+  }
+}
+
+.excerpt {
+  padding-top: 2.3424em;
+  padding-bottom: 1.1712em;
+  > div {
+    font-style: italic;
+  }
+  @media (min-width: 768px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.excerptInterludeTitle {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 1.1712em;
+  @media (min-width: 600px) {
+    font-size: 1.3em;
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 2.3424em;
+  }
+}
+
+.interlude {
+  font-size: 1.3em;
+}
+
+.rowFirst {
+  margin-bottom: 1.7568em;
+  @media (min-width: 768px) {
+    padding-bottom: 2.3424em;
+  }
+}
+
+.rowLast {
+  margin-bottom: 0;
+}
+
+.colPaypal {
+  text-align: center;
+  padding-top: 2.3424em;
+  font-size: 1.1em;
+  @media (min-width: 600px) {
+    font-size: 1.3em;
+  }
+  @media (min-width: 768px) {
+    font-size: 1em;
+  }
+}
+

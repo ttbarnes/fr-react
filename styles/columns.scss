@@ -5,6 +5,13 @@
   }
 }
 
+.col-40-md {
+  @media (min-width: 768px) {
+    float: left;
+    width: 40%;
+  }
+}
+
 .col-40-lg {
   @media (min-width: 1000px) {
     float: left;
@@ -27,7 +34,7 @@
 }
 
 .col-60-md {
-  @media (min-width: 850px) {
+  @media (min-width: 768px) {
     float: left;
     width: 60%;
   }

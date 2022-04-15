@@ -61,6 +61,10 @@ const PAGE = {
     TITLE: `Press - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/press`
   },
+  REFLECTIONS_IN_BLUE: {
+    TITLE: `Reflections in Blue by Audrey Ross`,
+    URL: `${BASE_URL_REACT}/reflections-in-blue-by-audrey-ross`
+  },
   VIDEOS: {
     TITLE: `Videos - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/videos`
