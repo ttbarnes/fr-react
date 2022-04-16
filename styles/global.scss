@@ -8,6 +8,7 @@
 @import './button.scss';
 @import './layout.scss';
 @import './mixins.scss';
+@import './cookie-consent.scss';
 
 html,
 body {
@@ -102,3 +103,4 @@ iframe {
 .react-swipeable-view-container {
   transition: all .1s ease !important;
 }
+

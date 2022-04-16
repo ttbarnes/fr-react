@@ -58,13 +58,26 @@
 
 .colPaypal {
   text-align: center;
-  padding-top: 2.3424em;
   font-size: 1.1em;
+  padding-top: 2.3424em;
   @media (min-width: 600px) {
     font-size: 1.3em;
   }
   @media (min-width: 768px) {
     font-size: 1em;
+    padding-top: 1.5em;
+  }
+
+  @media (min-width: 850px) {
+    font-size: 1em;
+    padding-top: 2.3424em;
+  }
+}
+
+.paypalDisabledCopy {
+  @media (min-width: 768px) {
+    max-width: 420px;
+    margin: 0 auto;
   }
 }
 

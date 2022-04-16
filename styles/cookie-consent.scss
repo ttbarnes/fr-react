@@ -1,0 +1,43 @@
+.cookie-consent {
+  padding: 1em;
+  text-align: center;
+  flex-direction: column;
+  align-items: center !important;
+
+  >div {
+    margin: 0 !important;
+    flex: initial !important;
+
+    &:first-child {
+      padding-bottom: .5em;
+    }
+  }
+
+  >div+div {
+    margin: 0 auto;
+    max-width: 210px;
+    display: flex;
+    flex-direction: row;
+
+    button {
+      font-size: 1em;
+      padding: .5em;
+      border: 0;
+      font-weight: 500;
+
+      &:first-child {
+        margin-right: 1em;
+      }
+
+      ;
+    }
+
+    .button-accept {
+      background: #2EA42F;
+    }
+
+    .button-decline {
+      background: #A42E2E;
+    }
+  }
+}

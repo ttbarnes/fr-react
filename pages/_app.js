@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Script from 'next/script';
+import CookieConsent, { Cookies, getCookieConsentValue } from 'react-cookie-consent';
+import { useState } from 'react';
 import Header from '../components/Header';
 import BurgerMenu from '../components/BurgerMenu';
 import StickySocialLinks from '../components/StickySocialLinks';
@@ -8,6 +10,12 @@ import CONSTANTS from '../constants';
 import styles from '../styles/global.scss';
 
 const App = ({ Component, pageProps }) => {
+  const [hasCookieConsent, setHasCookieConsent] = useState(false);
+  const cookieConsent = getCookieConsentValue();
+
+  if (cookieConsent === true || cookieConsent === false) {
+    setHasCookieConsent(cookieConsent);
+  }
 
   return (
     <div>
@@ -70,28 +78,49 @@ const App = ({ Component, pageProps }) => {
 
       <main>
 
-        <Component {...pageProps} />
+        <Component
+          {...pageProps}
+          cookieConsent={cookieConsent}
+        />
         
       </main>
 
       <Footer />
 
-      <Script
-        id='google-analytics'
-        strategy='afterInteractive'
-      >
-        {`
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-            ga('create', '${process.env.GOOGLE_ANALYTICS}', 'auto', {
-              'cookieExpires': 0,
-              'storage': 'none'
-            });
-            ga('set', 'anonymizeIp', true);
-            `}
-      </Script>
+      <CookieConsent
+        enableDeclineButton
+        onAccept={() => {
+          setHasCookieConsent(true);
+        }}
+        containerClasses='cookie-consent'
+        disableButtonStyles
+        buttonText='Accept'
+        declineButtonText='Decline'
+        flipButtons
+        buttonClasses='button-accept'
+        declineButtonClasses='button-decline'
+      >This website uses cookies to enhance the user experience.
+      </CookieConsent>
+
+      {hasCookieConsent && (
+        <Script
+          id='google-analytics'
+          strategy='afterInteractive'
+        >
+          {`
+          console.log('RUNNING GA');
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+              ga('create', '${process.env.GOOGLE_ANALYTICS}', 'auto', {
+                'cookieExpires': 0,
+                'storage': 'none'
+              });
+              ga('set', 'anonymizeIp', true);
+              `}
+        </Script>
+      )}
 
     </div>
   );
