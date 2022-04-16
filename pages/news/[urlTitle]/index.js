@@ -34,7 +34,7 @@ const NewsArticlePage = ({ article }) => {
 export async function getServerSideProps(context) {
   const { urlTitle } = context.query;
 
-  const { data } = await client.query({
+  const apiResponse = await client.query({
     query: gql`
       query($urlTitle: String!) {
         newsArticleByUrlTitle(urlTitle: $urlTitle) {
@@ -56,7 +56,23 @@ export async function getServerSideProps(context) {
     variables: {
       urlTitle
     }
+  }).catch(() => {
+    return {
+      networkError: true
+    }
   });
+
+  if (apiResponse.networkError) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: '/error',
+      },
+      props: {},
+    };
+  }
+
+  const { data } = apiResponse;
 
   const { newsArticleByUrlTitle } = data;
 

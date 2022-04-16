@@ -35,7 +35,7 @@ const GigsPage = ({ gigs }) => (
 );
 
 export async function getServerSideProps() {
-  const { data } = await client.query({
+  const apiResponse = await client.query({
     query: gql`
       {
         gigsByYear {
@@ -50,7 +50,23 @@ export async function getServerSideProps() {
         }
       }
     `
+  }).catch(() => {
+    return {
+      networkError: true
+    }
   });
+
+  if (apiResponse.networkError) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: '/error',
+      },
+      props: {},
+    };
+  }
+
+  const { data } = apiResponse;
 
   const { gigsByYear } = data;
 

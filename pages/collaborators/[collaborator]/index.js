@@ -102,7 +102,7 @@ const CollaboratorPage = ({ collaborator }) => {
 export async function getServerSideProps(context) {
   const { collaborator: collabName } = context.query;
 
-  const { data } = await client.query({
+  const apiResponse = await client.query({
     query: gql`
       query($name: String!) {
         collaboratorByName(name: $name) {
@@ -137,7 +137,23 @@ export async function getServerSideProps(context) {
     variables: {
       name: collabName
     }
+  }).catch(() => {
+    return {
+      networkError: true
+    }
   });
+
+  if (apiResponse.networkError) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: '/error',
+      },
+      props: {},
+    };
+  }
+
+  const { data } = apiResponse;
 
   const { collaboratorByName } = data;
 

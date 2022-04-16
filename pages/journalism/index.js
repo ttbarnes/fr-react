@@ -37,7 +37,7 @@ const JournalismPage = ({ articles }) => (
 );
 
 export async function getServerSideProps() {
-  const { data } = await client.query({
+  const apiResponse = await client.query({
     query: gql`
       {
         journalism {
@@ -50,7 +50,23 @@ export async function getServerSideProps() {
         }
       }
     `
+  }).catch(() => {
+    return {
+      networkError: true
+    }
   });
+
+  if (apiResponse.networkError) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: '/error',
+      },
+      props: {},
+    };
+  }
+
+  const { data } = apiResponse;
 
   const { journalism } = data;
 
