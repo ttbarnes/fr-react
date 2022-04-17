@@ -76,7 +76,7 @@ const ReflectionsInBluePage = ({ cookieConsent }) => (
               <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1" />
             </form>
           ) : (
-              <p className={styles.paypalDisabledCopy}>Contact <a href="mailto:info@fionaross.co.uk?subject=Fiona Ross - Free Signed Photo">info@fionaross.co.uk</a> for details. <br /> Or, clear your browser cookies, disable any cookie blockers and reload the page to accept PayPal cookies.</p>
+              <p className={styles.paypalDisabledCopy}>Contact <a href="mailto:info@fionaross.co.uk?subject=Fiona Ross - Reflections in Blue">info@fionaross.co.uk</a> for details. <br /> Or, clear your browser cookies, disable any cookie blockers and reload the page to accept PayPal cookies.</p>
           )}
         </div>
       </div>
