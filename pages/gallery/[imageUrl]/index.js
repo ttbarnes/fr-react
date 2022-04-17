@@ -1,6 +1,4 @@
-import { gql } from '@apollo/client';
 import Head from 'next/head';
-import client from '../../../apollo-client';
 import CONSTANTS from '../../../constants';
 import GALLERY_IMAGES from '../../../data/gallery.json';
 import PageButtonLink from '../../../components/PageButtonLink';
