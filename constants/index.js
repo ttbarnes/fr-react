@@ -33,6 +33,10 @@ const PAGE = {
     TITLE: `Gallery - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/gallery`
   },
+  GALLERY_SIGNED_PHOTO: {
+    TITLE: `Signed Photo - ${META_TAGS.AUTHOR}`,
+    URL: `${BASE_URL_REACT}/gallery/signed-photo`
+  },
   GIGS: {
     TITLE: `Gigs - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL_REACT}/gigs`

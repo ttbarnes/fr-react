@@ -1,0 +1,73 @@
+.heading {
+  margin-bottom: .5em;
+}
+
+.subHeading {
+  font-size: 1.2em;
+}
+
+.intro {
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.list {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  @media (min-width: 850px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.listItem {
+  padding: 1em;
+  margin-bottom: 1em;
+  @media (min-width: 600px) {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  @media (min-width: 850px) {
+    max-width: 50%;
+  }
+}
+
+.listItem3Image {
+  @media (min-width: 850px) {
+    height: 300px;
+  }
+}
+
+.listItem4 {
+  @media (min-width: 850px) {
+    max-width: 70%;
+  }
+}
+
+.listItem4Image {
+  @media (min-width: 850px) {
+    width: 450px;
+  }
+}
+
+.paypalButton {
+  width: auto;
+  border: 0;
+  margin-top: 1em;
+}
+
+.paypalButtonLeft {
+  @media (min-width: 850px) {
+    float: left;
+  }
+}
+
+.paypalButtonRight {
+  @media (min-width: 850px) {
+    float: right;
+  }
+}
