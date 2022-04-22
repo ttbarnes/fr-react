@@ -19,11 +19,12 @@ const GalleryPage = ({ images }) => (
     </Head>
 
     <img
-      src={'/images/background/sofa.png'}
+      src={'/images/background/sofa2.png'}
       alt=''
       className='page-img-bg'
       aria-hidden='true'
       role='presentation'
+      style={{ top: '48px'}}
     />
 
     <div className='main-content'>
