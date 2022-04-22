@@ -17,7 +17,7 @@ const GallerySignedPhotPage = ({ cookieConsent }) => (
     </Head>
 
     <div className='main-content text-align-center'>
-      <h1 className={`text-align-center ${styles.heading}`}>Free signed photo of Fi</h1>
+      <h1 className={`text-align-center ${styles.heading}`}><span className='sr-only'>Fiona Ross - </span> Free signed photo of Fi</h1>
       <p className={styles.subHeading}>limited edition</p>
 
       {cookieConsent ? (

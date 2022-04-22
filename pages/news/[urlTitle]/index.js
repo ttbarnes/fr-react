@@ -23,6 +23,7 @@ const NewsArticlePage = ({ article }) => {
 
       <div className='main-content'>
 
+        <h1 className='sr-only'>Fiona Ross - {article.title}</h1>
         <NewsArticle {...article} />
 
       </div>

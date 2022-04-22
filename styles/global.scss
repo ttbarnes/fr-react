@@ -104,3 +104,8 @@ iframe {
   transition: all .1s ease !important;
 }
 
+
+.sr-only {
+  display: none;
+  visibility: hidden;
+}

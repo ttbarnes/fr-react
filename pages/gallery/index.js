@@ -18,7 +18,7 @@ const GalleryPage = ({ images }) => (
     </Head>
 
     <div className='main-content'>
-      <h1 className='text-align-center'>Gallery</h1>
+      <h1 className='text-align-center'><span className='sr-only'>Fiona Ross </span>Gallery <span className='sr-only'>of gigs, events, photoshoots</span></h1>
 
       <Gallery images={images} />
 

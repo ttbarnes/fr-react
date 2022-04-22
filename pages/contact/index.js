@@ -25,7 +25,7 @@ const ContactPage = () => (
     />
 
     <div className={`main-content ${styles.container}`}>
-      <h1 className={styles.heading}>Contact</h1>
+      <h1 className={styles.heading}>Contact <span className='sr-only'>Fiona Ross</span></h1>
 
       <TextLinksSection
         heading='Get email updates'

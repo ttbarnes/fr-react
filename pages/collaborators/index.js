@@ -19,7 +19,7 @@ const CollaboratorsPage = ({ collaborators }) => (
     </Head>
 
     <div className='main-content'>
-      <h1 className='text-align-center'>Collaborators</h1>
+      <h1 className='text-align-center'><span className='sr-only'>Fiona Ross</span> Collaborators</h1>
 
       <CollaboratorsList collaborators={collaborators} />
 

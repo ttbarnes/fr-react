@@ -20,11 +20,10 @@ const JournalismPage = ({ articles }) => (
     </Head>
 
     <div className='main-content'>
-      <h1 className='text-align-center'>Journalism by Fiona</h1>
+      <h1 className='text-align-center'>Journalism by Fiona <span className='sr-only'>Ross</span></h1>
 
       <JournalismIntro />
 
-      <JournalismList articles={articles} />
 
       <PageButtonLink
         href={`${CONSTANTS.BASE_URL}/contact`}

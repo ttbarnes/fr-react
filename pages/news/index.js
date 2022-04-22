@@ -21,7 +21,7 @@ const NewsPage = ({ articles }) => (
     </Head>
 
     <div className='main-content'>
-      <h1 className='text-align-center'>News</h1>
+      <h1 className='text-align-center'><span className='sr-only'>Fiona Ross </span>News</h1>
 
       <ul className='no-list-style link-highlight-hover-border'>
         {articles.map((article) => (

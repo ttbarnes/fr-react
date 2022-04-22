@@ -22,7 +22,7 @@ const GalleryImagePage = ({
     </Head>
 
     <div className='main-content text-align-center'>
-      <h1 className='text-align-center'>Gallery Image</h1>
+      <h1 className='text-align-center'><span className='sr-only'>Fiona Ross </span>Gallery image</h1>
 
       {image.caption && (
         <p className={styles.caption}>Photo by {image.caption}</p>

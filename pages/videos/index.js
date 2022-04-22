@@ -18,7 +18,7 @@ const VideosPage = ({ videos }) => (
     </Head>
 
     <div className='main-content'>
-      <h1 className='text-align-center'>Videos</h1>
+      <h1 className='text-align-center'><span className='sr-only'>Fiona Ross </span>Videos</h1>
 
       <VideosList videos={videos} />
 
