@@ -5,11 +5,18 @@
 }
 
 .listItem {
-  max-width: 25%;
-  max-height: 200px;
+  max-width: 50%;
   padding: 1em;
   overflow: hidden;
   cursor: pointer;
+  @media (min-width: 768px) {
+    max-width: 33.333%;
+    max-height: 200px;
+  }
+  @media (min-width: 900px) {
+    max-width: 25%;
+    max-height: 200px;
+  }
 }
 
 .listItemImage {
