@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import PageButtonLink from '../../components/PageButtonLink';
 import Gallery from '../../components/Gallery';
 import CONSTANTS from '../../constants';
@@ -19,6 +20,12 @@ const GalleryPage = ({ images }) => (
 
     <div className='main-content'>
       <h1 className='text-align-center'><span className='sr-only'>Fiona Ross </span>Gallery <span className='sr-only'>of gigs, events, photoshoots</span></h1>
+
+      <p className='text-align-center'>
+        <Link href={`${CONSTANTS.BASE_URL}/gallery/signed-photo`}>
+          <a className='link-highlight-hover-border'>Get a signed photo from Fi</a>
+        </Link>
+      </p>
 
       <Gallery images={images} />
 
