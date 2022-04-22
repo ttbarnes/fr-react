@@ -67,7 +67,16 @@ const GalleryModal = ({
           overscanSlideBefore={1}
           overscanSlideAfter={1}
           onChangeIndex={(newIndex) => {
-            const newSelectedImage = images[newIndex];
+            let newSelectedImage;
+
+            if (newIndex < 0) {
+              const lastImageIndex = images.length - 1;
+              newSelectedImage = images[lastImageIndex];
+            } else if (newIndex === images.length) {
+              newSelectedImage = images[0];
+            } else {
+              newSelectedImage = images[newIndex];
+            }
             onSetSelectedImage(newSelectedImage);
           }}
           slideRenderer={({key, index}) => {
