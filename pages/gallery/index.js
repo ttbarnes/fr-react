@@ -18,6 +18,14 @@ const GalleryPage = ({ images }) => (
       <meta property='twitter:url' content={CONSTANTS.PAGE.GALLERY.URL} />
     </Head>
 
+    <img
+      src={'/images/background/sofa.png'}
+      alt=''
+      className='page-img-bg'
+      aria-hidden='true'
+      role='presentation'
+    />
+
     <div className='main-content'>
       <h1 className='text-align-center'><span className='sr-only'>Fiona Ross </span>Gallery <span className='sr-only'>of gigs, events, photoshoots</span></h1>
 
