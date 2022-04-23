@@ -4,7 +4,9 @@ import styles from './CollaboratorsList.module.scss';
 import CONSTANTS from '../../constants';
 
 const CollaboratorsList = ({ collaborators }) => {
-  const orderedCollaborators = collaborators.sort((a, b) => {
+  const collabs = JSON.parse(JSON.stringify(collaborators));
+
+  const orderedCollaborators = collabs.sort((a, b) => {
     if (Number(a.orderNumber) > Number(b.orderNumber)) {
       return 1;
     }

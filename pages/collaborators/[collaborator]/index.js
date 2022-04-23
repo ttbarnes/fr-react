@@ -50,12 +50,18 @@ const CollaboratorPage = ({ collaborator }) => {
               <h2 className='h4-size'>Collaborated on</h2>
 
               <ul className={styles.collabOn}>
-                {collaborator.collabOn.map((collab) => (
-                  <li
-                    key={collab}
-                    className={styles.collabOnListItem}
-                  >{collab}</li>
-                ))}
+                {collaborator.collabOn.map((collab) => {
+                  if (collab.length) {
+                    return (
+                      <li
+                        key={collab}
+                        className={styles.collabOnListItem}
+                      >{collab}</li>
+                    );
+                  }
+
+                  return null;
+                })}
               </ul>
             </div>
           )}
