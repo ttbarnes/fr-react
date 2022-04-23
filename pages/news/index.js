@@ -7,6 +7,14 @@ import CONSTANTS from '../../constants';
 import styles from './News.module.scss';
 import NewsArticle from '../../components/NewsArticle';
 
+const sortArticles = (articles) => {
+  const sortedNews = JSON.parse(JSON.stringify(articles));
+
+  sortedNews.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+
+  return sortedNews.reverse();
+};
+
 const NewsPage = ({ articles }) => (
   <div className='container with-page-bg-img'>
 
@@ -67,9 +75,11 @@ export async function getServerSideProps() {
 
   const { news } = data;
 
+  const sortedArticles = sortArticles(news);
+
   return {
     props: {
-      articles: news
+      articles: sortedArticles
     }
   };
 };
