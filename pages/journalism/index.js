@@ -24,6 +24,7 @@ const JournalismPage = ({ articles }) => (
 
       <JournalismIntro />
 
+      <JournalismList articles={articles} />
 
       <PageButtonLink
         href={`${CONSTANTS.BASE_URL}/contact`}
@@ -43,6 +44,7 @@ export async function getServerSideProps() {
           title
           copy
           externalLink
+          releaseDate
           image {
             cloudinaryUrl
           }

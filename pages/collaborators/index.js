@@ -44,6 +44,7 @@ export async function getServerSideProps() {
             cloudinaryUrl
           }
           urlName
+          orderNumber
         }
       }
     `
