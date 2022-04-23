@@ -32,11 +32,13 @@
   position: relative;
   overflow: hidden;
   max-height: 232px;
+  height: 100%;
 }
 
 .listItemImage {
   position: relative;
   z-index: 1;
+  height: 100%;
 }
 
 .listItemLink {
@@ -78,6 +80,11 @@
   }
 }
 
+.hoverContainer {
+  position: relative;
+  padding-top: 5.5em;
+}
+
 .title {
   display: none;
   @media (min-width:1000px + 150px) {
@@ -89,8 +96,8 @@
     top: 0;
     left: 0;
     text-align: center;
-    margin: -0.8em;
-    width: calc(100% + 1.6em);
+    margin: -.9em;
+    width: calc(100% + 1.8em);
   }
 }
 

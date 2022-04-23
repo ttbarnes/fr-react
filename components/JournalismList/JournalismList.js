@@ -28,7 +28,7 @@ const JournalismList = ({ articles }) => {
               className={styles.listItemLink}
               aria-label={article.title}
             >
-              <div>
+              <div className={styles.hoverContainer}>
                 <p className={styles.title} aria-hidden='true'>{article.title}</p>
                 <p className={styles.copy} aria-hidden='true'>{article.copy}</p>
                 <p className={styles.readMore} aria-hidden='true'>Read more</p>
