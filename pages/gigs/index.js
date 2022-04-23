@@ -6,6 +6,21 @@ import PageButtonLink from '../../components/PageButtonLink';
 import styles from './Gigs.module.scss';
 import CONSTANTS from '../../constants';
 
+const sortGigs = (gigs) => {
+  const sortedGigs = JSON.parse(JSON.stringify(gigs));
+
+  sortedGigs.map((year) => {
+    const sortedYearGigs = year.gigs.sort((a, b) => new Date(a.date) - new Date(b.date)).reverse();
+
+    return {
+      year,
+      gigs: sortedYearGigs
+    };
+  });
+
+  return sortedGigs.reverse();
+};
+
 const GigsPage = ({ gigs }) => (
   <div className='container with-page-bg-img'>
 
@@ -71,9 +86,11 @@ export async function getServerSideProps() {
 
   const { gigsByYear } = data;
 
+  const sortedGigs = sortGigs(gigsByYear);
+
   return {
     props: {
-      gigs: gigsByYear
+      gigs: sortedGigs
     }
   };
 }

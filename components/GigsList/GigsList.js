@@ -6,53 +6,63 @@ import styles from './GigsList.module.scss';
 
 const GigsList = ({ gigs }) => (
   <React.Fragment>
-    {gigs.map((year, yearIndex) => (
+    {gigs.map((year, index) => (
       <ul
         key={year.year}
         className={`no-list-style row ${styles.yearList}`}
       >
         <li>
           <YearHeading
-            index={yearIndex}
+            index={index}
             year={year.year}
           />
 
           <ul className='no-list-style'>
-            {year.gigs.map((gig) => (
-              <li
-                key={gig.title}
-                className={styles.listItem}
-              >
-                <div className={styles.listItemInner}>
+            {year.gigs.map((gig) => {
+              let gigTitle;
 
-                  <GigHeading
-                    yearIndex={yearIndex}
-                    title={`${gig.title} - ${gig.venue}`}
-                  />
+              if (gig.title) {
+                gigTitle = `${gig.title} - ${gig.venue}`;
+              } else {
+                gigTitle = gig.venue;
+              }
 
-                  <p className={styles.listItemParagraph}>{gig.location}</p>
+              return (
+                <li
+                  key={gigTitle}
+                  className={styles.listItem}
+                >
+                  <div className={styles.listItemInner}>
 
-                  <p className={`${styles.listItemParagraph} ${styles.listItemDate}`}>
-                    {format(new Date(gig.date), 'MMM do')}
-                    {gig.time && (
-                      <span>&nbsp;-&nbsp;{gig.time}</span>
-                    )}
-                  </p>
+                    <GigHeading
+                      yearIndex={index}
+                      title={gigTitle}
+                    />
 
-                  <div className='row'>
-                    <a
-                      href={gig.ticketsUrl}
-                      className='button button-black'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      aria-label={`Get tickets for ${gig.title}`}
-                    >Tickets
-                    </a>
+                    <p className={styles.listItemParagraph}>{gig.location}</p>
+
+                    <p className={`${styles.listItemParagraph} ${styles.listItemDate}`}>
+                      {format(new Date(gig.date), 'MMM do')}
+                      {gig.time && (
+                        <span>&nbsp;-&nbsp;{gig.time}</span>
+                      )}
+                    </p>
+
+                    <div className='row'>
+                      <a
+                        href={gig.ticketsUrl}
+                        className='button button-black'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        aria-label={`Get tickets for ${gig.title}`}
+                      >Tickets
+                      </a>
+                    </div>
+
                   </div>
-
-                </div>
-              </li>
-            ))}
+                </li>
+              )}
+            )}
           </ul>
         </li>
       </ul>
