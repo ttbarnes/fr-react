@@ -3,10 +3,18 @@ import Link from 'next/link';
 import styles from './CollaboratorsList.module.scss';
 import CONSTANTS from '../../constants';
 
-const CollaboratorsList = ({ collaborators }) => (
-  <React.Fragment>
+const CollaboratorsList = ({ collaborators }) => {
+  const orderedCollaborators = collaborators.sort((a, b) => {
+    if (Number(a.orderNumber) > Number(b.orderNumber)) {
+      return 1;
+    }
+
+    return -1;
+  });
+
+  return (
     <ul className='grid-layout-4-4'>
-      {collaborators.map((collab) => (
+      {orderedCollaborators.map((collab) => (
         <li
           className={`col-50-xs col-25-md no-list-style ${styles.collaboratorsListItem}`}
           key={collab.name}>
@@ -27,7 +35,7 @@ const CollaboratorsList = ({ collaborators }) => (
         </li>
       ))}
     </ul>
-  </React.Fragment>
-);
+  );
+};
 
 export default CollaboratorsList;
