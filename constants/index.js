@@ -1,5 +1,4 @@
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-const BASE_URL_REACT = process.env.NEXT_PUBLIC_BASE_URL_REACT;
 
 const META_TAGS = {
   TITLE: 'Fiona Ross - Jazz Vocalist, Pianist, Composer, Producer and Journalist',
@@ -19,59 +18,59 @@ const PAGE = {
   ABOUT: {
     TITLE: `About - ${META_TAGS.AUTHOR}`,
     DESCRIPTION: 'Award winning vocalist, pianist, composer and producer',
-    URL: `${BASE_URL_REACT}/about`
+    URL: `${BASE_URL}/about`
   },
   COLLABORATORS: {
     TITLE: `Collaborators - ${META_TAGS.AUTHOR}`,
-    URL: `${BASE_URL_REACT}/collaborators`
+    URL: `${BASE_URL}/collaborators`
   },
   CONTACT: {
     TITLE: `Contact - ${META_TAGS.AUTHOR}`,
-    URL: `${BASE_URL_REACT}/contact`
+    URL: `${BASE_URL}/contact`
   },
   GALLERY: {
     TITLE: `Gallery - ${META_TAGS.AUTHOR}`,
-    URL: `${BASE_URL_REACT}/gallery`
+    URL: `${BASE_URL}/gallery`
   },
   GALLERY_SIGNED_PHOTO: {
     TITLE: `Signed Photo - ${META_TAGS.AUTHOR}`,
-    URL: `${BASE_URL_REACT}/gallery/signed-photo`
+    URL: `${BASE_URL}/gallery/signed-photo`
   },
   GIGS: {
     TITLE: `Gigs - ${META_TAGS.AUTHOR}`,
-    URL: `${BASE_URL_REACT}/gigs`
+    URL: `${BASE_URL}/gigs`
   },
   HOME: {
     TITLE: META_TAGS.TITLE,
-    URL: BASE_URL_REACT,
+    URL: BASE_URL,
   },
   JOURNALISM: {
     TITLE: `Journalism - ${META_TAGS.AUTHOR}`,
-    URL: `${BASE_URL_REACT}/journalism`
+    URL: `${BASE_URL}/journalism`
   },
   MUSIC: {
     TITLE: `Music - ${META_TAGS.AUTHOR}`,
-    URL: `${BASE_URL_REACT}/music`
+    URL: `${BASE_URL}/music`
   },
   NEWS: {
     TITLE: `News - ${META_TAGS.AUTHOR}`,
-    URL: `${BASE_URL_REACT}/news`
+    URL: `${BASE_URL}/news`
   },
   PRIVACY_POLICY: {
     TITLE: `Privacy Policy - ${META_TAGS.AUTHOR}`,
-    URL: `${BASE_URL_REACT}/privacy-policy`
+    URL: `${BASE_URL}/privacy-policy`
   },
   PRESS: {
     TITLE: `Press - ${META_TAGS.AUTHOR}`,
-    URL: `${BASE_URL_REACT}/press`
+    URL: `${BASE_URL}/press`
   },
   REFLECTIONS_IN_BLUE: {
     TITLE: `Reflections in Blue by Audrey Ross`,
-    URL: `${BASE_URL_REACT}/reflections-in-blue-by-audrey-ross`
+    URL: `${BASE_URL}/reflections-in-blue-by-audrey-ross`
   },
   VIDEOS: {
     TITLE: `Videos - ${META_TAGS.AUTHOR}`,
-    URL: `${BASE_URL_REACT}/videos`
+    URL: `${BASE_URL}/videos`
   }
 };
 
@@ -91,7 +90,7 @@ const SOCIAL_MEDIA_URLS = {
 
 export default {
   BASE_URL,
-  BASE_URL_REACT,
+  BASE_URL,
   META_TAGS,
   PAGE,
   SOCIAL_MEDA_IMAGE_SIZE,
