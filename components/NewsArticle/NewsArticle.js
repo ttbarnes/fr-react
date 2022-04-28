@@ -35,7 +35,7 @@ const NewsArticle = ({
 
   return (
     <div key={_id}>
-      <h2>{title}</h2>
+      <h2 className={styles.heading}>{title}</h2>
 
       {/*
         <p className={styles.date}>
@@ -52,7 +52,7 @@ const NewsArticle = ({
             {section.copy && (
               <div
                 dangerouslySetInnerHTML={{ __html: section.copy }}
-                className={styles.articleSectionCopy}
+                className={`long-copy-line-height ${styles.articleSectionCopy}`}
               />
             )}
 

@@ -28,7 +28,7 @@ const NewsPage = ({ articles }) => (
       <meta property='twitter:url' content={CONSTANTS.PAGE.NEWS.URL} />
     </Head>
 
-    <div className='main-content'>
+    <div className={`main-content ${styles.mainContainer}`}>
       <h1 className='text-align-center'><span className='sr-only'>Fiona Ross </span>News</h1>
 
       <ul className='no-list-style link-highlight-hover-border'>
@@ -67,6 +67,7 @@ export async function getServerSideProps() {
             images {
               cloudinaryUrl
             }
+            videoEmbed
           }
         }
       }
