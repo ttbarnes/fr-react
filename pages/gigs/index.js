@@ -9,6 +9,8 @@ import CONSTANTS from '../../constants';
 const sortGigs = (gigs) => {
   const sortedGigs = JSON.parse(JSON.stringify(gigs));
 
+  const sortedYears = sortedGigs.sort((a, b) => Number(a.year) - Number(b.year)).reverse();
+
   sortedGigs.map((year) => {
     const sortedYearGigs = year.gigs.sort((a, b) => new Date(a.date) - new Date(b.date)).reverse();
 
@@ -18,7 +20,7 @@ const sortGigs = (gigs) => {
     };
   });
 
-  return sortedGigs.reverse();
+  return sortedGigs;
 };
 
 const GigsPage = ({ gigs }) => (
@@ -33,6 +35,14 @@ const GigsPage = ({ gigs }) => (
       <meta name='twitter:title' content={CONSTANTS.PAGE.GIGS.TITLE} />
       <meta property='twitter:url' content={CONSTANTS.PAGE.GIGS.URL} />
     </Head>
+
+    <img
+      src={'/images/background/gigs-page.png'}
+      alt=''
+      className='page-img-bg'
+      aria-hidden='true'
+      role='presentation'
+    />
 
     <div className='main-content'>
       <h1 className='sr-only'>Fiona Ross gigs</h1>
