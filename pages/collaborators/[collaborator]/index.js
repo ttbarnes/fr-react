@@ -10,6 +10,35 @@ const CollaboratorPage = ({ collaborator }) => {
   const title = `${collaborator.name} - ${CONSTANTS.PAGE.COLLABORATORS.TITLE}`;
   const url = `${CONSTANTS.PAGE.COLLABORATORS.URL}/${collaborator.name}`;
 
+  const {
+    website,
+    facebook,
+    instagram,
+    twitter,
+    soundcloud,
+    bandcamp,
+    bio,
+    email,
+    phone
+  } = collaborator.urls;
+
+  const urlValues = {
+    website,
+    facebook,
+    instagram,
+    twitter,
+    soundcloud,
+    bandcamp,
+    bio,
+    email,
+    phone
+  };
+
+  const cleanUrls = Object.values(urlValues).filter((url) => (url && url !== ""));
+  const cleanCollabOn = Object.values(collaborator.collabOn).filter((item) => item !== "");
+
+  const hasAbout = (collaborator.about && collaborator.about !== '<p><br></p>');
+
   return (
     <div className='container with-page-bg-img'>
 
@@ -45,7 +74,7 @@ const CollaboratorPage = ({ collaborator }) => {
             <p>{collaborator.role}</p>
           </div>
 
-          {(collaborator.collabOn && collaborator.collabOn.length > 0) && (
+          {cleanCollabOn.length ? (
             <div className={styles.row}>
               <h2 className='h4-size'>Collaborated on</h2>
 
@@ -64,9 +93,9 @@ const CollaboratorPage = ({ collaborator }) => {
                 })}
               </ul>
             </div>
-          )}
+          ) : null}
 
-          {collaborator.about && (
+          {hasAbout && (
             <div className={styles.row}>
               <h3 className='h4-size'>About</h3>
 
@@ -77,13 +106,13 @@ const CollaboratorPage = ({ collaborator }) => {
             </div>
           )}
 
-          {collaborator.urls && (
+          {cleanUrls.length ? (
             <div className={styles.row}>
               <h3>Links</h3>
 
               <CollaboratorUrls urls={collaborator.urls} />
             </div>
-          )}
+          ) : null}
 
           <PageButtonLink
             href={`${CONSTANTS.BASE_URL}/collaborators/${collaborator.nextCollaborator.urlName}`}
