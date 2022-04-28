@@ -1,5 +1,6 @@
 .heading {
   text-transform: initial;
+  margin-bottom: 0;
 }
 
 .imgWrap {
@@ -117,6 +118,25 @@
   @media (min-width: 768px) {
     display: inline-block;
     vertical-align: top;
+  }
+}
+
+.articleSectionCopy {
+  p {
+    margin-bottom:1.1712em;
+  }
+  u {
+    text-decoration: none;
+  }
+  blockquote {
+    padding-left: 0;
+    margin-left: 0;
+    font-style: italic;
+    color: #FFF;
+    strong {
+      font-weight: 300;
+      color: #C5C5C5;
+    }
   }
 }
 
