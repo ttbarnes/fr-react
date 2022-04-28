@@ -10,7 +10,7 @@ import NewsArticle from '../../components/NewsArticle';
 const sortArticles = (articles) => {
   const sortedNews = JSON.parse(JSON.stringify(articles));
 
-  sortedNews.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+  sortedNews.sort((a, b) => new Date(Number(a.createdAt)) - new Date(Number(b.createdAt)));
 
   return sortedNews.reverse();
 };
