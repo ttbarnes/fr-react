@@ -66,6 +66,9 @@
 .iframeContainer {
   max-width: 800px;
   margin: 0 auto 2.5em auto;
+  iframe {
+    width: 100%;
+  }
 }
 
 .findOutMore {
