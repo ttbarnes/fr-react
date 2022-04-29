@@ -45,13 +45,14 @@ const Album = (album) => {
 
           <div className='row'>
 
-            {album.canOrderAudioCd && (
+            {/*
+            album.canOrderAudioCd && (
               <p className={styles.audioCdLink}>
                 <Link href={`${CONSTANTS.BASE_URL}/music/album/${album.id}/audio-cd`}>
                   <a className='link-highlight-hover-border' aria-label={`Get a signed Audio CD of ${album.name}`}>Get a signed Audio CD</a>
                 </Link>
               </p>
-            )}
+            )*/}
 
             {(album.renderReviewsLink || album.renderPressLink) && (
               <div className={styles.ctaLinksContainer}>
