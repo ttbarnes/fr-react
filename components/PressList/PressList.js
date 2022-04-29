@@ -5,9 +5,9 @@ const PressList = ({ articles }) => (
     className='no-list-style'
     aria-label='Press articles'
   >
-    {articles.map((article) => (
+    {articles.map((article, index) => (
       <li
-        key={article.title}
+        key={`${article.title}-${index}`}
         className={`col-50-lg ${styles.listItem}`}
       >
         <div className={styles.listItemInner}>
