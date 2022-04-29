@@ -1,5 +1,5 @@
 import CONSTANTS from '../../constants';
-import styles from './Gallerylist.module.scss';
+import styles from './GalleryList.module.scss';
 
 const GalleryList = ({
   jsEnabled,
