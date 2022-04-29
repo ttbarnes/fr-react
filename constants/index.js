@@ -2,7 +2,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const META_TAGS = {
   TITLE: 'Fiona Ross - Jazz Vocalist, Pianist, Composer, Producer and Journalist',
-  DESCRIPTION: 'Award Winning Vocalist, Pianist, Composer, Producer and Journalist. Red Flags and High Heels out now',
+  DESCRIPTION: 'Award Winning Vocalist, Pianist, Composer, Producer and Journalist. 7 Songs in 7 Days out now',
   KEYWORDS: 'Fiona Ross, jazz, vocalist, pianist, composer, musician, singer, songwriter, producer, journalist, london',
   AUTHOR: 'Fiona Ross',
   OG_DESCRIPTION: 'It\’s just me doing my thing',
