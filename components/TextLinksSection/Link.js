@@ -11,7 +11,7 @@ const Link = ({
       href={isMailTo ? `mailto:${url}` : url}
       target='_blank'
       rel='noopener noreferrer'
-      className={`link-highlight-hover-border ${styles.link}`}
+      className={`link-highlight-hover-border word-break-break-all ${styles.link}`}
     >{url}</a>
   </React.Fragment>
 );

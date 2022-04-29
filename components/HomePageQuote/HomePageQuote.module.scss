@@ -14,7 +14,7 @@
     margin-left: 0;
   }
   @media (min-width: 850px) {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
   }
   @media (min-width: 1000px) {
     font-size: 1.4em;
@@ -57,11 +57,11 @@
 
 .author {
   font-size: 0.8em;
-  margin-left: -4px;
   line-height: 2.3em;
   text-align: left;
-  padding-left: 30px;
   display: block;
+  margin-left: -4px;
+  padding-left: 30px;
   @media (min-width: 600px) {
     padding-left: 10px;
   }
@@ -87,11 +87,8 @@
   left: -20px;
   font-size: 4em;
   @media (min-width: 600px) {
-    top: -5px;
-    left: -9%;
-  }
-  @media (min-width: 768px) {
-    top: -4px;
+    top: -10%;
+    left: -8%;
   }
   @media (min-width: 1000px) {
     left: -15%;
@@ -120,4 +117,12 @@
 
 .last-blockquote {
   margin-bottom: 0;
+  @media (min-width: 600px) {
+    padding-top: 1em;
+  }
+  .quoteFirst {
+    @media (min-width: 600px) {
+      top: -10%;
+    }
+  }
 }

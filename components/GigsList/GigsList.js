@@ -51,7 +51,7 @@ const GigsList = ({ gigs }) => (
                     <div className='row'>
                       <a
                         href={gig.ticketsUrl}
-                        className='button button-black'
+                        className={`button button-black ${styles.button}`}
                         target='_blank'
                         rel='noopener noreferrer'
                         aria-label={`Get tickets for ${gig.title}`}

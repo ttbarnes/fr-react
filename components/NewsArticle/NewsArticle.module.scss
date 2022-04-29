@@ -68,6 +68,10 @@
     padding-bottom: 0;
     border-bottom: 0 none;
   }
+  iframe {
+    max-width: 100%;
+  }
+  overflow-x: hidden;
 }
 
 .articleSectionImagesList {

@@ -19,13 +19,11 @@ const HomePage = () => (
       <meta property='twitter:url' content={CONSTANTS.PAGE.HOME.URL} />
     </Head>
 
-    <Image
+    <img
       src={'/images/background/red-flags-and-high-heels.png'}
       alt=''
       className={`page-img-bg ${styles.bgImage}`}
       aria-hidden='true'
-      role='presentation'
-      layout='fill'
     />
 
     <div className='main-content container-small'>
