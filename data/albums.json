@@ -107,7 +107,7 @@
       "itunes": "https://itunes.apple.com/gb/album/fierce-and-non-compliant/1460549860",
       "appleMusic": "https://itunes.apple.com/gb/album/fierce-and-non-compliant/1460549860"
     },
-    "canOrderAudioCd": true,
+    "canOrderAudioCd": false,
     "isOutOfStock": false,
     "albumCredits": [
       "Written, arranged and produced by Fiona Ross (Vocals, Piano)",
@@ -159,7 +159,7 @@
       "itunes": "https://itunes.apple.com/gb/album/black-white-and-a-little-bit-of-grey/id1299378578",
       "appleMusic": "https://itunes.apple.com/gb/album/black-white-and-a-little-bit-of-grey/id1299378578"
     },
-    "canOrderAudioCd": true,
+    "canOrderAudioCd": false,
     "description": "'Black, White and a Little Bit of Grey', explores the story of a husband, a wife, and a mistress: a web of emotions, of desires, of regrets, of ecstasy. Situations are not always as clear-cut as they may appear as allegiances shift and betrayals become serpentine - not everything is black and white. Sometimes - when the victim becomes hazy, when pain and passion become intertwined — there's 'a Little Bit of Grey.",
     "albumCredits": [
       "Written, arranged and produced by Fiona Ross",
@@ -228,7 +228,7 @@
       "itunes": "https://itunes.apple.com/gb/album/just-me-and-sometimes-someone-else/id1216328709",
       "appleMusic": "https://itunes.apple.com/gb/album/just-me-and-sometimes-someone-else/id1216328709"
     },
-    "canOrderAudioCd": true,
+    "canOrderAudioCd": false,
     "renderQuotes": false,
     "renderReviewsLink": true,
     "renderPressLink": true,
