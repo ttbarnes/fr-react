@@ -98,7 +98,7 @@ const HomePage = () => (
         <p>
           <Link
             href={process.env.NEXT_PUBLIC_MAILCHIMP_URL}>
-            <a className={`link-highlight-hover-border ${styles.findOutMore}`}>{process.env.NEXT_PUBLIC_MAILCHIMP_URL}</a>
+            <a className={`link-highlight-hover-border ${styles.findOutMore}`}>Fiona Ross mailing list</a>
           </Link>
         </p>
 

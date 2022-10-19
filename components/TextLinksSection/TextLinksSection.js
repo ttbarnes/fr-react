@@ -56,7 +56,7 @@ const TextLinksSection = ({
         }
 
         const firstAndOnlyLink = links[0];
-        const { url, isMailTo } = firstAndOnlyLink;
+        const { url, text, isMailTo } = firstAndOnlyLink;
             
         return (
           <li
@@ -65,6 +65,7 @@ const TextLinksSection = ({
           >
             <Link
               url={url}
+              text={text ? text : url}
               isMailTo={isMailTo}
             />
           </li>

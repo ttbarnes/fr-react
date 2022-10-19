@@ -3,6 +3,7 @@ import styles from './Link.module.scss';
 
 const Link = ({
   url,
+  text,
   isMailTo
 }) => (
   <React.Fragment>
@@ -12,7 +13,7 @@ const Link = ({
       target='_blank'
       rel='noopener noreferrer'
       className={`link-highlight-hover-border word-break-break-all ${styles.link}`}
-    >{url}</a>
+    >{text ? text : url}</a>
   </React.Fragment>
 );
 

@@ -33,7 +33,7 @@ const ContactPage = () => (
         groups={[
           {
             links: [
-              { url: process.env.NEXT_PUBLIC_MAILCHIMP_URL }
+              { url: process.env.NEXT_PUBLIC_MAILCHIMP_URL, text: 'Fiona Ross mailing list' }
             ]
           }
         ]}
