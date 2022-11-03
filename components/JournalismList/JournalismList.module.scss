@@ -52,7 +52,6 @@
   z-index: 2;
   padding: 0.8em;
   text-align: center;
-  display: none !important;
   opacity: 0;
   @media (min-width: 1000px) {
     display: block !important;
@@ -77,6 +76,20 @@
       top: 0;
       opacity: 1;
     }
+  }
+}
+
+.listItemLinkMobile {
+  @media (min-width: 1000px) {
+    display: none !important;
+  }
+}
+
+.listItemLinkDesktop,
+.listItemImageDesktop {
+  display: none !important;
+  @media (min-width: 1000px) {
+    display: block !important;
   }
 }
 

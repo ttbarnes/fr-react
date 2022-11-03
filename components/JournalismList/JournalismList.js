@@ -14,9 +14,25 @@ const JournalismList = ({ articles }) => {
         >
 
           <div className={styles.listItemInner}>
+            <a
+              href={article.externalLink}
+              target='_blank'
+              rel='noopener noreferrer'
+              className={`${styles.listItemLink} ${styles.listItemLinkMobile}`}
+              aria-label={article.title}
+              aria-hidden='true'
+            >
+              <img
+                src={article.image.cloudinaryUrl}
+                className={styles.listItemImage}
+                aria-hidden='true'
+                alt=''
+              />
+            </a>
+
             <img
               src={article.image.cloudinaryUrl}
-              className={styles.listItemImage}
+              className={`${styles.listItemImage} ${styles.listItemImageDesktop}`}
               aria-hidden='true'
               alt=''
             />
@@ -25,7 +41,7 @@ const JournalismList = ({ articles }) => {
               href={article.externalLink}
               target='_blank'
               rel='noopener noreferrer'
-              className={styles.listItemLink}
+              className={`${styles.listItemLink} ${styles.listItemLinkDesktop}`}
               aria-label={article.title}
             >
               <div className={styles.hoverContainer}>
