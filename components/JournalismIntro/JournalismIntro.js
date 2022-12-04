@@ -12,6 +12,7 @@ const JournalismIntro = () => (
 
     <p>Through Women in Jazz Media, Fiona collaborates with many official partners including the Jazz Times, Jazzwise, Jazz in Europe, Black Music Matters and Céline Peterson and Fiona's work with these partners has led to an increase in the gender and diversity balance in several publications. Fiona's interviews for Women in Jazz Media include Celine Peterson, Hiromi, Jordannah Elizabeth and Dr Tammy Kernodle.</p>
 
+    <p>Follow Fiona's journalism on her <a className='link-highlight-hover-border' href='https://www.instagram.com/fionarossjazzjournalism' target='_blank' rel='noopener noreferrer' aria-label="Follow Fiona's journalism on Instagram">dedicated Instagram account</a>.</p>
     <p>For reviews or interview requests please contact <a className='link-highlight-hover-border' href='mailto:info@fionaross.co.uk'>info@fionaross.co.uk</a></p>
   </div>
 );
