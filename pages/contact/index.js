@@ -54,6 +54,12 @@ const ContactPage = () => (
         heading='Media and Public Relations'
         groups={[
           {
+            groupHeading: 'Press kit',
+            links: [
+              { url: 'https://heyzine.com/flip-book/1b8d151950.html', text: 'Fiona Ross press kit' }
+            ]
+          },
+          {
             groupHeading: 'Canada',
             groupHeadingSubText: 'Eric Alper',
             links: [

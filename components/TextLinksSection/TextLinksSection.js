@@ -32,11 +32,16 @@ const TextLinksSection = ({
               key={links[0].url}
               className={styles.groupMultiple}
             >
-              <h3 className={`h3-size ${styles.heading} ${styles.groupHeading}`}><span className='text-uppercase'>{groupHeading}</span> - {groupHeadingSubText}</h3>
+              <h3 className={`h3-size ${styles.heading} ${styles.groupHeading}`}>
+                <span className='text-uppercase'>{groupHeading}</span>
+                {groupHeadingSubText && (
+                  <span> - {groupHeadingSubText}</span>
+                )}
+              </h3>
 
               <ul className='no-list-style' aria-label={`${heading} - ${groupHeading} - ${groupHeadingSubText}`}>
                 {links.map((link) => {
-                  const { url, isMailTo } = link;
+                  const { url, isMailTo, text } = link;
 
                   return (
                     <li
@@ -45,6 +50,7 @@ const TextLinksSection = ({
                     >
                       <Link
                         url={url}
+                        text={text}
                         isMailTo={isMailTo}
                       />
                     </li>
