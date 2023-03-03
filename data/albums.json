@@ -1,6 +1,6 @@
 [
   {
-    "id": 6,
+    "id": 7,
     "name": "7 Songs in 7 Days",
     "encodedName": "7-Songs-in-7-Days",
     "releaseDate": "25th March 2022",
@@ -8,6 +8,28 @@
       "thumb": "./images/albums/thumb/7-songs-in-7-days.jpg"
     },
     "albumType": "latest",
+    "urls": {
+      "bandcamp": "https://fionarossjazz.bandcamp.com/album/7-songs-in-7-days",
+      "spotify": "https://open.spotify.com/album/4z39eDzCzOuvPkRwmcKzdW?si=9l5yUwjXSluTR40eJAo3jg",
+      "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_kU3o7pB_ajR4yMiqv9NEnFj8cZWuI0wPg",
+      "amazon": "https://www.amazon.co.uk/music/player/albums/B09V3C2R9R",
+      "appleMusic": "https://music.apple.com/gb/album/7-songs-in-7-days/1613335157"
+    },
+    "canOrderAudioCd": false,
+    "isOutOfStock": false,
+    "albumCredits": [],
+    "tracklist": [],
+    "hasBackgroundImage": true,
+    "backgroundImageOpacity": 0.05
+  },
+  {
+    "id": 6,
+    "name": "7 Songs in 7 Days",
+    "encodedName": "7-Songs-in-7-Days",
+    "releaseDate": "25th March 2022",
+    "images": {
+      "thumb": "./images/albums/thumb/7-songs-in-7-days.jpg"
+    },
     "urls": {
       "bandcamp": "https://fionarossjazz.bandcamp.com/album/7-songs-in-7-days",
       "spotify": "https://open.spotify.com/album/4z39eDzCzOuvPkRwmcKzdW?si=9l5yUwjXSluTR40eJAo3jg",
