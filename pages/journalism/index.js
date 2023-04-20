@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 import Head from 'next/head';
 import client from '../../apollo-client';
 import JournalismIntro from '../../components/JournalismIntro';
-import JournalismList from '../../components/JournalismList';
+import CategoriesList from '../../components/CategoriesList';
 import PageButtonLink from '../../components/PageButtonLink';
 import CONSTANTS from '../../constants';
 
@@ -24,7 +24,11 @@ const JournalismPage = ({ articles }) => (
 
       <JournalismIntro />
 
-      <JournalismList articles={articles} />
+      {/*
+        <JournalismList articles={articles} />
+      */}
+
+      <CategoriesList categories={Object.values(CONSTANTS.JOURNALISM_CATEGORIES)} />
 
       <PageButtonLink
         href={`${CONSTANTS.BASE_URL}/contact`}

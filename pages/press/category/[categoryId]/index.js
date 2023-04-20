@@ -1,9 +1,10 @@
 import { gql } from '@apollo/client';
 import Head from 'next/head';
-import client from '../../apollo-client';
-import CategoriesList from '../../components/CategoriesList';
-import PageButtonLink from '../../components/PageButtonLink';
-import CONSTANTS from '../../constants';
+import client from '../../../../apollo-client';
+import ExternalLinksList from '../../../../components/ExternalLinksList';
+import PressCategoriesList from '../../../../components/CategoriesList';
+import PageButtonLink from '../../../../components/PageButtonLink';
+import CONSTANTS from '../../../../constants';
 
 const PressPage = ({ articles }) => (
   <div className='container'>
@@ -21,31 +22,44 @@ const PressPage = ({ articles }) => (
     <div className='main-content'>
       <h1 className='text-align-center'><span className='sr-only'>Finoa Ross </span> Press</h1>
 
-      <CategoriesList categories={Object.values(CONSTANTS.PRESS_CATEGORIES)}/>
+      <ExternalLinksList
+        items={articles}
+        heading='Press articles'
+      />
 
+      {/*
       <PageButtonLink
         href={`${CONSTANTS.BASE_URL}/gigs`}
         text='Gigs'
       />
+      */}
 
     </div>
 
   </div>
 );
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  const { categoryId } = context.query;
+
   const apiResponse = await client.query({
     query: gql`
-      {
-        press {
+      query pressCategory($categoryId: ID!) {
+        pressCategory(categoryId: $categoryId) {
           author
           title
           excerpt
           externalLink
           categoryId
+          image {
+            cloudinaryUrl
+          }
         }
       }
-    `
+    `,
+    variables: {
+      categoryId: Number(categoryId)
+    }
   }).catch(() => {
     return {
       networkError: true
@@ -64,11 +78,11 @@ export async function getServerSideProps() {
 
   const { data } = apiResponse;
 
-  const { press } = data;
+  const { pressCategory } = data;
 
   return {
     props: {
-      articles: press,
+      articles: pressCategory,
     }
   };
 }
