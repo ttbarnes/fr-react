@@ -20,6 +20,9 @@ const PAGE = {
     DESCRIPTION: 'Award winning vocalist, pianist, composer and producer',
     URL: `${BASE_URL}/about`
   },
+  CATEGORY: {
+    URL: '/category'
+  },
   COLLABORATORS: {
     TITLE: `Collaborators - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL}/collaborators`
@@ -93,41 +96,31 @@ const JOURNALISM_CATEGORIES = {
     TEXT: 'Women in Jazz Media',
     VALUE: 1,
     IMAGE_URL: '/images/categories/journalism/temp.jpg',
-    // TODO: category title?
-    // update PAGES with category.
-    ROUTE: `${PAGE.JOURNALISM.URL}/category/1`
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/1`
   },
   JAZZ_IN_EUROPE: {
     TEXT: 'Jazz in Europe',
     VALUE: 2,
     IMAGE_URL: '/images/categories/journalism/temp.jpg',
-    // TODO: category title?
-    // update PAGES with category.
-    ROUTE: `${PAGE.JOURNALISM.URL}/category/2`
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/2`
   },
   KIND_OF_JAZZ: {
     TEXT: 'Kind of Jazz',
     VALUE: 3,
     IMAGE_URL: '/images/categories/journalism/temp.jpg',
-    // TODO: category title?
-    // update PAGES with category.
-    ROUTE: `${PAGE.JOURNALISM.URL}/category/3`
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/3`
   },
   JAZZ_QUARTERLY: {
     TEXT: 'Jazz Quarterly',
     VALUE: 4,
     IMAGE_URL: '/images/categories/journalism/temp.jpg',
-    // TODO: category title?
-    // update PAGES with category.
-    ROUTE: `${PAGE.JOURNALISM.URL}/category/4`
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/4`
   },
   OTHER: {
     TEXT: 'Other',
     VALUE: 5,
     IMAGE_URL: '/images/categories/journalism/temp.jpg',
-    // TODO: category title?
-    // update PAGES with category.
-    ROUTE: `${PAGE.JOURNALISM.URL}/category/5`
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/5`
   }
 };
 
@@ -136,25 +129,19 @@ const PRESS_CATEGORIES = {
     TEXT: 'Reviews',
     VALUE: 1,
     IMAGE_URL: '/images/categories/press/reviews.jpg',
-    // TODO: category title?
-    // update PAGES with category.
     ROUTE: `${PAGE.PRESS.URL}/category/1`
   },
   INTERVIEWS: {
     TEXT: 'Interviews',
     VALUE: 2,
     IMAGE_URL: '/images/categories/press/interviews.jpg',
-    // TODO: category title?
-    // update PAGES with category.
-    ROUTE: `${PAGE.PRESS.URL}/category/2`
+    ROUTE: `${PAGE.PRESS.URL}${PAGE.CATEGORY.URL}/2`
   },
   OTHER: {
     TEXT: 'Other',
     VALUE: 3,
     IMAGE_URL: '/images/categories/press/other.jpg',
-    // TODO: category title?
-    // update PAGES with category.
-    ROUTE: `${PAGE.PRESS.URL}/category/3`
+    ROUTE: `${PAGE.PRESS.URL}${PAGE.CATEGORY.URL}/3`
   }
 };
 
