@@ -27,12 +27,10 @@ const PressPage = ({ articles }) => (
         heading='Press articles'
       />
 
-      {/*
       <PageButtonLink
         href={`${CONSTANTS.BASE_URL}/gigs`}
-        text='Gigs'
+        text='TODO'
       />
-      */}
 
     </div>
 

@@ -24,10 +24,6 @@ const JournalismPage = ({ articles }) => (
 
       <JournalismIntro />
 
-      {/*
-        <JournalismList articles={articles} />
-      */}
-
       <CategoriesList categories={Object.values(CONSTANTS.JOURNALISM_CATEGORIES)} />
 
       <PageButtonLink
