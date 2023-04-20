@@ -92,7 +92,7 @@ const JOURNALISM_CATEGORIES = {
   WIJM: {
     TEXT: 'Women in Jazz Media',
     VALUE: 1,
-    IMAGE_URL: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    IMAGE_URL: '/images/categories/journalism/temp.jpg',
     // TODO: category title?
     // update PAGES with category.
     ROUTE: `${PAGE.JOURNALISM.URL}/category/1`
@@ -100,7 +100,7 @@ const JOURNALISM_CATEGORIES = {
   JAZZ_IN_EUROPE: {
     TEXT: 'Jazz in Europe',
     VALUE: 2,
-    IMAGE_URL: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    IMAGE_URL: '/images/categories/journalism/temp.jpg',
     // TODO: category title?
     // update PAGES with category.
     ROUTE: `${PAGE.JOURNALISM.URL}/category/2`
@@ -108,7 +108,7 @@ const JOURNALISM_CATEGORIES = {
   KIND_OF_JAZZ: {
     TEXT: 'Kind of Jazz',
     VALUE: 3,
-    IMAGE_URL: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    IMAGE_URL: '/images/categories/journalism/temp.jpg',
     // TODO: category title?
     // update PAGES with category.
     ROUTE: `${PAGE.JOURNALISM.URL}/category/3`
@@ -116,7 +116,7 @@ const JOURNALISM_CATEGORIES = {
   JAZZ_QUARTERLY: {
     TEXT: 'Jazz Quarterly',
     VALUE: 4,
-    IMAGE_URL: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    IMAGE_URL: '/images/categories/journalism/temp.jpg',
     // TODO: category title?
     // update PAGES with category.
     ROUTE: `${PAGE.JOURNALISM.URL}/category/4`
@@ -124,7 +124,7 @@ const JOURNALISM_CATEGORIES = {
   OTHER: {
     TEXT: 'Other',
     VALUE: 5,
-    IMAGE_URL: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    IMAGE_URL: '/images/categories/journalism/temp.jpg',
     // TODO: category title?
     // update PAGES with category.
     ROUTE: `${PAGE.JOURNALISM.URL}/category/5`
@@ -135,7 +135,7 @@ const PRESS_CATEGORIES = {
   REVIEWS: {
     TEXT: 'Reviews',
     VALUE: 1,
-    IMAGE_URL: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    IMAGE_URL: '/images/categories/press/reviews.jpg',
     // TODO: category title?
     // update PAGES with category.
     ROUTE: `${PAGE.PRESS.URL}/category/1`
@@ -143,7 +143,7 @@ const PRESS_CATEGORIES = {
   INTERVIEWS: {
     TEXT: 'Interviews',
     VALUE: 2,
-    IMAGE_URL: 'https://images.unsplash.com/photo-1543242594-c8bae8b9e708?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    IMAGE_URL: '/images/categories/press/interviews.jpg',
     // TODO: category title?
     // update PAGES with category.
     ROUTE: `${PAGE.PRESS.URL}/category/2`
@@ -151,7 +151,7 @@ const PRESS_CATEGORIES = {
   OTHER: {
     TEXT: 'Other',
     VALUE: 3,
-    IMAGE_URL: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    IMAGE_URL: '/images/categories/press/other.jpg',
     // TODO: category title?
     // update PAGES with category.
     ROUTE: `${PAGE.PRESS.URL}/category/3`
