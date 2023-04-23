@@ -5,6 +5,8 @@ import ExternalLinksList from '../../../../components/ExternalLinksList';
 import PressCategoriesList from '../../../../components/CategoriesList';
 import PageButtonLink from '../../../../components/PageButtonLink';
 import CONSTANTS from '../../../../constants';
+import getStringWithoutDashes from '../../../../helpers/get-string-without-dashes';
+import getCategoryByTitle from '../../../../helpers/get-category-by-title';
 
 const PressPage = ({ articles }) => (
   <div className='container'>
@@ -28,8 +30,8 @@ const PressPage = ({ articles }) => (
       />
 
       <PageButtonLink
-        href={`${CONSTANTS.BASE_URL}/gigs`}
-        text='TODO'
+        href={CONSTANTS.PAGE.PRESS.URL}
+        text='View all press'
       />
 
     </div>
@@ -38,7 +40,23 @@ const PressPage = ({ articles }) => (
 );
 
 export async function getServerSideProps(context) {
-  const { categoryId } = context.query;
+  const { categoryTitle } = context.query;
+
+  const titleWithoutDashes = getStringWithoutDashes(categoryTitle);
+
+  const categories = Object.values(CONSTANTS.PRESS_CATEGORIES);
+
+  const category = getCategoryByTitle(categories, titleWithoutDashes);
+
+  if (!category) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: CONSTANTS.PAGE.PRESS.URL
+      },
+      props: {}
+    };
+  }
 
   const apiResponse = await client.query({
     query: gql`
@@ -56,7 +74,7 @@ export async function getServerSideProps(context) {
       }
     `,
     variables: {
-      categoryId: Number(categoryId)
+      categoryId: Number(category.ID)
     }
   }).catch(() => {
     return {

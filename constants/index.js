@@ -94,54 +94,62 @@ const SOCIAL_MEDIA_URLS = {
 const JOURNALISM_CATEGORIES = {
   WIJM: {
     TEXT: 'Women in Jazz Media',
-    VALUE: 1,
+    ID: 1,
     IMAGE_URL: '/images/categories/journalism/temp.jpg',
-    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/1`
+    // ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/1`
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Women-in-Jazz-Media`
   },
   JAZZ_IN_EUROPE: {
     TEXT: 'Jazz in Europe',
-    VALUE: 2,
+    ID: 2,
     IMAGE_URL: '/images/categories/journalism/temp.jpg',
-    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/2`
+    // ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/2`
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Jazz-in-Europe`
   },
   KIND_OF_JAZZ: {
     TEXT: 'Kind of Jazz',
-    VALUE: 3,
+    ID: 3,
     IMAGE_URL: '/images/categories/journalism/temp.jpg',
-    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/3`
+    // ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/3`
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Kind-of-Jazz`
   },
   JAZZ_QUARTERLY: {
     TEXT: 'Jazz Quarterly',
-    VALUE: 4,
+    ID: 4,
     IMAGE_URL: '/images/categories/journalism/temp.jpg',
-    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/4`
+    // ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/4`
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Jazz-Quarterly`
   },
   OTHER: {
     TEXT: 'Other',
-    VALUE: 5,
+    ID: 5,
     IMAGE_URL: '/images/categories/journalism/temp.jpg',
-    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/5`
+    // ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/5`
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Other`
   }
 };
 
 const PRESS_CATEGORIES = {
   REVIEWS: {
     TEXT: 'Reviews',
-    VALUE: 1,
+    ID: 1,
     IMAGE_URL: '/images/categories/press/reviews.jpg',
-    ROUTE: `${PAGE.PRESS.URL}/category/1`
+    // ROUTE: `${PAGE.PRESS.URL}/category/1`
+    ROUTE: `${PAGE.PRESS.URL}/category/Reviews`
   },
   INTERVIEWS: {
     TEXT: 'Interviews',
-    VALUE: 2,
+    ID: 2,
     IMAGE_URL: '/images/categories/press/interviews.jpg',
-    ROUTE: `${PAGE.PRESS.URL}${PAGE.CATEGORY.URL}/2`
+    // ROUTE: `${PAGE.PRESS.URL}${PAGE.CATEGORY.URL}/2`
+    ROUTE: `${PAGE.PRESS.URL}/category/Interviews`
   },
   OTHER: {
     TEXT: 'Other',
-    VALUE: 3,
+    ID: 3,
     IMAGE_URL: '/images/categories/press/other.jpg',
-    ROUTE: `${PAGE.PRESS.URL}${PAGE.CATEGORY.URL}/3`
+    // ROUTE: `${PAGE.PRESS.URL}${PAGE.CATEGORY.URL}/3`
+    ROUTE: `${PAGE.PRESS.URL}/Other`
   }
 };
 
