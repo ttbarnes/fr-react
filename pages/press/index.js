@@ -19,7 +19,7 @@ const PressPage = ({ articles }) => (
     </Head>
 
     <div className='main-content'>
-      <h1 className='text-align-center'><span className='sr-only'>Finoa Ross </span> Press</h1>
+      <h1 className='text-align-center'><span className='sr-only'>Fiona Ross </span> Press</h1>
 
       <CategoriesList categories={Object.values(CONSTANTS.PRESS_CATEGORIES)}/>
 

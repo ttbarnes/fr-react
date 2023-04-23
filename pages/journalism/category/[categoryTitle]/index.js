@@ -12,26 +12,26 @@ const PressPage = ({ articles }) => (
   <div className='container'>
 
     <Head>
-      <title>{CONSTANTS.PAGE.PRESS.TITLE}</title>
+      <title>{CONSTANTS.PAGE.JOURNALISM.TITLE}</title>
 
-      <meta property='og:title' content={CONSTANTS.PAGE.PRESS.TITLE} />
-      <meta property='og:url' content={CONSTANTS.PAGE.PRESS.URL} />
+      <meta property='og:title' content={CONSTANTS.PAGE.JOURNALISM.TITLE} />
+      <meta property='og:url' content={CONSTANTS.PAGE.JOURNALISM.URL} />
 
-      <meta name='twitter:title' content={CONSTANTS.PAGE.PRESS.TITLE} />
-      <meta property='twitter:url' content={CONSTANTS.PAGE.PRESS.URL} />
+      <meta name='twitter:title' content={CONSTANTS.PAGE.JOURNALISM.TITLE} />
+      <meta property='twitter:url' content={CONSTANTS.PAGE.JOURNALISM.URL} />
     </Head>
 
     <div className='main-content'>
-      <h1 className='text-align-center'><span className='sr-only'>Fiona Ross </span> Press</h1>
+      <h1 className='text-align-center'><span className='sr-only'>Fiona Ross </span> Journalism</h1>
 
       <ExternalLinksList
         items={articles}
-        heading='Press articles'
+        heading='Journalism articles'
       />
 
       <PageButtonLink
-        href={CONSTANTS.PAGE.PRESS.URL}
-        text='View all press'
+        href={CONSTANTS.PAGE.JOURNALISM.URL}
+        text='View all journalism'
       />
 
     </div>
@@ -44,7 +44,7 @@ export async function getServerSideProps(context) {
 
   const titleWithoutDashes = getStringWithoutDashes(categoryTitle);
 
-  const categories = Object.values(CONSTANTS.PRESS_CATEGORIES);
+  const categories = Object.values(CONSTANTS.JOURNALISM_CATEGORIES);
 
   const category = getCategoryByTitle(categories, titleWithoutDashes);
 
@@ -52,7 +52,7 @@ export async function getServerSideProps(context) {
     return {
       redirect: {
         permanent: false,
-        destination: CONSTANTS.PAGE.PRESS.URL
+        destination: CONSTANTS.PAGE.JOURNALISM.URL
       },
       props: {}
     };
@@ -60,11 +60,9 @@ export async function getServerSideProps(context) {
 
   const apiResponse = await client.query({
     query: gql`
-      query pressCategory($categoryId: ID!) {
-        pressCategory(categoryId: $categoryId) {
-          author
+      query journalismCategory($categoryId: ID!) {
+        journalismCategory(categoryId: $categoryId) {
           title
-          excerpt
           externalLink
           categoryId
           image {
@@ -94,11 +92,11 @@ export async function getServerSideProps(context) {
 
   const { data } = apiResponse;
 
-  const { pressCategory } = data;
+  const { journalismCategory } = data;
 
   return {
     props: {
-      articles: pressCategory,
+      articles: journalismCategory,
     }
   };
 }
