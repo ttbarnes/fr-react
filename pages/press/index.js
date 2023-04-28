@@ -3,7 +3,7 @@ import Head from 'next/head';
 import client from '../../apollo-client';
 import CONSTANTS from '../../constants';
 import PageContainer from '../../components/PageContainer';
-import PressList from '../../components/PressList';
+import CategoriesList from '../../components/CategoriesList';
 import PageButtonLink from '../../components/PageButtonLink';
 
 const PressPage = ({ articles }) => (
@@ -20,10 +20,10 @@ const PressPage = ({ articles }) => (
         <meta property='twitter:url' content={CONSTANTS.PAGE.PRESS.URL} />
       </Head>
 
-      <div className='main-content'>
-        <h1 className='text-align-center'><span className='sr-only'>Finoa Ross </span> Press</h1>
+    <div className='main-content'>
+      <h1 className='text-align-center'><span className='sr-only'>Fiona Ross </span> Press</h1>
 
-        <PressList articles={articles} />
+      <CategoriesList categories={Object.values(CONSTANTS.PRESS_CATEGORIES)}/>
 
         <PageButtonLink
           href={`${CONSTANTS.BASE_URL}/gigs`}
@@ -45,6 +45,7 @@ export async function getServerSideProps() {
           title
           excerpt
           externalLink
+          categoryId
         }
       }
     `

@@ -20,6 +20,9 @@ const PAGE = {
     DESCRIPTION: 'Award winning vocalist, pianist, composer and producer',
     URL: `${BASE_URL}/about`
   },
+  CATEGORY: {
+    URL: '/category'
+  },
   COLLABORATORS: {
     TITLE: `Collaborators - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL}/collaborators`
@@ -88,10 +91,66 @@ const SOCIAL_MEDIA_URLS = {
   YOUTUBE: 'https://www.youtube.com/channel/UC9srPEZZNgnsM23Q777HbzA'
 };
 
+const JOURNALISM_CATEGORIES = {
+  WIJM: {
+    TEXT: 'Women in Jazz Media',
+    ID: 1,
+    IMAGE_URL: '/images/categories/journalism/Women-in-Jazz-Media.jpg',
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Women-in-Jazz-Media`
+  },
+  JAZZ_IN_EUROPE: {
+    TEXT: 'Jazz in Europe',
+    ID: 2,
+    IMAGE_URL: '/images/categories/journalism/Jazz-in-Europe.jpg',
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Jazz-in-Europe`
+  },
+  KIND_OF_JAZZ: {
+    TEXT: 'Kind of Jazz',
+    ID: 3,
+    IMAGE_URL: '/images/categories/journalism/Kind-of-Jazz.jpg',
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Kind-of-Jazz`
+  },
+  JAZZ_QUARTERLY: {
+    TEXT: 'Jazz Quarterly',
+    ID: 4,
+    IMAGE_URL: '/images/categories/journalism/Jazz-Quarterly.jpg',
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Jazz-Quarterly`
+  },
+  OTHER: {
+    TEXT: 'Other',
+    ID: 5,
+    IMAGE_URL: '/images/categories/journalism/Other.jpg',
+    ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Other`
+  }
+};
+
+const PRESS_CATEGORIES = {
+  REVIEWS: {
+    TEXT: 'Reviews',
+    ID: 1,
+    IMAGE_URL: '/images/categories/press/reviews.jpg',
+    ROUTE: `${PAGE.PRESS.URL}/${PAGE.CATEGORY.URL}/Reviews`
+  },
+  INTERVIEWS: {
+    TEXT: 'Interviews',
+    ID: 2,
+    IMAGE_URL: '/images/categories/press/interviews.jpg',
+    ROUTE: `${PAGE.PRESS.URL}/${PAGE.CATEGORY.URL}/Interviews`
+  },
+  OTHER: {
+    TEXT: 'Other',
+    ID: 3,
+    IMAGE_URL: '/images/categories/press/other.jpg',
+    ROUTE: `${PAGE.PRESS.URL}/${PAGE.CATEGORY.URL}/Other`
+  }
+};
+
 export default {
   BASE_URL,
   META_TAGS,
   PAGE,
   SOCIAL_MEDA_IMAGE_SIZE,
-  SOCIAL_MEDIA_URLS
+  SOCIAL_MEDIA_URLS,
+  JOURNALISM_CATEGORIES,
+  PRESS_CATEGORIES
 };
