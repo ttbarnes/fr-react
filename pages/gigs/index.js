@@ -1,10 +1,11 @@
 import { gql } from '@apollo/client';
 import Head from 'next/head';
 import client from '../../apollo-client';
+import CONSTANTS from '../../constants';
+import PageContainer from '../../components/PageContainer';
 import GigsList from '../../components/GigsList';
 import PageButtonLink from '../../components/PageButtonLink';
 import styles from './Gigs.module.scss';
-import CONSTANTS from '../../constants';
 
 const sortGigs = (gigs) => {
   const sortedGigs = JSON.parse(JSON.stringify(gigs));
@@ -24,40 +25,42 @@ const sortGigs = (gigs) => {
 };
 
 const GigsPage = ({ gigs }) => (
-  <div className='container with-page-bg-img'>
+  <PageContainer>
+    <div className='container with-page-bg-img'>
 
-    <Head>
-      <title>{CONSTANTS.PAGE.GIGS.TITLE}</title>
+      <Head>
+        <title>{CONSTANTS.PAGE.GIGS.TITLE}</title>
 
-      <meta property='og:title' content={CONSTANTS.PAGE.GIGS.TITLE} />
-      <meta property='og:url' content={CONSTANTS.PAGE.GIGS.URL} />
+        <meta property='og:title' content={CONSTANTS.PAGE.GIGS.TITLE} />
+        <meta property='og:url' content={CONSTANTS.PAGE.GIGS.URL} />
 
-      <meta name='twitter:title' content={CONSTANTS.PAGE.GIGS.TITLE} />
-      <meta property='twitter:url' content={CONSTANTS.PAGE.GIGS.URL} />
-    </Head>
+        <meta name='twitter:title' content={CONSTANTS.PAGE.GIGS.TITLE} />
+        <meta property='twitter:url' content={CONSTANTS.PAGE.GIGS.URL} />
+      </Head>
 
-    <img
-      src={'/images/background/gigs-page.png'}
-      alt=''
-      className='page-img-bg'
-      aria-hidden='true'
-      role='presentation'
-    />
-
-    <div className='main-content'>
-      <h1 className='sr-only'>Fiona Ross gigs</h1>
-      <h2 className={`text-align-center ${styles.heading}`}>{gigs[0].year} gigs </h2>
-
-      <GigsList gigs={gigs} />
-
-      <PageButtonLink
-        href={`${CONSTANTS.BASE_URL}/news`}
-        text='News'
+      <img
+        src={'/images/background/gigs-page.png'}
+        alt=''
+        className='page-img-bg'
+        aria-hidden='true'
+        role='presentation'
       />
 
-    </div>
+      <div className='main-content'>
+        <h1 className='sr-only'>Fiona Ross gigs</h1>
+        <h2 className={`text-align-center ${styles.heading}`}>{gigs[0].year} gigs </h2>
 
-  </div>
+        <GigsList gigs={gigs} />
+
+        <PageButtonLink
+          href={`${CONSTANTS.BASE_URL}/news`}
+          text='News'
+        />
+
+      </div>
+
+    </div>
+  </PageContainer>
 );
 
 export async function getServerSideProps() {
