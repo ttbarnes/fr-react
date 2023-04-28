@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import ALBUMS from '../../../data/albums.json';
+import CONSTANTS from '../../../constants';
+import PageContainer from '../../../components/PageContainer';
 import Album from '../../../components/Album';
 import PageButtonLink from '../../../components/PageButtonLink';
-import CONSTANTS from '../../../constants';
 import {
   cleanAlbumName,
   encodeAlbumName,
@@ -18,63 +19,64 @@ const AlbumPage = ({ albums }) => {
   const metaUrl = `${CONSTANTS.BASE_URL}/music/${firstAlbum.formattedName}`;
   const metaImage = `${CONSTANTS.BASE_URL_REACT}/images/albums/social/${firstAlbum.imageName}.png`;
 
-  console.log('----firstAlbum ', firstAlbum);
   return (
-    <div className='container with-page-bg-img'>
+    <PageContainer>
+      <div className='container with-page-bg-img'>
 
-      <Head>
-        <title>{metaTitle}</title>
-        <meta name='description' content={metaDescription} />
+        <Head>
+          <title>{metaTitle}</title>
+          <meta name='description' content={metaDescription} />
 
-        <meta property='og:title' content={metaTitle} />
-        <meta property='og:description' content={metaDescription} />
-        <meta property='og:url' content={metaUrl} />
+          <meta property='og:title' content={metaTitle} />
+          <meta property='og:description' content={metaDescription} />
+          <meta property='og:url' content={metaUrl} />
 
-        <meta property='og:image' content={metaImage} />
-        <meta property='og:image:secure_url' content={metaImage} />
-        <meta property='og:image:type' content='image/png' />
-        <meta property='og:image:width' content={CONSTANTS.SOCIAL_MEDA_IMAGE_SIZE.WIDTH} />
-        <meta property='og:image:height' content={CONSTANTS.SOCIAL_MEDA_IMAGE_SIZE.HEIGHT} />
+          <meta property='og:image' content={metaImage} />
+          <meta property='og:image:secure_url' content={metaImage} />
+          <meta property='og:image:type' content='image/png' />
+          <meta property='og:image:width' content={CONSTANTS.SOCIAL_MEDA_IMAGE_SIZE.WIDTH} />
+          <meta property='og:image:height' content={CONSTANTS.SOCIAL_MEDA_IMAGE_SIZE.HEIGHT} />
 
-        <meta name='twitter:title' content={metaTitle} />
-        <meta name='twitter:description' content={metaDescription} />
-        <meta property='twitter:url' content={metaUrl} />
+          <meta name='twitter:title' content={metaTitle} />
+          <meta name='twitter:description' content={metaDescription} />
+          <meta property='twitter:url' content={metaUrl} />
 
-        <meta name='twitter:image' content={metaImage} />
-      </Head>
+          <meta name='twitter:image' content={metaImage} />
+        </Head>
 
-      <h1 className='hidden'>Albums</h1>
+        <h1 className='hidden'>Albums</h1>
 
-      {firstAlbum.hasBackgroundImage && (
-        <img
-          src={`/images/background/${firstAlbum.imageName}.png`}
-          alt=''
-          className={`page-img-bg ${firstAlbum.imageName}`}
-          aria-hidden='true'
-          role='presentation'
-          style={{
-            opacity: firstAlbum.backgroundImageOpacity ? firstAlbum.backgroundImageOpacity : 1
-          }}
-        />
-      )}
+        {firstAlbum.hasBackgroundImage && (
+          <img
+            src={`/images/background/${firstAlbum.imageName}.png`}
+            alt=''
+            className={`page-img-bg ${firstAlbum.imageName}`}
+            aria-hidden='true'
+            role='presentation'
+            style={{
+              opacity: firstAlbum.backgroundImageOpacity ? firstAlbum.backgroundImageOpacity : 1
+            }}
+          />
+        )}
 
-      <div className='main-content container-small'>
+        <div className='main-content container-small'>
 
-        <ul className='no-list-style' aria-label='Albums'>
-          {albums.map((album) => (
-            <li key={album.name}>
-              <Album {...album} />
-            </li>
-          ))}
-        </ul>
+          <ul className='no-list-style' aria-label='Albums'>
+            {albums.map((album) => (
+              <li key={album.name}>
+                <Album {...album} />
+              </li>
+            ))}
+          </ul>
 
-        <PageButtonLink
-          href={`${CONSTANTS.BASE_URL}/press`}
-          text='Press'
-        />
+          <PageButtonLink
+            href={`${CONSTANTS.BASE_URL}/press`}
+            text='Press'
+          />
 
+        </div>
       </div>
-    </div>
+    </PageContainer>
   );
 };
 

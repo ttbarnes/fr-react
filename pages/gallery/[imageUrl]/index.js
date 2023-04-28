@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import CONSTANTS from '../../../constants';
+import PageContainer from '../../../components/PageContainer';
 import GALLERY_IMAGES from '../../../data/gallery.json';
 import PageButtonLink from '../../../components/PageButtonLink';
 import styles from './GalleryImageSingle.module.scss';
@@ -9,56 +10,58 @@ const GalleryImagePage = ({
   nextImage,
   previousImage
 }) => (
-  <div className='container with-page-bg-img' id='main'>
+  <PageContainer>
+    <div className='container with-page-bg-img' id='main'>
 
-    <Head>
-      <title>{CONSTANTS.PAGE.GALLERY.TITLE} Image</title>
+      <Head>
+        <title>{CONSTANTS.PAGE.GALLERY.TITLE} Image</title>
 
-      <meta property='og:title' content={CONSTANTS.PAGE.GALLERY.TITLE} />
-      <meta property='og:url' content={CONSTANTS.PAGE.GALLERY.URL} />
+        <meta property='og:title' content={CONSTANTS.PAGE.GALLERY.TITLE} />
+        <meta property='og:url' content={CONSTANTS.PAGE.GALLERY.URL} />
 
-      <meta name='twitter:title' content={CONSTANTS.PAGE.GALLERY.TITLE} />
-      <meta property='twitter:url' content={CONSTANTS.PAGE.GALLERY.URL} />
-    </Head>
+        <meta name='twitter:title' content={CONSTANTS.PAGE.GALLERY.TITLE} />
+        <meta property='twitter:url' content={CONSTANTS.PAGE.GALLERY.URL} />
+      </Head>
 
-    <div className='main-content text-align-center'>
-      <h1 className='text-align-center'><span className='sr-only'>Fiona Ross </span>Gallery image</h1>
+      <div className='main-content text-align-center'>
+        <h1 className='text-align-center'><span className='sr-only'>Fiona Ross </span>Gallery image</h1>
 
-      {image.caption && (
-        <p className={styles.caption}>Photo by {image.caption}</p>
-      )}
-
-      <img
-        src={`/images/gallery/${image.url}`}
-        alt={`Photo by ${image.caption}`}
-        className={styles.image}
-      />
-
-      <p className={styles.nextPreviousLinks}>
-        <a
-          href={`${CONSTANTS.BASE_URL}/gallery/${nextImage.url}`}
-          className='link-highlight-hover-border'
-        >Next image</a>
-
-        {previousImage && (
-          <>
-            <a
-              href={`${CONSTANTS.BASE_URL}/gallery/${previousImage.url}`}
-              className={`link-highlight-hover-border ${styles.previousLink}`}
-            >Previous image</a>
-          </>
+        {image.caption && (
+          <p className={styles.caption}>Photo by {image.caption}</p>
         )}
 
-      </p>
+        <img
+          src={`/images/gallery/${image.url}`}
+          alt={`Photo by ${image.caption}`}
+          className={styles.image}
+        />
 
-      <PageButtonLink
-        href={`${CONSTANTS.BASE_URL}/gallery`}
-        text='View all'
-      />
+        <p className={styles.nextPreviousLinks}>
+          <a
+            href={`${CONSTANTS.BASE_URL}/gallery/${nextImage.url}`}
+            className='link-highlight-hover-border'
+          >Next image</a>
+
+          {previousImage && (
+            <>
+              <a
+                href={`${CONSTANTS.BASE_URL}/gallery/${previousImage.url}`}
+                className={`link-highlight-hover-border ${styles.previousLink}`}
+              >Previous image</a>
+            </>
+          )}
+
+        </p>
+
+        <PageButtonLink
+          href={`${CONSTANTS.BASE_URL}/gallery`}
+          text='View all'
+        />
+
+      </div>
 
     </div>
-
-  </div>
+  </PageContainer>
 );
 
 export async function getServerSideProps(context) {

@@ -2,6 +2,7 @@ import { gql } from '@apollo/client';
 import Head from 'next/head';
 import client from '../../../apollo-client';
 import CONSTANTS from '../../../constants';
+import PageContainer from '../../../components/PageContainer';
 import CollaboratorUrls from '../../../components/CollaboratorUrls';
 import PageButtonLink from '../../../components/PageButtonLink';
 import styles from './Collaborator.module.scss';
@@ -40,96 +41,98 @@ const CollaboratorPage = ({ collaborator }) => {
   const hasAbout = (collaborator.about && collaborator.about !== '<p><br></p>');
 
   return (
-    <div className='container with-page-bg-img'>
+    <PageContainer>
+      <div className='container with-page-bg-img'>
 
-      <Head>
-        <title>{title}</title>
+        <Head>
+          <title>{title}</title>
 
-        <meta property='og:title' content={title} />
-        <meta property='og:url' content={url} />
+          <meta property='og:title' content={title} />
+          <meta property='og:url' content={url} />
 
-        <meta name='twitter:title' content={title} />
-        <meta property='twitter:url' content={url} />
-      </Head>
+          <meta name='twitter:title' content={title} />
+          <meta property='twitter:url' content={url} />
+        </Head>
 
-      <div className={`main-content ${styles.container}`}>
+        <div className={`main-content ${styles.container}`}>
 
-        <div className='hide-md'>
-          <h1 className={`page-heading ${styles.headingSm}`}>{collaborator.name}</h1>
-          <p>{collaborator.role}</p>
-        </div>
-
-
-        <div className={styles.colLeft}>
-          <img
-            src={collaborator.avatar.cloudinaryUrl}
-            alt={collaborator.name}
-          />
-        </div>
-
-        <div className={styles.colRight}>
-
-          <div className='show-md'>
-            <h1 className={styles.headingMd}>{collaborator.name}</h1>
+          <div className='hide-md'>
+            <h1 className={`page-heading ${styles.headingSm}`}>{collaborator.name}</h1>
             <p>{collaborator.role}</p>
           </div>
 
-          {cleanCollabOn.length ? (
-            <div className={styles.row}>
-              <h2 className='h4-size'>Collaborated on</h2>
 
-              <ul className={styles.collabOn}>
-                {collaborator.collabOn.map((collab) => {
-                  if (collab.length) {
-                    return (
-                      <li
-                        key={collab}
-                        className={styles.collabOnListItem}
-                      >{collab}</li>
-                    );
-                  }
+          <div className={styles.colLeft}>
+            <img
+              src={collaborator.avatar.cloudinaryUrl}
+              alt={collaborator.name}
+            />
+          </div>
 
-                  return null;
-                })}
-              </ul>
+          <div className={styles.colRight}>
+
+            <div className='show-md'>
+              <h1 className={styles.headingMd}>{collaborator.name}</h1>
+              <p>{collaborator.role}</p>
             </div>
-          ) : null}
 
-          {hasAbout && (
-            <div className={styles.row}>
-              <h3 className='h4-size'>About</h3>
+            {cleanCollabOn.length ? (
+              <div className={styles.row}>
+                <h2 className='h4-size'>Collaborated on</h2>
 
-              <div
-                dangerouslySetInnerHTML={{ __html: collaborator.about }}
-                className={`long-copy-line-height link-highlight-hover link-highlight-hover-border ${styles.about}`}
-              />
-            </div>
-          )}
+                <ul className={styles.collabOn}>
+                  {collaborator.collabOn.map((collab) => {
+                    if (collab.length) {
+                      return (
+                        <li
+                          key={collab}
+                          className={styles.collabOnListItem}
+                        >{collab}</li>
+                      );
+                    }
 
-          {cleanUrls.length ? (
-            <div className={styles.row}>
-              <h3>Links</h3>
+                    return null;
+                  })}
+                </ul>
+              </div>
+            ) : null}
 
-              <CollaboratorUrls urls={collaborator.urls} />
-            </div>
-          ) : null}
+            {hasAbout && (
+              <div className={styles.row}>
+                <h3 className='h4-size'>About</h3>
 
-          <PageButtonLink
-            href={`${CONSTANTS.BASE_URL}/collaborators/${collaborator.nextCollaborator.urlName}`}
-            text='Next collaborator'
-            subText={collaborator.nextCollaborator.name}
-            footerLink={{
-              href: `${CONSTANTS.BASE_URL}/collaborators`,
-              text: 'All collaborators'
-            }}
-            alignCenter={false}
-          />
+                <div
+                  dangerouslySetInnerHTML={{ __html: collaborator.about }}
+                  className={`long-copy-line-height link-highlight-hover link-highlight-hover-border ${styles.about}`}
+                />
+              </div>
+            )}
+
+            {cleanUrls.length ? (
+              <div className={styles.row}>
+                <h3>Links</h3>
+
+                <CollaboratorUrls urls={collaborator.urls} />
+              </div>
+            ) : null}
+
+            <PageButtonLink
+              href={`${CONSTANTS.BASE_URL}/collaborators/${collaborator.nextCollaborator.urlName}`}
+              text='Next collaborator'
+              subText={collaborator.nextCollaborator.name}
+              footerLink={{
+                href: `${CONSTANTS.BASE_URL}/collaborators`,
+                text: 'All collaborators'
+              }}
+              alignCenter={false}
+            />
+
+          </div>
 
         </div>
 
       </div>
-
-    </div>
+    </PageContainer>
   );
 };
 

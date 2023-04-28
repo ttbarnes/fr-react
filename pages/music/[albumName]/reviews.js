@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import ALBUMS from '../../../data/albums.json';
+import CONSTANTS from '../../../constants';
+import PageContainer from '../../../components/PageContainer';
 import BlockQuote from '../../../components/BlockQuote';
 import PageButtonLink from '../../../components/PageButtonLink';
-import CONSTANTS from '../../../constants';
 
 const AlbumReviewsPage = ({ album }) => {
   const metaTitle = `${album.name} - Reviews - Fiona Ross`;
@@ -12,60 +13,62 @@ const AlbumReviewsPage = ({ album }) => {
   const metaImage = `${CONSTANTS.BASE_URL_REACT}/images/albums/social/${album.imageName}.png`;
 
   return (
-    <div className='container with-page-bg-img'>
+    <PageContainer>
+      <div className='container with-page-bg-img'>
 
-      <Head>
-        <title>{metaTitle}</title>
-        <meta name='description' content={metaDescription} />
+        <Head>
+          <title>{metaTitle}</title>
+          <meta name='description' content={metaDescription} />
 
-        <meta property='og:title' content={metaTitle} />
-        <meta property='og:description' content={metaDescription} />
-        <meta property='og:url' content={metaUrl} />
+          <meta property='og:title' content={metaTitle} />
+          <meta property='og:description' content={metaDescription} />
+          <meta property='og:url' content={metaUrl} />
 
-        <meta property='og:image' content={metaImage} />
-        <meta property='og:image:secure_url' content={metaImage} />
-        <meta property='og:image:type' content='image/png' />
-        <meta property='og:image:width' content={CONSTANTS.SOCIAL_MEDA_IMAGE_SIZE.WIDTH} />
-        <meta property='og:image:height' content={CONSTANTS.SOCIAL_MEDA_IMAGE_SIZE.HEIGHT} />
+          <meta property='og:image' content={metaImage} />
+          <meta property='og:image:secure_url' content={metaImage} />
+          <meta property='og:image:type' content='image/png' />
+          <meta property='og:image:width' content={CONSTANTS.SOCIAL_MEDA_IMAGE_SIZE.WIDTH} />
+          <meta property='og:image:height' content={CONSTANTS.SOCIAL_MEDA_IMAGE_SIZE.HEIGHT} />
 
-        <meta name='twitter:title' content={metaTitle} />
-        <meta name='twitter:description' content={metaDescription} />
-        <meta property='twitter:url' content={metaUrl} />
+          <meta name='twitter:title' content={metaTitle} />
+          <meta name='twitter:description' content={metaDescription} />
+          <meta property='twitter:url' content={metaUrl} />
 
-        <meta name='twitter:image' content={metaImage} />
-      </Head>
-    
-      <Image
-        src={`/images/background/${album.imageName}.png`}
-        alt=''
-        className={`page-img-bg ${album.imageName}`}
-        aria-hidden='true'
-        role='presentation'
-      />
-
-      <div className='main-content container-large'>
-
-        <h1 className='text-align-center'>{album.name} reviews</h1>
-
-        <ul className='no-list-style'>
-          {album.quotes.map((quote) => (
-            <li key={quote.author}>
-              <BlockQuote
-                copy={quote.copy}
-                author={quote.author}
-                isLarge
-              />
-            </li>
-          ))}
-        </ul>
-
-        <PageButtonLink
-          href='/music'
-          text='Music'
+          <meta name='twitter:image' content={metaImage} />
+        </Head>
+      
+        <img
+          src={`/images/background/${album.imageName}.png`}
+          alt=''
+          className={`page-img-bg ${album.imageName}`}
+          aria-hidden='true'
+          role='presentation'
         />
 
+        <div className='main-content container-large'>
+
+          <h1 className='text-align-center'>{album.name} reviews</h1>
+
+          <ul className='no-list-style'>
+            {album.quotes.map((quote) => (
+              <li key={quote.author}>
+                <BlockQuote
+                  copy={quote.copy}
+                  author={quote.author}
+                  isLarge
+                />
+              </li>
+            ))}
+          </ul>
+
+          <PageButtonLink
+            href='/music'
+            text='Music'
+          />
+
+        </div>
       </div>
-    </div>
+    </PageContainer>
   );
 };
 

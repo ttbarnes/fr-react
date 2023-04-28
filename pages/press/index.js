@@ -1,36 +1,39 @@
 import { gql } from '@apollo/client';
 import Head from 'next/head';
 import client from '../../apollo-client';
+import CONSTANTS from '../../constants';
+import PageContainer from '../../components/PageContainer';
 import PressList from '../../components/PressList';
 import PageButtonLink from '../../components/PageButtonLink';
-import CONSTANTS from '../../constants';
 
 const PressPage = ({ articles }) => (
-  <div className='container'>
+  <PageContainer>
+    <div className='container'>
 
-    <Head>
-      <title>{CONSTANTS.PAGE.PRESS.TITLE}</title>
+      <Head>
+        <title>{CONSTANTS.PAGE.PRESS.TITLE}</title>
 
-      <meta property='og:title' content={CONSTANTS.PAGE.PRESS.TITLE} />
-      <meta property='og:url' content={CONSTANTS.PAGE.PRESS.URL} />
+        <meta property='og:title' content={CONSTANTS.PAGE.PRESS.TITLE} />
+        <meta property='og:url' content={CONSTANTS.PAGE.PRESS.URL} />
 
-      <meta name='twitter:title' content={CONSTANTS.PAGE.PRESS.TITLE} />
-      <meta property='twitter:url' content={CONSTANTS.PAGE.PRESS.URL} />
-    </Head>
+        <meta name='twitter:title' content={CONSTANTS.PAGE.PRESS.TITLE} />
+        <meta property='twitter:url' content={CONSTANTS.PAGE.PRESS.URL} />
+      </Head>
 
-    <div className='main-content'>
-      <h1 className='text-align-center'><span className='sr-only'>Finoa Ross </span> Press</h1>
+      <div className='main-content'>
+        <h1 className='text-align-center'><span className='sr-only'>Finoa Ross </span> Press</h1>
 
-      <PressList articles={articles} />
+        <PressList articles={articles} />
 
-      <PageButtonLink
-        href={`${CONSTANTS.BASE_URL}/gigs`}
-        text='Gigs'
-      />
+        <PageButtonLink
+          href={`${CONSTANTS.BASE_URL}/gigs`}
+          text='Gigs'
+        />
+
+      </div>
 
     </div>
-
-  </div>
+  </PageContainer>
 );
 
 export async function getServerSideProps() {

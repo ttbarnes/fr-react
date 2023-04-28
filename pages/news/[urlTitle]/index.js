@@ -2,6 +2,7 @@ import { gql } from '@apollo/client';
 import Head from 'next/head';
 import client from '../../../apollo-client';
 import CONSTANTS from '../../../constants';
+import PageContainer from '../../../components/PageContainer';
 import NewsArticle from '../../../components/NewsArticle';
 
 const NewsArticlePage = ({ article }) => {
@@ -9,26 +10,28 @@ const NewsArticlePage = ({ article }) => {
   const url = `${CONSTANTS.PAGE.NEWS.URL}/${article.title}`;
 
   return (
-    <div className='container with-page-bg-img'>
+    <PageContainer>
+      <div className='container with-page-bg-img'>
 
-      <Head>
-        <title>{title}</title>
+        <Head>
+          <title>{title}</title>
 
-        <meta property='og:title' content={title} />
-        <meta property='og:url' content={url} />
+          <meta property='og:title' content={title} />
+          <meta property='og:url' content={url} />
 
-        <meta name='twitter:title' content={title} />
-        <meta property='twitter:url' content={url} />
-      </Head>
+          <meta name='twitter:title' content={title} />
+          <meta property='twitter:url' content={url} />
+        </Head>
 
-      <div className='main-content'>
+        <div className='main-content'>
 
-        <h1 className='sr-only'>Fiona Ross - {article.title}</h1>
-        <NewsArticle {...article} />
+          <h1 className='sr-only'>Fiona Ross - {article.title}</h1>
+          <NewsArticle {...article} />
+
+        </div>
 
       </div>
-
-    </div>
+    </PageContainer>
   );
 };
 

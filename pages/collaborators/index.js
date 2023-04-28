@@ -1,36 +1,39 @@
 import { gql } from '@apollo/client';
 import Head from 'next/head';
 import client from '../../apollo-client';
+import PageContainer from '../../components/PageContainer';
 import PageButtonLink from '../../components/PageButtonLink';
 import CollaboratorsList from '../../components/CollaboratorsList';
 import CONSTANTS from '../../constants';
 
 const CollaboratorsPage = ({ collaborators }) => (
-  <div className='container with-page-bg-img'>
+  <PageContainer>
+    <div className='container with-page-bg-img'>
 
-    <Head>
-      <title>{CONSTANTS.PAGE.COLLABORATORS.TITLE}</title>
+      <Head>
+        <title>{CONSTANTS.PAGE.COLLABORATORS.TITLE}</title>
 
-      <meta property='og:title' content={CONSTANTS.PAGE.COLLABORATORS.TITLE} />
-      <meta property='og:url' content={CONSTANTS.PAGE.COLLABORATORS.URL} />
+        <meta property='og:title' content={CONSTANTS.PAGE.COLLABORATORS.TITLE} />
+        <meta property='og:url' content={CONSTANTS.PAGE.COLLABORATORS.URL} />
 
-      <meta name='twitter:title' content={CONSTANTS.PAGE.COLLABORATORS.TITLE} />
-      <meta property='twitter:url' content={CONSTANTS.PAGE.COLLABORATORS.URL} />
-    </Head>
+        <meta name='twitter:title' content={CONSTANTS.PAGE.COLLABORATORS.TITLE} />
+        <meta property='twitter:url' content={CONSTANTS.PAGE.COLLABORATORS.URL} />
+      </Head>
 
-    <div className='main-content'>
-      <h1 className='text-align-center'><span className='sr-only'>Fiona Ross</span> Collaborators</h1>
+      <div className='main-content'>
+        <h1 className='text-align-center'><span className='sr-only'>Fiona Ross</span> Collaborators</h1>
 
-      <CollaboratorsList collaborators={collaborators} />
+        <CollaboratorsList collaborators={collaborators} />
 
-      <PageButtonLink
-        href={`${CONSTANTS.BASE_URL}/journalism`}
-        text='Journalism'
-      />
+        <PageButtonLink
+          href={`${CONSTANTS.BASE_URL}/journalism`}
+          text='Journalism'
+        />
+
+      </div>
 
     </div>
-
-  </div>
+  </PageContainer>
 );
 
 export async function getServerSideProps() {

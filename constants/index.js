@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE_URL = 'http://localhost:4000'
 
 const META_TAGS = {
   TITLE: 'Fiona Ross - Jazz Vocalist, Pianist, Composer, Producer and Journalist',
@@ -89,7 +89,6 @@ const SOCIAL_MEDIA_URLS = {
 };
 
 export default {
-  BASE_URL,
   BASE_URL,
   META_TAGS,
   PAGE,
