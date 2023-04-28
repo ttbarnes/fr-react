@@ -1,26 +1,59 @@
 [
   {
     "id": 7,
-    "name": "7 Songs in 7 Days",
-    "encodedName": "7-Songs-in-7-Days",
+    "name": "Thoughts, Conversations and To Do Lists",
+    "encodedName": "Thoughts-Conversations-and-To-Do-Lists",
     "releaseDate": "25th March 2022",
     "images": {
-      "thumb": "./images/albums/thumb/7-songs-in-7-days.jpg"
+      "thumb": "./images/albums/thumb/thoughts-conversations-and-to-do-lists.jpg"
     },
     "albumType": "latest",
     "urls": {
-      "bandcamp": "https://fionarossjazz.bandcamp.com/album/7-songs-in-7-days",
+      "bandcamp": "https://fionarossjazz.bandcamp.com/album/thoughts-conversations-and-to-do-lists",
       "spotify": "https://open.spotify.com/album/4z39eDzCzOuvPkRwmcKzdW?si=9l5yUwjXSluTR40eJAo3jg",
       "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_kU3o7pB_ajR4yMiqv9NEnFj8cZWuI0wPg",
       "amazon": "https://www.amazon.co.uk/music/player/albums/B09V3C2R9R",
-      "appleMusic": "https://music.apple.com/gb/album/7-songs-in-7-days/1613335157"
+      "appleMusic": "https://music.apple.com/gb/album/thoughts-conversations-and-to-do-lists/1613335157"
     },
     "canOrderAudioCd": false,
     "isOutOfStock": false,
-    "albumCredits": [],
-    "tracklist": [],
+    "albumCredits": [
+      "All songs written, arranged and produced by Fiona Ross",
+      "Fiona Ross (Vocals and Piano)",
+      "Guitar: Gibbi Bettini",
+      "Bass: Derek Daley",
+      "Drums: Marley Drummond",
+      "Saxophones and Flute: Loren Hignell",
+      "Trumpets: Dave Boa",
+      "Backing vocals: Ashaine White",
+      "Percussion: Warren Woodcraft",
+      "Guest appearance on 'Push Me Around in a Pushchair':  Nancy Richardson",
+      "Recorded at Studio XYZ by Gibbi Bettini",
+      "Mixed at Highfield Studio by Elliot Richardson and Warren Woodcraft",
+      "Mastered by Nick Watson at Fluid Mastering",
+      "Front Cover photo by Monika S Jakubowska taken at Jazz Cafe Posk, London",
+      "Art work by Chris Cunningham",
+      "Photos by Ron Milsom",
+      "Liner notes by Jordannah Elizabeth"
+    ],
+    "tracklist": [
+      "When Will You Leave My Mind",
+      "I Want To Know More",
+      "The Small Things",
+      "When you Walked In The Room",
+      "A Single Source of Truth",
+      "Push Me Around In A Pushchair",
+      "Looking At My To Do List",
+      "The Best Version Of Me",
+      "The Trumpet Man",
+      "Look What You've Become",
+      "Always There For Me",
+      "Positive Things",
+      "The Don't Stop Just Breathe Ragtime",
+      "#ThursdayThoughts"
+    ],
     "hasBackgroundImage": true,
-    "backgroundImageOpacity": 0.05
+    "backgroundImageOpacity": 0.20
   },
   {
     "id": 6,

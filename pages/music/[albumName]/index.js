@@ -18,6 +18,7 @@ const AlbumPage = ({ albums }) => {
   const metaUrl = `${CONSTANTS.BASE_URL}/music/${firstAlbum.formattedName}`;
   const metaImage = `${CONSTANTS.BASE_URL_REACT}/images/albums/social/${firstAlbum.imageName}.png`;
 
+  console.log('----firstAlbum ', firstAlbum);
   return (
     <div className='container with-page-bg-img'>
 
