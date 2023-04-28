@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import styles from './ExternalLinksList.module.scss';
 
-const ExternalLinksListItem = ({ link, title, author, image }) => (
+const ExternalLinksListItem = ({ externalLink, title, author, image }) => (
   <li className={styles.listItem}>
     <a
-      href={link}
+      href={externalLink}
       target='_blank'
       rel='noopener noreferrer'
       aria-label={`${title} by ${author}`}
