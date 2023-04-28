@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import CONSTANTS from '../../../constants';
-import PageContainer from '../../components/PageContainer';
+import PageContainer from '../../../components/PageContainer';
 import PageButtonLink from '../../../components/PageButtonLink';
 import styles from './SignedPhoto.module.scss';
 
