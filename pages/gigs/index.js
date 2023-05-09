@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 import Head from 'next/head';
+import { isBefore } from 'date-fns';
 import client from '../../apollo-client';
 import CONSTANTS from '../../constants';
 import PageContainer from '../../components/PageContainer';
@@ -8,15 +9,35 @@ import PageButtonLink from '../../components/PageButtonLink';
 import styles from './Gigs.module.scss';
 
 const sortGigs = (gigs) => {
-  const sortedGigs = JSON.parse(JSON.stringify(gigs));
+  const now = new Date();
+
+  const currentYear = now.getFullYear();
+
+  let sortedGigs = JSON.parse(JSON.stringify(gigs));
 
   const sortedYears = sortedGigs.sort((a, b) => Number(a.year) - Number(b.year)).reverse();
 
-  sortedGigs.map((year) => {
-    const sortedYearGigs = year.gigs.sort((a, b) => new Date(a.date) - new Date(b.date)).reverse();
+  sortedGigs = sortedGigs.map((year) => {
+    let sortedYearGigs;
+
+    if (Number(year.year) === currentYear) {
+      const previousGigs = year.gigs.filter((gig) => isBefore(new Date(gig.date), new Date()));
+
+      const upcomingGigs = year.gigs.filter((gig) => !isBefore(new Date(gig.date), new Date()));
+
+      const sortedUpcomingGigs = upcomingGigs.sort((a, b) => Math.abs(Date.now() - new Date(a.date)) - Math.abs(Date.now() - new Date(b.date)));
+
+      sortedYearGigs = [
+        ...sortedUpcomingGigs,
+        ...previousGigs
+      ];
+
+    } else {
+      sortedYearGigs = year.gigs.sort((a, b) => new Date(a.date) - new Date(b.date)).reverse();
+    }
 
     return {
-      year,
+      year: year.year,
       gigs: sortedYearGigs
     };
   });
