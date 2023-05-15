@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 
-const NavLink = ({ link, pathname, text }) => {
+const NavLink = ({ link, pathname, text, onClick }) => {
   const router = useRouter();
 
   const { pathname: routerPath } = router;
@@ -18,7 +18,12 @@ const NavLink = ({ link, pathname, text }) => {
 
   return (
     <Link href={link}>
-      <a className={linkClassName}>{text}</a>
+      <a
+        onClick={onClick}
+        className={linkClassName}
+      >
+        {text}
+      </a>
     </Link>
   );
 };
