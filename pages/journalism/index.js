@@ -26,7 +26,7 @@ const JournalismPage = ({ articles }) => (
 
         <JournalismIntro />
 
-      <CategoriesList categories={Object.values(CONSTANTS.JOURNALISM_CATEGORIES)} />
+        <CategoriesList categories={Object.values(CONSTANTS.JOURNALISM_CATEGORIES)} />
 
         <PageButtonLink
           href={`${CONSTANTS.BASE_URL}/contact`}
@@ -80,6 +80,5 @@ export async function getServerSideProps() {
     }
   };
 }
-
 
 export default JournalismPage;
