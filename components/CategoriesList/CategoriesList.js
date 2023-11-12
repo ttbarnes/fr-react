@@ -8,15 +8,15 @@ const CategoriesList = ({ categories }) => (
         className='categories-list-item'
       >
 
-        <Link href={category.ROUTE}>
-          <a>
-            <div className='categories-list-item-image-container' aria-hidden='true'>
-              <img src={category.IMAGE_URL} alt={category.TEXT} className='categories-list-item-image' />
+        <Link
+          href={category.ROUTE}
+          passHref
+        >
+          <div className='categories-list-item-image-container' aria-hidden='true'>
+            <img src={category.IMAGE_URL} alt={category.TEXT} className='categories-list-item-image' />
 
-              <h2 className='categories-list-item-heading'>{category.TEXT}</h2>
-            </div>
-          </a>
-
+            <h2 className='categories-list-item-heading'>{category.TEXT}</h2>
+          </div>
         </Link>
 
       </li>

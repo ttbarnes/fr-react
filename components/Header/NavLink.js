@@ -18,10 +18,12 @@ const NavLink = ({ link, pathname, text }) => {
   const linkClassName = isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink;
 
   return (
-    <Link href={link}>
-      <a className={linkClassName}>
-        <span className={styles.navLinkInner}>{text}</span>
-      </a>
+    <Link
+      href={link}
+      className={linkClassName}
+      passHref
+    >
+      <span className={styles.navLinkInner}>{text}</span>
     </Link>
   );
 };

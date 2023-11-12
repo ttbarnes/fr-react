@@ -42,19 +42,21 @@ const MusicPage = ({ albums }) => (
               key={album.name}
               className={styles.listItem}
             >
-              <Link href={`/music/${album.formattedName}`}>
-                <a className={styles.listItemLink}>
-                  <div className={styles.imageContainer}>
-                    <Image
-                      src={`/images/albums/${album.imageName}.jpg`}
-                      alt={`Fiona Ross - ${album.name}`}
-                      layout='responsive'
-                      width='403'
-                      height='403'
-                      className={styles.image}
-                    />
-                  </div>
-                </a>
+              <Link
+                href={`/music/${album.formattedName}`}
+                passHref
+                className={styles.listItemLink}
+              >
+                <div className={styles.imageContainer}>
+                  <Image
+                    src={`/images/albums/${album.imageName}.jpg`}
+                    alt={`Fiona Ross - ${album.name}`}
+                    layout='responsive'
+                    width='403'
+                    height='403'
+                    className={styles.image}
+                  />
+                </div>
               </Link>
             </li>
           ))}

@@ -52,8 +52,8 @@ const App = ({ Component, pageProps }) => {
         <meta name='google-site-verification' content={CONSTANTS.META_TAGS.GOOGLE_SITE_VERIFICATION_3} />
         <meta name='msvalidate.01' content={CONSTANTS.META_TAGS.MICROSOFT_VERFICATION} />
 
-
         {/* favicon's generated via favicon-generator.org */}
+        
         <link rel='apple-touch-icon' sizes='57x57' href={`${CONSTANTS.BASE_URL}/images/apple-icon-57x57.png`} />
         <link rel='apple-touch-icon' sizes='60x60' href={`${CONSTANTS.BASE_URL}/images/apple-icon-60x60.png`} />
         <link rel='apple-touch-icon' sizes='72x72' href={`${CONSTANTS.BASE_URL}/images/apple-icon-72x72.png`} />
@@ -77,12 +77,10 @@ const App = ({ Component, pageProps }) => {
       <StickySocialLinks />
 
       <main>
-
         <Component
           {...pageProps}
           cookieConsent={cookieConsent}
         />
-        
       </main>
 
       <Footer />
@@ -117,7 +115,7 @@ const App = ({ Component, pageProps }) => {
                 'storage': 'none'
               });
               ga('set', 'anonymizeIp', true);
-              `}
+          `}
         </Script>
       )}
 

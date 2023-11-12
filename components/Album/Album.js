@@ -49,14 +49,11 @@ const Album = (album) => {
               <p className={styles.audioCdLink}>
                 <Link
                   href={album.urls.bandcamp}
-                >
-                  <a
-                    className='link-highlight-hover-border'
-                    aria-label={`Get a signed Audio CD of ${album.name}`}
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    Get a signed Audio CD
-                  </a>
+                  className='link-highlight-hover-border'
+                  aria-label={`Get a signed Audio CD of ${album.name}`}
+                  target='_blank'
+                  rel='noopener noreferrer'>
+                  Get a signed Audio CD
                 </Link>
               </p>
             )}

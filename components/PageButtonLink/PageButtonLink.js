@@ -18,19 +18,21 @@ const PageButtonLink = ({
 
   return (
     <div className={containerClassName}>
-      <Link href={href}>
-        <a className={`button ${styles.link}`}>
-          <span className={styles.linkText}>
-            {text}
-            {subText && (
-              <span>
-                <br />
-                <small className={styles.subText}>{subText}</small>
-              </span>
-            )}
-          </span>
-          <i className={`${icon} ${styles.linkIcon}`} />
-        </a>
+      <Link
+        href={href}
+        className={`button ${styles.link}`}
+        passHref
+      >
+        <span className={styles.linkText}>
+          {text}
+          {subText && (
+            <span>
+              <br />
+              <small className={styles.subText}>{subText}</small>
+            </span>
+          )}
+        </span>
+        <i className={`${icon} ${styles.linkIcon}`} />
       </Link>
 
       {footerLink && (
