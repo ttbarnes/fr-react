@@ -12,7 +12,6 @@ const BurgerMenu = () => {
   };
 
   const closeSideBar = () => {
-    console.log('>>>>>>>>> closeSideBar ', closeSideBar);
     setOpen(false);
   };
 

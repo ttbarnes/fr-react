@@ -96,7 +96,9 @@ const HomePage = () => {
 
             <p>
               <Link
-                href='/music/Red-Flags-and-High-Heels'>
+                href='/music/Red-Flags-and-High-Heels'
+                passHref
+              >
                 <a className={`link-highlight-hover-border ${styles.findOutMore}`}>Find out more</a>
               </Link>
             </p>
@@ -110,12 +112,13 @@ const HomePage = () => {
               
             <p>
               <Link
-                href={process.env.NEXT_PUBLIC_MAILCHIMP_URL}>
-                <a
-                  className={`link-highlight-hover-border ${styles.findOutMore}`}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >Fiona Ross mailing list</a>
+                href={process.env.NEXT_PUBLIC_MAILCHIMP_URL}
+                passHref
+                className={`link-highlight-hover-border ${styles.findOutMore}`}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Fiona Ross mailing list
               </Link>
             </p>
 
