@@ -74,4 +74,8 @@
   color: #FFF;
   text-shadow: 1px 3px 1px #000;
   font-weight: 500;
+
+  &.smaller-font-size {
+    font-size: 2.1em;
+  }
 }

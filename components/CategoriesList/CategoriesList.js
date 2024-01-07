@@ -2,25 +2,41 @@ import Link from 'next/link';
 
 const CategoriesList = ({ categories }) => (
   <ul className='categories-list'>
-    {categories.map((category) => (
-      <li
-        key={category.TEXT}
-        className='categories-list-item'
-      >
+    {categories.map((category) => {
+      let targetAttributes = {};
 
-        <Link href={category.ROUTE}>
-          <a>
-            <div className='categories-list-item-image-container' aria-hidden='true'>
-              <img src={category.IMAGE_URL} alt={category.TEXT} className='categories-list-item-image' />
+      if (category.EXTERNAL_LINK) {
+        targetAttributes = {
+          target: '_blank',
+          rel: 'noopener noreferrer'
+        };
+      }
 
-              <h2 className='categories-list-item-heading'>{category.TEXT}</h2>
-            </div>
-          </a>
+      let headingClassName = 'categories-list-item-heading';
 
-        </Link>
+      if (category.SMALLER_FONT_SIZE) {
+        headingClassName += ' smaller-font-size';
+      }
 
-      </li>
-    ))}
+      return (
+        <li
+          key={category.TEXT}
+          className='categories-list-item'
+        >
+          <Link href={category.ROUTE}>
+            <a {...targetAttributes}>
+              <div className='categories-list-item-image-container' aria-hidden='true'>
+                <img src={category.IMAGE_URL} alt={category.TEXT} className='categories-list-item-image' />
+
+                <h2 className={headingClassName}>{category.TEXT}</h2>
+              </div>
+            </a>
+
+          </Link>
+
+        </li>
+      );
+    })}
   </ul>
 );
 

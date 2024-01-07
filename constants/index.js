@@ -98,27 +98,35 @@ const JOURNALISM_CATEGORIES = {
     IMAGE_URL: '/images/categories/journalism/Women-in-Jazz-Media.jpg',
     ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Women-in-Jazz-Media`
   },
+  THOUGHTS_CONVERSATIONS_AND_TO_DO_LISTS: {
+    TEXT: 'Thoughts, Conversations and To Do Lists',
+    ID: 2,
+    IMAGE_URL: '/images/categories/journalism/thoughts-conversations-and-to-do-lists.jpg',
+    ROUTE: 'https://thoughtsconversationsandtodolists.com',
+    EXTERNAL_LINK: true,
+    SMALLER_FONT_SIZE: true
+  },
   JAZZ_IN_EUROPE: {
     TEXT: 'Jazz in Europe',
-    ID: 2,
+    ID: 3,
     IMAGE_URL: '/images/categories/journalism/Jazz-in-Europe.jpg',
     ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Jazz-in-Europe`
   },
   KIND_OF_JAZZ: {
     TEXT: 'Kind of Jazz',
-    ID: 3,
+    ID: 4,
     IMAGE_URL: '/images/categories/journalism/Kind-of-Jazz.jpg',
     ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Kind-of-Jazz`
   },
   JAZZ_QUARTERLY: {
     TEXT: 'Jazz Quarterly',
-    ID: 4,
+    ID: 5,
     IMAGE_URL: '/images/categories/journalism/Jazz-Quarterly.jpg',
     ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Jazz-Quarterly`
   },
   OTHER: {
     TEXT: 'Other',
-    ID: 5,
+    ID: 6,
     IMAGE_URL: '/images/categories/journalism/Other.jpg',
     ROUTE: `${PAGE.JOURNALISM.URL}${PAGE.CATEGORY.URL}/Other`
   }
