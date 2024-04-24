@@ -2,12 +2,18 @@ import Head from 'next/head';
 import Script from 'next/script';
 import CookieConsent, { Cookies, getCookieConsentValue } from 'react-cookie-consent';
 import { useState } from 'react';
+import { Source_Sans_3 } from 'next/font/google';
 import Header from '../components/Header';
 import BurgerMenu from '../components/BurgerMenu';
 import StickySocialLinks from '../components/StickySocialLinks';
 import Footer from '../components/Footer';
 import CONSTANTS from '../constants';
 import styles from '../styles/global.scss';
+
+const sourceSans = Source_Sans_3({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const App = ({ Component, pageProps }) => {
   const [hasCookieConsent, setHasCookieConsent] = useState(false);
@@ -18,7 +24,7 @@ const App = ({ Component, pageProps }) => {
   }
 
   return (
-    <div>
+    <div className={sourceSans.className}>
       <Head>
         <meta charSet='utf-8' />
         <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
