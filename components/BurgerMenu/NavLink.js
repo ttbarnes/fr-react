@@ -17,7 +17,7 @@ const NavLink = ({ link, pathname, text, onClick }) => {
   const linkClassName = isActive ? 'bm-link bm-link-active' : 'bm-link';
 
   return (
-    <Link href={link}>
+    <Link href={link} legacyBehavior>
       <a
         onClick={onClick}
         className={linkClassName}

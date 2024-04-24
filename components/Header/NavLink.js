@@ -18,7 +18,7 @@ const NavLink = ({ link, pathname, text }) => {
   const linkClassName = isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink;
 
   return (
-    <Link href={link}>
+    <Link href={link} legacyBehavior>
       <a className={linkClassName}>
         <span className={styles.navLinkInner}>{text}</span>
       </a>

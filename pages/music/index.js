@@ -42,7 +42,10 @@ const MusicPage = ({ albums }) => (
               key={album.name}
               className={styles.listItem}
             >
-              <Link href={`/music/${album.formattedName}`}>
+              <Link
+                href={`/music/${album.formattedName}`}
+                legacyBehavior
+              >
                 <a className={styles.listItemLink}>
                   <div className={styles.imageContainer}>
                     <Image

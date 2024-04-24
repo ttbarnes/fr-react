@@ -20,7 +20,7 @@ const CollaboratorsList = ({ collaborators }) => {
         <li
           className={`col-50-xs col-25-md no-list-style ${styles.collaboratorsListItem}`}
           key={collab.name}>
-          <Link href={`${CONSTANTS.BASE_URL}/collaborators/${collab.urlName}`}>
+          <Link href={`${CONSTANTS.BASE_URL}/collaborators/${collab.urlName}`} legacyBehavior>
             <a>
               <div className={styles.inner}>
                 <img

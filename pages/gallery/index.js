@@ -33,7 +33,10 @@ const GalleryPage = ({ images }) => (
         <h1 className='text-align-center'><span className='sr-only'>Fiona Ross </span>Gallery <span className='sr-only'>of gigs, events, photoshoots</span></h1>
 
         <p className='text-align-center'>
-          <Link href={`${CONSTANTS.BASE_URL}/gallery/signed-photo`}>
+          <Link
+            href={`${CONSTANTS.BASE_URL}/gallery/signed-photo`}
+            legacyBehavior
+          >
             <a className='link-highlight-hover-border'>Get a signed photo from Fi</a>
           </Link>
         </p>

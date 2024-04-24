@@ -49,6 +49,7 @@ const Album = (album) => {
               <p className={styles.audioCdLink}>
                 <Link
                   href={album.urls.bandcamp}
+                  legacyBehavior
                 >
                   <a
                     className='link-highlight-hover-border'

@@ -1,6 +1,12 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import { Source_Sans_3 } from 'next/font/google';
 import styles from './PageButtonLink.module.scss';
+
+const sourceSans = Source_Sans_3({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const PageButtonLink = ({
   href,
@@ -18,8 +24,8 @@ const PageButtonLink = ({
 
   return (
     <div className={containerClassName}>
-      <Link href={href}>
-        <a className={`button ${styles.link}`}>
+      <Link href={href} legacyBehavior>
+        <a className={`button ${sourceSans.className} ${styles.link}`}>
           <span className={styles.linkText}>
             {text}
             {subText && (
@@ -35,8 +41,8 @@ const PageButtonLink = ({
 
       {footerLink && (
         <div className='row'>
-          <Link href={footerLink.href}>
-            <a className={`${styles.link} ${styles.footerLink}`}>{footerLink.text}</a>
+          <Link href={footerLink.href} legacyBehavior>
+            <a className={`${sourceSans.className} ${styles.link} ${styles.footerLink}`}>{footerLink.text}</a>
           </Link>
         </div>
       )}
