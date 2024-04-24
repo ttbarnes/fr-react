@@ -110,7 +110,9 @@ const HomePage = () => {
               
             <p>
               <Link
-                href={process.env.NEXT_PUBLIC_MAILCHIMP_URL}>
+                href={process.env.NEXT_PUBLIC_MAILCHIMP_URL}
+                legacyBehavior
+              >
                 <a
                   className={`link-highlight-hover-border ${styles.findOutMore}`}
                   target='_blank'

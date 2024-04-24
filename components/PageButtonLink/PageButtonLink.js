@@ -18,7 +18,7 @@ const PageButtonLink = ({
 
   return (
     <div className={containerClassName}>
-      <Link href={href}>
+      <Link href={href} legacyBehavior>
         <a className={`button ${styles.link}`}>
           <span className={styles.linkText}>
             {text}
@@ -35,7 +35,7 @@ const PageButtonLink = ({
 
       {footerLink && (
         <div className='row'>
-          <Link href={footerLink.href}>
+          <Link href={footerLink.href} legacyBehavior>
             <a className={`${styles.link} ${styles.footerLink}`}>{footerLink.text}</a>
           </Link>
         </div>

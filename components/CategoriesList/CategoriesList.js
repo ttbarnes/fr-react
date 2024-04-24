@@ -23,7 +23,7 @@ const CategoriesList = ({ categories }) => (
           key={category.TEXT}
           className='categories-list-item'
         >
-          <Link href={category.ROUTE}>
+          <Link href={category.ROUTE} legacyBehavior>
             <a {...targetAttributes}>
               <div className='categories-list-item-image-container' aria-hidden='true'>
                 <img src={category.IMAGE_URL} alt={category.TEXT} className='categories-list-item-image' />
