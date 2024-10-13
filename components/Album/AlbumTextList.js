@@ -7,7 +7,7 @@ const AlbumTextList = ({
   list,
   listType,
   start,
-  withBackground,
+  withBackground = false,
   alwaysShowHeading,
 }) => {
   if (list && list.length) {
@@ -70,10 +70,6 @@ AlbumTextList.propTypes = {
   listType: PropTypes.string.isRequired,
   list: PropTypes.arrayOf(PropTypes.string).isRequired,
   withBackground: PropTypes.bool
-};
-
-AlbumTextList.defaultProps = {
-  withBackground: false
 };
 
 export default AlbumTextList;

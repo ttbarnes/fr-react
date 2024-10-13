@@ -12,9 +12,9 @@ const PageButtonLink = ({
   href,
   text,
   subText,
-  icon,
+  icon = 'icon-arrow-right',
   footerLink,
-  alignCenter
+  alignCenter = true
 }) => {
   let containerClassName = `row ${styles.container}`;
 
@@ -61,10 +61,5 @@ PageButtonLink.propTypes = {
   }),
   alignCenter: PropTypes.bool
 }
-
-PageButtonLink.defaultProps = {
-  icon: 'icon-arrow-right',
-  alignCenter: true
-};
 
 export default PageButtonLink;
