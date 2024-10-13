@@ -95,8 +95,4 @@ TextLinksSection.propTypes = {
   })).isRequired
 };
 
-TextLinksSection.defaultProps = {
-  withBackground: false
-};
-
 export default TextLinksSection;
