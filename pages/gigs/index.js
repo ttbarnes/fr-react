@@ -8,41 +8,49 @@ import GigsList from '../../components/GigsList';
 import PageButtonLink from '../../components/PageButtonLink';
 import styles from './Gigs.module.scss';
 
-const sortGigs = (gigs) => {
+const sortGigs = (years) => {
   const now = new Date();
 
   const currentYear = now.getFullYear();
 
-  let sortedGigs = JSON.parse(JSON.stringify(gigs));
+  const gigYears = JSON.parse(JSON.stringify(years));
 
-  const sortedYears = sortedGigs.sort((a, b) => Number(a.year) - Number(b.year)).reverse();
+  const currentYearGigs = [];
+  const futureGigYears = [];
+  const previousGigYears = [];
 
-  sortedGigs = sortedGigs.map((year) => {
+  gigYears.forEach((yearObj) => {
+    const { year } = yearObj;
+
     let sortedYearGigs;
 
-    if (Number(year.year) === currentYear) {
-      const previousGigs = year.gigs.filter((gig) => isBefore(new Date(gig.date), new Date()));
+    if (Number(year) > currentYear) {
+      futureGigYears.push(yearObj);
+    }
+    
+    if (Number(year) === currentYear) {
+      const sortedUpcomingGigs = yearObj.gigs.sort((a, b) => Math.abs(Date.now() - new Date(a.date)) - Math.abs(Date.now() - new Date(b.date)));
 
-      const upcomingGigs = year.gigs.filter((gig) => !isBefore(new Date(gig.date), new Date()));
-
-      const sortedUpcomingGigs = upcomingGigs.sort((a, b) => Math.abs(Date.now() - new Date(a.date)) - Math.abs(Date.now() - new Date(b.date)));
-
-      sortedYearGigs = [
-        ...sortedUpcomingGigs,
-        ...previousGigs
-      ];
-
-    } else {
-      sortedYearGigs = year.gigs.sort((a, b) => new Date(a.date) - new Date(b.date)).reverse();
+      currentYearGigs.push({
+        year,
+        gigs: sortedUpcomingGigs,
+      });
     }
 
-    return {
-      year: year.year,
-      gigs: sortedYearGigs
-    };
+    if (Number(year) < currentYear) {
+      previousGigYears.push(yearObj);
+    }
   });
 
-  return sortedGigs;
+  const sortedPreviousGigYears = previousGigYears.sort((a, b) => new Date(a.year) - new Date(b.year)).reverse();
+
+  const gigsOrderedByYear = [
+    ...currentYearGigs,
+    ...futureGigYears.reverse(),
+    ...sortedPreviousGigYears
+  ];
+
+  return gigsOrderedByYear;
 };
 
 const GigsPage = ({ gigs }) => (
