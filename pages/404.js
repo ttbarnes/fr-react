@@ -6,8 +6,7 @@ const NotFoundPage = () => (
     <div className='container'>
       <div className='main-content container-small text-align-center'>
 
-          <p className='page-heading'>Sorry, I don't want to play</p>
-          <p>Something has gone wrong.</p>
+          <p className='page-heading'>Page not found</p>
 
           <PageButtonLink
             href='/'
