@@ -28,7 +28,7 @@ const PAGE = {
     URL: `${BASE_URL}/collaborators`
   },
   DISCOGRAPHY: {
-    TITLE: `Music - ${META_TAGS.AUTHOR}`,
+    TITLE: `Discography - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL}/discography`
   },
   CONTACT: {
