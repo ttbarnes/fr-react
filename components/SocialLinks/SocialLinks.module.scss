@@ -15,7 +15,8 @@
   &:focus,
   &:active {
     .listItemIcon,
-    .listItemImageIcon {
+    .listItemImageIcon,
+    img {
       transform: rotate(360deg);
     }
   }
@@ -72,23 +73,5 @@
   }
   .text {
     display: none;
-  }
-}
-
-.iconThr {
-  vertical-align: bottom;
-  // margin-bottom: .3em;
-}
-
-.iconBs {
-  vertical-align: bottom;
-  // margin-bottom: .5em;
-  position: relative;
-  top: 5px;
-  padding-right: .5em;
-  padding-left: .5em;
-  @media (min-width: 600px) {
-    padding-right: 0;
-    padding-left: 0;
   }
 }

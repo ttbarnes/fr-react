@@ -82,7 +82,7 @@ const SocialLinks = ({
         <img
           src={'/images/icons/s-tt.svg'}
           alt='TikTok'
-          className='icon-tt'
+          className={`${styles.listItemImageIcon} icon-tt`}
           aria-label='TikTok'
         />
       </a>
@@ -99,7 +99,7 @@ const SocialLinks = ({
         <img
           src={'/images/icons/s-thr.svg'}
           alt='Threads'
-          className='icon-thr'
+          className={`${styles.listItemImageIcon} icon-thr`}
           aria-label='Threads'
         />
       </a>
@@ -116,7 +116,7 @@ const SocialLinks = ({
         <img
           src={'/images/icons/s-bs.svg'}
           alt='Bluesky'
-          className='icon-bs'
+          className={`${styles.listItemImageIcon} icon-bs`}
           aria-label='Bluesky'
         />
       </a>
