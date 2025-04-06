@@ -34,6 +34,45 @@ const SocialLinks = ({
 
     <li className={isSticky ? `${styles.listItem} ${styles.isSticky}` : styles.listItem}>
       <a
+        className={styles.listItemLink}
+        href={CONSTANTS.SOCIAL_MEDIA_URLS.FACEBOOK}
+        target='_blank'
+        rel='noopener noreferrer'
+        aria-label='Facebook'
+      >
+        <i className={`icon-s-f ${styles.listItemIcon}`}></i>
+        <span className={styles.text}>Facebook</span>
+      </a>
+    </li>
+
+    <li className={isSticky ? `${styles.listItem} ${styles.isSticky}` : styles.listItem}>
+      <a
+        className={styles.listItemLink}
+        href={CONSTANTS.SOCIAL_MEDIA_URLS.INSTAGRAM}
+        target='_blank'
+        rel='noopener noreferrer'
+        aria-label='Instagram'
+      >
+        <i className={`icon-s-i ${styles.listItemIcon}`}></i>
+        <span className={styles.text}>Instagram</span>
+      </a>
+    </li>
+
+    <li className={isSticky ? `${styles.listItem} ${styles.isSticky}` : styles.listItem}>
+      <a
+        className={styles.listItemLink}
+        href={CONSTANTS.SOCIAL_MEDIA_URLS.YOUTUBE}
+        target='_blank'
+        rel='noopener noreferrer'
+        aria-label='YouTube'
+      >
+        <i className={`icon-s-y ${styles.listItemIcon}`}></i>
+        <span className={styles.text}>YouTube</span>
+      </a>
+    </li>
+
+    <li className={isSticky ? `${styles.listItem} ${styles.isSticky}` : styles.listItem}>
+      <a
         className={`${styles.listItemLink} ${styles.iconTtLink}`}
         href={CONSTANTS.SOCIAL_MEDIA_URLS.TIKTOK}
         target='_blank'
@@ -80,45 +119,6 @@ const SocialLinks = ({
           className='icon-bs'
           aria-label='Bluesky'
         />
-      </a>
-    </li>
-
-    <li className={isSticky ? `${styles.listItem} ${styles.isSticky}` : styles.listItem}>
-      <a
-        className={styles.listItemLink}
-        href={CONSTANTS.SOCIAL_MEDIA_URLS.FACEBOOK}
-        target='_blank'
-        rel='noopener noreferrer'
-        aria-label='Facebook'
-      >
-        <i className={`icon-s-f ${styles.listItemIcon}`}></i>
-        <span className={styles.text}>Facebook</span>
-      </a>
-    </li>
-
-    <li className={isSticky ? `${styles.listItem} ${styles.isSticky}` : styles.listItem}>
-      <a
-        className={styles.listItemLink}
-        href={CONSTANTS.SOCIAL_MEDIA_URLS.INSTAGRAM}
-        target='_blank'
-        rel='noopener noreferrer'
-        aria-label='Instagram'
-      >
-        <i className={`icon-s-i ${styles.listItemIcon}`}></i>
-        <span className={styles.text}>Instagram</span>
-      </a>
-    </li>
-
-    <li className={isSticky ? `${styles.listItem} ${styles.isSticky}` : styles.listItem}>
-      <a
-        className={styles.listItemLink}
-        href={CONSTANTS.SOCIAL_MEDIA_URLS.YOUTUBE}
-        target='_blank'
-        rel='noopener noreferrer'
-        aria-label='YouTube'
-      >
-        <i className={`icon-s-y ${styles.listItemIcon}`}></i>
-        <span className={styles.text}>YouTube</span>
       </a>
     </li>
 
