@@ -39,7 +39,7 @@ const AboutPage = ({ articles }) => (
 
           <div className={styles.centralQuote}>
             <BlockQuote
-              copy='It’s just me doing my thing'
+              copy="It's just me doing my thing"
               isLarge
               isHighlight
               isShort
@@ -49,20 +49,22 @@ const AboutPage = ({ articles }) => (
 
           <div className={styles.textContentContainer}>
 
-            <p>Named among the 100 Alternative Power Music List for 2020, multi-award winning jazz artist, editor-in-chief, journalist and founder of the award winning Women in Jazz Media organisation, Fiona Ross never stops.</p>
+            <p>Named among the 100 Alternative Power Music List, multi-award winning jazz artist, journalist and founder of the award winning Women in Jazz Media organisation Fiona Ross never stops.</p>
           
-            <p>As a vocalist, pianist, composer and producer, Fiona has become known for creating her own contemporary jazz sound incorporating fast paced Latin Jazz, vintage Jazz club, a little neo soul along with heart wrenching ballads that demonstrate <span className='highlight'><i>"Her style is poetic and the messages ooze with Millennial angst"</i> (Jazz weekly)</span>.</p>
+            <p>As vocalist, pianist, composer and producer, Fiona has become known for creating her own contemporary jazz sound incorporating fast paced Latin Jazz, vintage Jazz club, a little neo soul along with heart wrenching ballads. She came to the world's attention as <span className='highlight'><i>"The artist that gave Ed Sheeran his 'first push'"</i></span>{' '}but very quickly established herself as an artist in her own right and has received incredible reviews and awards across the globe for all of her albums.</p>
 
-            <p>She came to the worlds attention as <span className='highlight'><i>"The artist that gave Ed Sheeran his 'first push'"</i> (Daily Express)</span>, but very quickly established herself as an artist in her own right and has received incredible reviews and awards across the globe for all of her albums.</p>
+            <p>Her live performances have seen her perform at prestigious venues including 606 Club, Pizza Express, Nells Jazz and Blues and festivals such as the EFG London Jazz Festival and her music is played on radio stations all over the world. Fiona has achieved many accolades for her work including <span className='highlight'>Best Jazz Song</span> from the World Songwriting Awards, <span className='highlight'>Outstanding achievement</span> awarded by the Global Music Awards and <span className='highlight'>International female songwriter of the year</span> from the International Singer Songwriters Association. She has been featured in many publications including Tinnitist, Jazziz, Record World Magazine, Jazz Corner, Ink 19 and Jazz Quarterly. Fiona's song ‘Mistress’ which was recorded live in a stairwell, is <span className='highlight'>included in the British Library archives</span> for prosperity.</p>
 
-            <p>Her live performances have seen her perform at prestigious venues including 606 Club, Pizza Express, Bulls Head, Nells Jazz and Blues and Toulouse Lautrec and her music is played on radio stations all over the world including 40 stations in the USA as well as in Canada, Italy, France, Germany, Australia, Nertherlands and Spain.</p>
+            <p>As well as working as a Jazz artist, Fiona spends her time behind the scenes in Jazz working as the founder of <span className='highlight'>Women in Jazz Media</span>, senior writer for Jazz in Europe and writing for a range of publications. She has interviewed an impressive list of inspirational artists including Rickie Lee Jones, Regina Carter, Brandee Younger, Jazzmeia Horn,Steve Gadd, Michel Camilo, Kyle Eastwood, Dee Dee Bridgewater, Maxine Gordon, Terri Lyne Carrington, Barbara Thompson OBE, Ruby Turner, Hiromi, Camille Thurman and Celine Peterson.</p>
 
-            <p>Fiona has achieved many accolades for her most recent album, including <span className='highlight'>Best Jazz Song</span> from the World Songwriting Awards for her song ‘For My Dad’, <span className='highlight'>Outstanding achievement</span> awarded by the Global Music Awards and most recently <span className='highlight'>International female songwriter of the year</span> from the International Singer Songwriters Association. She has been featured in many publications including Tinnitist, Jazziz, Record World Magazine, Jazz Corner, Ink 19 and Jazz Quarterly and was thrilled to be in the top ten of most played videos recently in Tinnitist. Fiona’s song ‘Mistress’ which was recorded live in a stairwell, was selected to be <span className='highlight'>included in the British Library archives</span> for prosperity.</p>
+            <p>Fiona launched her podcast series <span className='highlight'>'Thoughts, Conversations and To Do Lists'</span> in 2023 inspired by her last album title and was nominated for <span className='highlight'>'Best Podcast'</span> by the World Entertainment Awards. Fiona explains that 'Every podcast guest is someone who inspires me and who I have previously had a wonderful conversation with'. This podcast series has recently been rated on FeedSpot as <span className='highlight'>number 8 in the Top 60 UK Music Podcasts on the web</span>.</p>
 
-            <p>There has rarely been a day since then for Fiona that has not centered around music. <span className='highlight'>Enrolled in dance, drama and singing lessons at the age of two, piano at age six. </span>At what moment did Fiona make a conscious choice to pursue a career in music? There wasn't a moment. There was never a time when there was any other choice. By the age of eight years old Fiona was starring in London's West End. Talent like Fiona's doesn't go unnoticed; soon she was signed to an agency and was featured in a string of television commercials and print advertisements and was recording radio jingles for everything from ketchup to Fairy dishwashing soap.</p>
+            <p>Fiona has been nominated four years in a row by the National Diversity Awards for the ‘Positive Role Model’ Award.</p>
 
-            <p>At the age of fourteen she lied about her age and talked her way into gigging on weekends in jazz clubs throughout London, from the classy nightspots of the elite to some <span className='highlight'>rather seedy pubs that were no place for an ordinary teenager. </span>There were never any contracts to sign, it was always cash in hand at the end of the night. No one even suspected that a voice that startling in its maturity and passion could belong to a singer barely into her teens. <span className='quote'>'I will never forget going home to my parents,' </span>&nbsp;Fiona says;</p>
-          
+            <p>There has rarely been a day since then for Fiona that has not centered around music. <span className='highlight'>Enrolled in dance, drama and singing lessons at the age of two, piano at age six</span>. At what moment did Fiona make a conscious choice to pursue a career in music? There wasn't a moment. There was never a time when there was any other choice. By the age of eight years old Fiona was starring in London's West End. Talent like Fiona's doesn't go unnoticed; soon she was signed to an agency and was featured in a string of television commercials and print advertisements and was recording radio jingles for everything from ketchup to Fairy dishwashing soap.</p>
+
+            <p>At the age of fourteen she lied about her age and talked her way into gigging on weekends in jazz clubs throughout London, from the classy nightspots of the elite to some <span className='highlight'>rather seedy pubs that were no place for an ordinary teenager</span>. There were never any contracts to sign, it was always cash in hand at the end of the night. No one even suspected that a voice that startling in its maturity and passion could belong to a singer barely into her teens. Fiona says;</p>
+
             <BlockQuote
               copy='Telling them that I had a job singing and playing Jazz as a solo artist in a club in London, I was so thrilled, but they were furious - well, I was only 14 at the time.'
               isHighlight
@@ -70,29 +72,9 @@ const AboutPage = ({ articles }) => (
               centered
             />
 
-            <p>Fiona attended the prestigious Arts Educational School (the English equivalent of New York's High School for Performing Arts) where Julie Andrews, Catherine Zeta Jones and Will Young, to name just a few, also trained. Fiona's career has taken her all over the musical map. She has worked as a musical director, session musician, composer, choreographer, director, dancer, actor, model -   She even sang back-up for a rock and roll band called Rocking Willie and the Y-Fronts when she was 15.</p>
+            <p>Fiona attended the prestigious Arts Educational School (the English equivalent of New York's High School for Performing Arts) where Julie Andrews, Catherine Zeta Jones and Will Young, to name just a few, also trained. Fiona's career has taken her all over the musical map. She has worked as a musical director, session musician, composer, choreographer, director, dancer, actor, model - She even sang back-up for a rock and roll band called Rocking Willie and the Y-Fronts when she was 15.</p>
 
-            <p>Alongside this, <span className='highlight'>educating young people has been Fiona’s passion </span>and she was Head of British Academy of New Music, London, for nearly nine years, where she was responsible for the training of Ed Sheeran, Rita Ora and Jess Glynne, to name a few. But now, it is Fiona’s turn.</p>
-
-            <BlockQuote
-              copy='Her style Is poetic and the message is ooze with millennial angst'
-              author='Jazz Weekly'
-              isHighlight
-              isMedium
-              centered
-            />
-
-            <BlockQuote
-              copy='Jazz artist extraordinaire'
-              author='Indie Music Women'
-              isHighlight
-              isMedium
-              centered
-              isShort
-            />
-
-            <br />
-            <br />
+            <p>Alongside this, <span className='highlight'>educating young people has been Fiona's passion</span> and she was Head of British Academy of New Music, London, for nearly nine years, where she was responsible for the training of Ed Sheeran, Rita Ora and Jess Glynne, to name a few.</p>
 
             <div className={`row ${styles.organisationsSupportContainer}`}>
 
