@@ -55,13 +55,13 @@ const MemberOfList = () => (
 
     <li className={styles.listItem}>
       <a
-        href="https://www.insomniacclub.co.uk"
+        href="https://www.recordingacademy.com"
         target='_blank'
         rel='noopener noreferrer'
-        aria-label='Insomniac Club'
-        className={styles.listItemLink}
+        aria-label='The Recording Academy'
+        className={`${styles.listItemLink} ${styles.theRecordingAcademy}`}
       >
-        <img src='./images/about/insomniac.png' alt='' />
+        <img src='./images/about/the-recording-academy.png' alt='' />
       </a>
     </li>
   </ul>

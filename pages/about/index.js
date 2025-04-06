@@ -63,14 +63,7 @@ const AboutPage = ({ articles }) => (
 
             <p>There has rarely been a day since then for Fiona that has not centered around music. <span className='highlight'>Enrolled in dance, drama and singing lessons at the age of two, piano at age six</span>. At what moment did Fiona make a conscious choice to pursue a career in music? There wasn't a moment. There was never a time when there was any other choice. By the age of eight years old Fiona was starring in London's West End. Talent like Fiona's doesn't go unnoticed; soon she was signed to an agency and was featured in a string of television commercials and print advertisements and was recording radio jingles for everything from ketchup to Fairy dishwashing soap.</p>
 
-            <p>At the age of fourteen she lied about her age and talked her way into gigging on weekends in jazz clubs throughout London, from the classy nightspots of the elite to some <span className='highlight'>rather seedy pubs that were no place for an ordinary teenager</span>. There were never any contracts to sign, it was always cash in hand at the end of the night. No one even suspected that a voice that startling in its maturity and passion could belong to a singer barely into her teens. Fiona says;</p>
-
-            <BlockQuote
-              copy='Telling them that I had a job singing and playing Jazz as a solo artist in a club in London, I was so thrilled, but they were furious - well, I was only 14 at the time.'
-              isHighlight
-              isMedium
-              centered
-            />
+            <p>At the age of fourteen she lied about her age and talked her way into gigging on weekends in jazz clubs throughout London, from the classy nightspots of the elite to some <span className='highlight'>rather seedy pubs that were no place for an ordinary teenager</span>. There were never any contracts to sign, it was always cash in hand at the end of the night. No one even suspected that a voice that startling in its maturity and passion could belong to a singer barely into her teens. Fiona says; "Telling them that I had a job singing and playing Jazz as a solo artist in a club in London, I was so thrilled, but they were furious - well, I was only 14 at the time."</p>
 
             <p>Fiona attended the prestigious Arts Educational School (the English equivalent of New York's High School for Performing Arts) where Julie Andrews, Catherine Zeta Jones and Will Young, to name just a few, also trained. Fiona's career has taken her all over the musical map. She has worked as a musical director, session musician, composer, choreographer, director, dancer, actor, model - She even sang back-up for a rock and roll band called Rocking Willie and the Y-Fronts when she was 15.</p>
 
@@ -91,15 +84,6 @@ const AboutPage = ({ articles }) => (
               <MemberOfList />
 
             </div>
-
-            <BlockQuote
-              copy='It is my pleasure and privilege to join the Insomniac Club Team as their patron. I am hugely passionate about raising awareness of mental health and more importantly creative strategies and support mechhanisms to truly help and make a difference. As an educator and someone who has worked in the creative industry all my life, I have seen many people struggle with their mental health and just not knowing what to do and who to turn to. The Insomniac Club are starting to make a difference through creating and promoting a variety of ways to support and also stimulate our thinking about how we can truly help. Raising awareness is one step, actions are the next one and I am very excited to be part of this.'
-              author='Fiona Ross'
-              isHighlight
-              isMedium
-              centered
-              isLong
-            />
 
           </div>
 
