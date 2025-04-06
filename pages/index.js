@@ -2,8 +2,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import CONSTANTS from '../constants';
-import ALBUMS from '../data/albums.json';
-import { mapAlbums } from '../helpers/albums';
+import DISCOGRAPHY from '../data/discography.json';
+import { mapDiscography } from '../discography';
 import PageContainer from '../components/PageContainer';
 import HomePageQuote from '../components/HomePageQuote';
 import Album from '../components/Album';
@@ -11,7 +11,7 @@ import PageButtonLink from '../components/PageButtonLink';
 import styles from './Home.module.scss';
 
 const HomePage = () => {
-  const mappedAlbums = mapAlbums(ALBUMS);
+  const mappedAlbums = mapDiscography(DISCOGRAPHY);
   const latestAlbum = mappedAlbums[0];
 
   return (
@@ -87,7 +87,7 @@ const HomePage = () => {
           {/*
           <div className={`row text-align-center ${styles.videoContainer}`}>
             <h3 className={styles.videoHeading}>
-              <Link href='/music/Red-Flags-and-High-Heels'>Red Flags and High Heels - out now</Link>
+              <Link href='/discography/Red-Flags-and-High-Heels'>Red Flags and High Heels - out now</Link>
             </h3>
 
             <div className={styles.iframeContainer}>
@@ -96,7 +96,7 @@ const HomePage = () => {
 
             <p>
               <Link
-                href='/music/Red-Flags-and-High-Heels'>
+                href='/discography/Red-Flags-and-High-Heels'>
                 <a className={`link-highlight-hover-border ${styles.findOutMore}`}>Find out more</a>
               </Link>
             </p>
@@ -125,8 +125,8 @@ const HomePage = () => {
           </div>
 
           <PageButtonLink
-            href={`${CONSTANTS.BASE_URL}/music`}
-            text='View albums'
+            href={`${CONSTANTS.BASE_URL}/discography`}
+            text='View discography'
           />
 
         </div>

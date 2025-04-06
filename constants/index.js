@@ -27,6 +27,10 @@ const PAGE = {
     TITLE: `Collaborators - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL}/collaborators`
   },
+  DISCOGRAPHY: {
+    TITLE: `Music - ${META_TAGS.AUTHOR}`,
+    URL: `${BASE_URL}/discography`
+  },
   CONTACT: {
     TITLE: `Contact - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL}/contact`
@@ -50,10 +54,6 @@ const PAGE = {
   JOURNALISM: {
     TITLE: `Journalism - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL}/journalism`
-  },
-  MUSIC: {
-    TITLE: `Music - ${META_TAGS.AUTHOR}`,
-    URL: `${BASE_URL}/music`
   },
   NEWS: {
     TITLE: `News - ${META_TAGS.AUTHOR}`,

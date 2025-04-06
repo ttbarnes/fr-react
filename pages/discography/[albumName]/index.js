@@ -1,23 +1,18 @@
 import Head from 'next/head';
-import ALBUMS from '../../../data/albums.json';
+import DISCOGRAPHY from '../../../data/discography.json';
 import CONSTANTS from '../../../constants';
 import PageContainer from '../../../components/PageContainer';
 import Album from '../../../components/Album';
 import PageButtonLink from '../../../components/PageButtonLink';
-import {
-  cleanAlbumName,
-  encodeAlbumName,
-  getImagePath,
-  mapAlbums
-} from '../../../helpers/albums';
+import { cleanDiscographyItemName, mapDiscography } from '../../../discography';
 
-const AlbumPage = ({ albums }) => {
-  const firstAlbum = albums[0];
+const AlbumPage = ({ discography }) => {
+  const firstItem = discography[0];
 
-  const metaTitle = `${firstAlbum.name} - Fiona Ross`;
-  const metaDescription = firstAlbum.albumCredits ? firstAlbum.albumCredits[0] : CONSTANTS.META_TAGS.OG_DESCRIPTION;
-  const metaUrl = `${CONSTANTS.BASE_URL}/music/${firstAlbum.formattedName}`;
-  const metaImage = `${CONSTANTS.BASE_URL_REACT}/images/albums/social/${firstAlbum.imageName}.png`;
+  const metaTitle = `${firstItem.name} - Fiona Ross`;
+  const metaDescription = firstItem.albumCredits ? firstItem.albumCredits[0] : CONSTANTS.META_TAGS.OG_DESCRIPTION;
+  const metaUrl = `${CONSTANTS.BASE_URL}/discography/${firstItem.formattedName}`;
+  const metaImage = `${CONSTANTS.BASE_URL_REACT}/images/discography/social/${firstItem.imageName}.png`;
 
   return (
     <PageContainer>
@@ -46,15 +41,15 @@ const AlbumPage = ({ albums }) => {
 
         <h1 className='hidden'>Albums</h1>
 
-        {firstAlbum.hasBackgroundImage && (
+        {firstItem.hasBackgroundImage && (
           <img
-            src={`/images/background/${firstAlbum.imageName}.png`}
+            src={`/images/background/${firstItem.imageName}.png`}
             alt=''
-            className={`page-img-bg ${firstAlbum.imageName}`}
+            className={`page-img-bg ${firstItem.imageName}`}
             aria-hidden='true'
             role='presentation'
             style={{
-              opacity: firstAlbum.backgroundImageOpacity ? firstAlbum.backgroundImageOpacity : 1
+              opacity: firstItem.backgroundImageOpacity ? firstItem.backgroundImageOpacity : 1
             }}
           />
         )}
@@ -62,9 +57,9 @@ const AlbumPage = ({ albums }) => {
         <div className='main-content container-small'>
 
           <ul className='no-list-style' aria-label='Albums'>
-            {albums.map((album) => (
-              <li key={album.name}>
-                <Album {...album} />
+            {discography.map((item) => (
+              <li key={item.name}>
+                <Album {...item} />
               </li>
             ))}
           </ul>
@@ -83,13 +78,13 @@ const AlbumPage = ({ albums }) => {
 export async function getServerSideProps(context) {
   const { albumName } = context.query;
 
-  let mappedAlbums = ALBUMS;
+  let mappedDiscography = DISCOGRAPHY;
 
   if (albumName) {
     const albumNameDecoded = albumName.replace(/-/g, ' ')
 
-    const album = ALBUMS.find((album) =>
-      cleanAlbumName(album.name).toLowerCase() === albumNameDecoded.toLowerCase());
+    const album = DISCOGRAPHY.find((album) =>
+      cleanDiscographyItemName(album.name).toLowerCase() === albumNameDecoded.toLowerCase());
 
     if (!album) {
       return {
@@ -101,9 +96,9 @@ export async function getServerSideProps(context) {
       };
     }
 
-    const allOtherAlbums = ALBUMS.filter((a) => a.name !== album.name);
+    const allOtherAlbums = DISCOGRAPHY.filter((a) => a.name !== album.name);
 
-    mappedAlbums = mapAlbums([
+    mappedDiscography = mapDiscography([
       album,
       ...allOtherAlbums
     ]);
@@ -111,7 +106,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      albums: mappedAlbums
+      discography: mappedDiscography
     }
   };
 }
