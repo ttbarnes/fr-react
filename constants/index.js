@@ -1,5 +1,7 @@
 const BASE_URL = '/'
 
+const GALLERY_HI_RES_PHOTOS_URL = 'https://drive.google.com/drive/folders/1YmJ7BpGb3D2XRq5F81c4il482trWvaqY?usp=sharing';
+
 const META_TAGS = {
   TITLE: 'Fiona Ross - Jazz Vocalist, Pianist, Composer, Producer and Journalist',
   DESCRIPTION: 'Award Winning Vocalist, Pianist, Composer, Producer and Journalist. 7 Songs in 7 Days out now',
@@ -157,6 +159,7 @@ const PRESS_CATEGORIES = {
 
 export default {
   BASE_URL,
+  GALLERY_HI_RES_PHOTOS_URL,
   META_TAGS,
   PAGE,
   SOCIAL_MEDA_IMAGE_SIZE,
