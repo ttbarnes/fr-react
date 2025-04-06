@@ -1,20 +1,41 @@
-/music/album/6 /music/7-Songs-in-7-Days
-/music/album/5 /music/Red-Flags-and-High-Heels
-/music/album/4 /music/Fierce-and-Non-Compliant
-/music/album/3 /music/Just-Me-and-sometimes-someone-else
-/music/album/2 /music/Black-White-and-a-Little-Bit-of-Grey
-/music/album/1 /music/A-Twist-of-Blue
+/music/album/6 /discography/7-Songs-in-7-Days
+/music/album/5 /discography/Red-Flags-and-High-Heels
+/music/album/4 /discography/Fierce-and-Non-Compliant
+/music/album/3 /discography/Just-Me-and-sometimes-someone-else
+/music/album/2 /discography/Black-White-and-a-Little-Bit-of-Grey
+/music/album/1 /discography/A-Twist-of-Blue
 
-/music/album/7-Songs-in-7-Days /music/7-Songs-in-7-Days
-/music/album/Red-Flags-and-High-Heels /music/Red-Flags-and-High-Heels
-/music/album/Fierce-and-Non-Compliant /music/Fierce-and-Non-Compliant
-/music/album/Just-Me-and-sometimes-someone-else /music/Just-Me-and-sometimes-someone-else
-/music/album/Black-White-and-a-Little-Bit-of-Grey /music/Black-White-and-a-Little-Bit-of-Grey
-/music/album/A-Twist-of-Blue /music/A-Twist-of-Blue
+/music/album/6/reviews /discography/7-Songs-in-7-Days/reviews
+/music/album/5/reviews /discography/Red-Flags-and-High-Heels/reviews
+/music/album/4/reviews /discography/Fierce-and-Non-Compliant/reviews
+/music/album/3/reviews /discography/Just-Me-and-sometimes-someone-else/reviews
+/music/album/2/reviews /discography/Black-White-and-a-Little-Bit-of-Grey/reviews
+/music/album/1/reviews /discography/A-Twist-of-Blue/reviews
 
-/music/album/6/reviews /music/7-Songs-in-7-Days/reviews
-/music/album/5/reviews /music/Red-Flags-and-High-Heels/reviews
-/music/album/4/reviews /music/Fierce-and-Non-Compliant/reviews
-/music/album/3/reviews /music/Just-Me-and-sometimes-someone-else/reviews
-/music/album/2/reviews /music/Black-White-and-a-Little-Bit-of-Grey/reviews
-/music/album/1/reviews /music/A-Twist-of-Blue/reviews
+/music/album/7-Songs-in-7-Days /discography/7-Songs-in-7-Days
+/music/album/Red-Flags-and-High-Heels /discography/Red-Flags-and-High-Heels
+/music/album/Fierce-and-Non-Compliant /discography/Fierce-and-Non-Compliant
+/music/album/Just-Me-and-sometimes-someone-else /discography/Just-Me-and-sometimes-someone-else
+/music/album/Black-White-and-a-Little-Bit-of-Grey /discography/Black-White-and-a-Little-Bit-of-Grey
+/music/album/A-Twist-of-Blue /discography/A-Twist-of-Blue
+
+/music/album/7-Songs-in-7-Days/reviews /discography/7-Songs-in-7-Days/reviews
+/music/album/Red-Flags-and-High-Heels/reviews /discography/Red-Flags-and-High-Heels/reviews
+/music/album/Fierce-and-Non-Compliant/reviews /discography/Fierce-and-Non-Compliant/reviews
+/music/album/Just-Me-and-sometimes-someone-else/reviews /discography/Just-Me-and-sometimes-someone-else/reviews
+/music/album/Black-White-and-a-Little-Bit-of-Grey/reviews /discography/Black-White-and-a-Little-Bit-of-Grey/reviews
+/music/album/A-Twist-of-Blue/reviews /discography/A-Twist-of-Blue/reviews
+
+/music/Thoughts-Conversations-and-To-Do-Lists /discography/Thoughts-Conversations-and-To-Do-Lists
+/music/7-Songs-in-7-Days /discography/7-Songs-in-7-Days
+/music/Red-Flags-and-High-Heels /discography/Red-Flags-and-High-Heels
+/music/Fierce-and-Non-Compliant /discography/Fierce-and-Non-Compliant
+/music/Black-White-and-a-Little-Bit-of-Grey /discography/Black-White-and-a-Little-Bit-of-Grey
+/music/Just-Me-and-sometimes-someone-else /discography/Just-Me-and-sometimes-someone-else
+
+/music/Thoughts-Conversations-and-To-Do-Lists/reviews /discography/Thoughts-Conversations-and-To-Do-Lists/reviews
+/music/7-Songs-in-7-Days/reviews /discography/7-Songs-in-7-Days/reviews
+/music/Red-Flags-and-High-Heels/reviews /discography/Red-Flags-and-High-Heels/reviews
+/music/Fierce-and-Non-Compliant/reviews /discography/Fierce-and-Non-Compliant/reviews
+/music/Black-White-and-a-Little-Bit-of-Grey/reviews /discography/Black-White-and-a-Little-Bit-of-Grey/reviews
+/music/Just-Me-and-sometimes-someone-else/reviews /discography/Just-Me-and-sometimes-someone-else/reviews
