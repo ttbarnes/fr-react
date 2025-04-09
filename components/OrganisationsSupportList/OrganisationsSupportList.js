@@ -23,13 +23,13 @@ const OrganisationsSupportList = () => (
         aria-label='Girls that Gig'>girlsthatgig.com
       </a>
     </li>
-    <li className={styles.listItem}>
+      <li className={styles.listItem}>
       <a
-        href='http://insomniacclub.co.uk'
+        href='http://recordingacademy.com'
         className='link-highlight-hover-border'
         target='_blank'
         rel='noopener noreferrer'
-        aria-label='Insomniac Club'>insomniacclub.co.uk
+        aria-label='The Recording Academy'>recordingacademy.com
       </a>
     </li>
     <li className={styles.listItem}>

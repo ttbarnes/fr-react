@@ -1,9 +1,9 @@
 .icon-s-s,
 .icon-ssp,
-.icon-s-t,
 .icon-s-f,
 .icon-s-i,
 .icon-s-y,
+.icon-tt,
 .icon-link,
 .icon-read,
 .icon-phone {
@@ -35,15 +35,6 @@
   position: relative;
   top: -2px;
 }
-.icon-s-t {
-  background: #1ebced;
-  padding-top: 6px;
-  padding-bottom: 2px;
-}
-.icon-s-t::before {
-  margin-top: 1px;
-  margin-left: 1.5px;
-}
 .icon-s-f {
   background: #3a5ba2;
 }
@@ -55,6 +46,17 @@
 }
 .icon-s-i::before {
   margin-top: 5px;
+}
+.icon-tt,
+.icon-thr {
+  background: #FFF;
+  border-radius: 50%;
+}
+.icon-thr {
+  width: 30px;
+}
+.icon-bs {
+  width: 28px;
 }
 .icon-s-y {
   background: #e02f2f;

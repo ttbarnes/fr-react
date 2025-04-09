@@ -1,16 +1,17 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import ALBUMS from '../../../data/albums.json';
+import DISCOGRAPHY from '../../../data/discography.json';
 import CONSTANTS from '../../../constants';
 import PageContainer from '../../../components/PageContainer';
 import BlockQuote from '../../../components/BlockQuote';
 import PageButtonLink from '../../../components/PageButtonLink';
+import { cleanDiscographyItemName, getImagePath } from '../../../helpers';
 
 const AlbumReviewsPage = ({ album }) => {
   const metaTitle = `${album.name} - Reviews - Fiona Ross`;
   const metaDescription = album.albumCredits ? album.albumCredits[0] : CONSTANTS.META_TAGS.OG_DESCRIPTION;
-  const metaUrl = `${CONSTANTS.BASE_URL}/music/${album.formattedName}`;
-  const metaImage = `${CONSTANTS.BASE_URL_REACT}/images/albums/social/${album.imageName}.png`;
+  const metaUrl = `${CONSTANTS.BASE_URL}/discography/${album.formattedName}`;
+  const metaImage = `${CONSTANTS.BASE_URL_REACT}/images/discography/social/${album.imageName}.png`;
 
   return (
     <PageContainer>
@@ -62,8 +63,8 @@ const AlbumReviewsPage = ({ album }) => {
           </ul>
 
           <PageButtonLink
-            href='/music'
-            text='Music'
+            href='/discography'
+            text='Discography'
           />
 
         </div>
@@ -72,21 +73,13 @@ const AlbumReviewsPage = ({ album }) => {
   );
 };
 
-
-// strip commas and brackets
-const cleanAlbumName = (albumName) =>
-  albumName.replace(/,|\(|\)/g, '');
-
-const getImagePath = (albumName) =>
-  cleanAlbumName(albumName).replace(/\s/g, '-').toLowerCase();
-
 export async function getServerSideProps(context) {
   const { albumName } = context.query;
 
   const albumNameDecoded = albumName.replace(/-/g, ' ')
 
-  const album = ALBUMS.find((album) =>
-    cleanAlbumName(album.name).toLowerCase() === albumNameDecoded.toLowerCase()
+  const album = DISCOGRAPHY.find((album) =>
+    cleanDiscographyItemName(album.name).toLowerCase() === albumNameDecoded.toLowerCase()
   );
 
   if (!album

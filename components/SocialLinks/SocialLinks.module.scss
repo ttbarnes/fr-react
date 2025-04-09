@@ -15,7 +15,8 @@
   &:focus,
   &:active {
     .listItemIcon,
-    .listItemImageIcon {
+    .listItemImageIcon,
+    img {
       transform: rotate(360deg);
     }
   }
@@ -45,9 +46,18 @@
   .listItemLink {
     padding-left: 0.25em;
     padding-right: 0.25em;
+
+    &.iconTtLink {
+      padding-right: .5em;
+    }
+
     @media (min-width: 600px) {
       padding: 0 1.1712em 0 .5em;
       opacity: .8;
+
+      &.iconTtLink {
+        padding-left: 0;
+      }
     }
 
     &:hover,

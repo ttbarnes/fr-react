@@ -5,7 +5,7 @@
     "encodedName": "Thoughts-Conversations-and-To-Do-Lists",
     "releaseDate": "25th March 2022",
     "images": {
-      "thumb": "./images/albums/thumb/thoughts-conversations-and-to-do-lists.jpg"
+      "thumb": "./images/discography/thumb/thoughts-conversations-and-to-do-lists.jpg"
     },
     "albumType": "latest",
     "urls": {
@@ -61,7 +61,7 @@
     "encodedName": "7-Songs-in-7-Days",
     "releaseDate": "25th March 2022",
     "images": {
-      "thumb": "./images/albums/thumb/7-songs-in-7-days.jpg"
+      "thumb": "./images/discography/thumb/7-songs-in-7-days.jpg"
     },
     "urls": {
       "bandcamp": "https://fionarossjazz.bandcamp.com/album/7-songs-in-7-days",
@@ -98,8 +98,8 @@
     "name": "Red Flags and High Heels",
     "releaseDate": "6th October 2021",
     "images": {
-      "thumb": "./images/albums/thumb/red-flags-and-high-heels.jpg",
-      "appCover": "./images/albums/red-flags-and-high-heels.jpg"
+      "thumb": "./images/discography/thumb/red-flags-and-high-heels.jpg",
+      "appCover": "./images/discography/red-flags-and-high-heels.jpg"
     },
     "urls": {
       "bandcamp": "https://fionarossjazz.bandcamp.com/album/red-flags-and-high-heels",

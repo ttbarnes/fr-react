@@ -2,28 +2,27 @@ import { gql } from '@apollo/client';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import ALBUMS from '../../data/albums.json';
+import DISCOGRAPHY from '../../data/discography.json';
 import CONSTANTS from '../../constants';
 import PageContainer from '../../components/PageContainer';
 import {
-  encodeAlbumName,
   getImagePath,
-  mapAlbums
-} from '../../helpers/albums';
-import styles from './Music.module.scss';
+  mapDiscography
+} from '../../helpers';
+import styles from './Discography.module.scss';
 
-const MusicPage = ({ albums }) => (
+const DiscographyPage = ({ discography }) => (
   <PageContainer>
     <div className='container with-page-bg-img'>
 
       <Head>
-        <title>{CONSTANTS.PAGE.MUSIC.TITLE}</title>
+        <title>{CONSTANTS.PAGE.DISCOGRAPHY.TITLE}</title>
 
-        <meta property='og:title' content={CONSTANTS.PAGE.MUSIC.TITLE} />
-        <meta property='og:url' content={CONSTANTS.PAGE.MUSIC.URL} />
+        <meta property='og:title' content={CONSTANTS.PAGE.DISCOGRAPHY.TITLE} />
+        <meta property='og:url' content={CONSTANTS.PAGE.DISCOGRAPHY.URL} />
 
-        <meta name='twitter:title' content={CONSTANTS.PAGE.MUSIC.TITLE} />
-        <meta property='twitter:url' content={CONSTANTS.PAGE.MUSIC.URL} />
+        <meta name='twitter:title' content={CONSTANTS.PAGE.DISCOGRAPHY.TITLE} />
+        <meta property='twitter:url' content={CONSTANTS.PAGE.DISCOGRAPHY.URL} />
       </Head>
 
       <img
@@ -37,20 +36,20 @@ const MusicPage = ({ albums }) => (
       <div className='main-content container-small'>
       
         <ul className='no-list-style' aria-label='Albums'>
-          {albums.map((album) => (
+          {discography.map((item) => (
             <li
-              key={album.name}
+              key={item.name}
               className={styles.listItem}
             >
               <Link
-                href={`/music/${album.formattedName}`}
+                href={`/discography/${item.formattedName}`}
                 legacyBehavior
               >
                 <a className={styles.listItemLink}>
                   <div className={styles.imageContainer}>
                     <Image
-                      src={`/images/albums/${album.imageName}.jpg`}
-                      alt={`Fiona Ross - ${album.name}`}
+                      src={`/images/discography/${item.imageName}.jpg`}
+                      alt={`Fiona Ross - ${item.name}`}
                       layout='responsive'
                       width='403'
                       height='403'
@@ -69,13 +68,13 @@ const MusicPage = ({ albums }) => (
 );
 
 export async function getServerSideProps() {
-  const mappedAlbums = mapAlbums(ALBUMS);
+  const mappedDiscography = mapDiscography(DISCOGRAPHY);
 
   return {
     props: {
-      albums: mappedAlbums
+      discography: mappedDiscography
     }
   };
 }
 
-export default MusicPage;
+export default DiscographyPage;

@@ -41,6 +41,15 @@ const GalleryPage = ({ images }) => (
           </Link>
         </p>
 
+        <p className='text-align-center'>
+          <a
+            href={CONSTANTS.GALLERY_HI_RES_PHOTOS_URL}
+            className='link-highlight-hover-border'
+            target='_blank'
+            rel='noopener noreferrer'
+          >Download high resolution photos</a>
+        </p>
+
         <Gallery images={images} />
 
         <PageButtonLink

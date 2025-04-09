@@ -1,11 +1,13 @@
 const BASE_URL = '/'
 
+const GALLERY_HI_RES_PHOTOS_URL = 'https://drive.google.com/drive/folders/1YmJ7BpGb3D2XRq5F81c4il482trWvaqY?usp=sharing';
+
 const META_TAGS = {
   TITLE: 'Fiona Ross - Jazz Vocalist, Pianist, Composer, Producer and Journalist',
   DESCRIPTION: 'Award Winning Vocalist, Pianist, Composer, Producer and Journalist. 7 Songs in 7 Days out now',
   KEYWORDS: 'Fiona Ross, jazz, vocalist, pianist, composer, musician, singer, songwriter, producer, journalist, london',
   AUTHOR: 'Fiona Ross',
-  OG_DESCRIPTION: 'It\’s just me doing my thing',
+  OG_DESCRIPTION: "It\'s just me doing my thing",
   TWITTER_CARD: 'summary_large_image',
   FACEBOOK_APP_ID: '1779328982334234',
   GOOGLE_SITE_VERIFICATION_1: 'vXuozyxCB7mdGABhxU9iHpi7J3Im4arLmV9Vsafglek',
@@ -26,6 +28,10 @@ const PAGE = {
   COLLABORATORS: {
     TITLE: `Collaborators - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL}/collaborators`
+  },
+  DISCOGRAPHY: {
+    TITLE: `Discography - ${META_TAGS.AUTHOR}`,
+    URL: `${BASE_URL}/discography`
   },
   CONTACT: {
     TITLE: `Contact - ${META_TAGS.AUTHOR}`,
@@ -50,10 +56,6 @@ const PAGE = {
   JOURNALISM: {
     TITLE: `Journalism - ${META_TAGS.AUTHOR}`,
     URL: `${BASE_URL}/journalism`
-  },
-  MUSIC: {
-    TITLE: `Music - ${META_TAGS.AUTHOR}`,
-    URL: `${BASE_URL}/music`
   },
   NEWS: {
     TITLE: `News - ${META_TAGS.AUTHOR}`,
@@ -85,10 +87,12 @@ const SOCIAL_MEDA_IMAGE_SIZE = {
 const SOCIAL_MEDIA_URLS = {
   BANDCAMP: 'https://fionarossjazz.bandcamp.com',
   SPOTIFY: 'https://play.spotify.com/artist/59lPcyDIZJxmRqatvAjct8?play=true',
-  TWITTER: 'http://twitter.com/fifross',
   FACEBOOK: 'http://facebook.com/fionarossmusic',
   INSTAGRAM: 'https://www.instagram.com/fifi_ross',
-  YOUTUBE: 'https://www.youtube.com/channel/UC9srPEZZNgnsM23Q777HbzA'
+  YOUTUBE: 'https://www.youtube.com/channel/UC9srPEZZNgnsM23Q777HbzA',
+  TIKTOK: 'https://www.tiktok.com/@fifross',
+  THREADS: 'https://www.threads.net/@fifi_ross',
+  BLUESKY: 'https://bsky.app/profile/fifiross.bsky.social',
 };
 
 const JOURNALISM_CATEGORIES = {
@@ -155,6 +159,7 @@ const PRESS_CATEGORIES = {
 
 export default {
   BASE_URL,
+  GALLERY_HI_RES_PHOTOS_URL,
   META_TAGS,
   PAGE,
   SOCIAL_MEDA_IMAGE_SIZE,

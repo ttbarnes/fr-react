@@ -24,7 +24,7 @@ const Album = (album) => {
 
         <div className={`col-50-md ${styles.colFirst}`}>
           <img
-            src={`/images/albums/${album.imageName}.jpg`}
+            src={`/images/discography/${album.imageName}.jpg`}
             alt={`Fiona Ross - ${album.name}`}
             className={styles.image}
           />
@@ -67,7 +67,7 @@ const Album = (album) => {
 
                 {album.renderReviewsLink && (
                   <CtaLink
-                    href={`/music/${album.formattedName}/reviews`}
+                    href={`/discography/${album.formattedName}/reviews`}
                     text='Reviews'
                   />
                 )}

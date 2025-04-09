@@ -7,9 +7,9 @@ const links = [
     text: 'Home'
   },
   {
-    route: `${CONSTANTS.BASE_URL}/music`,
-    pathname: '/music',
-    text: 'Music'
+    route: `${CONSTANTS.BASE_URL}/discography`,
+    pathname: '/discography',
+    text: 'Discography'
   },
   {
     route: `${CONSTANTS.BASE_URL}/press`,
