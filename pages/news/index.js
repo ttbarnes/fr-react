@@ -8,12 +8,15 @@ import PageButtonLink from '../../components/PageButtonLink';
 import styles from './News.module.scss';
 import NewsArticle from '../../components/NewsArticle';
 
+
 const sortArticles = (articles) => {
-  const sortedNews = JSON.parse(JSON.stringify(articles));
+  const sorted = JSON.parse(JSON.stringify(articles));
 
-  sortedNews.sort((a, b) => new Date(Number(a.createdAt)) - new Date(Number(b.createdAt)));
+  const filtered = sorted.filter((article) => !article.isArchived);
 
-  return sortedNews.reverse();
+  const orderedByDate = filtered.sort((a, b) => new Date(Number(a.createdAt)) - new Date(Number(b.createdAt)));
+
+  return orderedByDate.reverse();
 };
 
 const NewsPage = ({ articles }) => (
@@ -61,6 +64,7 @@ export async function getServerSideProps() {
       {
         news {
           _id
+          isArchived
           title
           urlTitle
           createdAt
