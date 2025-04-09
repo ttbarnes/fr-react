@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import CONSTANTS from '../constants';
 import DISCOGRAPHY from '../data/discography.json';
-import { mapDiscography } from '../discography';
+import { mapDiscography } from '../helpers';
 import PageContainer from '../components/PageContainer';
 import HomePageQuote from '../components/HomePageQuote';
 import Album from '../components/Album';

@@ -8,7 +8,7 @@ import PageContainer from '../../components/PageContainer';
 import {
   getImagePath,
   mapDiscography
-} from '../../discography';
+} from '../../helpers';
 import styles from './Discography.module.scss';
 
 const DiscographyPage = ({ discography }) => (

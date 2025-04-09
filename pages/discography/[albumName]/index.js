@@ -4,7 +4,7 @@ import CONSTANTS from '../../../constants';
 import PageContainer from '../../../components/PageContainer';
 import Album from '../../../components/Album';
 import PageButtonLink from '../../../components/PageButtonLink';
-import { cleanDiscographyItemName, mapDiscography } from '../../../discography';
+import { cleanDiscographyItemName, mapDiscography } from '../../../helpers';
 
 const AlbumPage = ({ discography }) => {
   const firstItem = discography[0];

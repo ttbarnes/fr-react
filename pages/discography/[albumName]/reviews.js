@@ -5,7 +5,7 @@ import CONSTANTS from '../../../constants';
 import PageContainer from '../../../components/PageContainer';
 import BlockQuote from '../../../components/BlockQuote';
 import PageButtonLink from '../../../components/PageButtonLink';
-import { cleanDiscographyItemName, getImagePath } from '../../../discography';
+import { cleanDiscographyItemName, getImagePath } from '../../../helpers';
 
 const AlbumReviewsPage = ({ album }) => {
   const metaTitle = `${album.name} - Reviews - Fiona Ross`;
