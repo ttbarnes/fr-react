@@ -4,7 +4,7 @@ const GALLERY_HI_RES_PHOTOS_URL = 'https://drive.google.com/drive/folders/1YmJ7B
 
 const META_TAGS = {
   TITLE: 'Fiona Ross - Jazz Vocalist, Pianist, Composer, Producer and Journalist',
-  DESCRIPTION: 'Award Winning Vocalist, Pianist, Composer, Producer and Journalist. 7 Songs in 7 Days out now',
+  DESCRIPTION: "Award Winning Vocalist, Pianist, Composer, Producer and Journalist. Let Your Soul Shine and I Don't Want Money out now",
   KEYWORDS: 'Fiona Ross, jazz, vocalist, pianist, composer, musician, singer, songwriter, producer, journalist, london',
   AUTHOR: 'Fiona Ross',
   OG_DESCRIPTION: "It\'s just me doing my thing",

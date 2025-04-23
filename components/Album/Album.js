@@ -111,14 +111,14 @@ const Album = (album) => {
               <p className={styles.description}>{album.description}</p>
             )}
 
-            {(album.tracklist && album.albumCredits) && (
+            {(album.tracklist && album.albumCredits && album.albumCredits.length) ? (
               <AlbumTextList
                 heading='Credits'
                 list={album.albumCredits}
                 listType='dl'
                 alwaysShowHeading
               />
-            )}
+            ) : null}
 
             {album.pressRelease && (
               <AlbumPressRelease press={album.pressRelease} />

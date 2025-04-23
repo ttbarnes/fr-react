@@ -1,13 +1,54 @@
 [
   {
     "id": 7,
+    "name": "Let Your Soul Shine",
+    "encodedName": "Let-Your-Soul-Shine",
+    "releaseDate": "25th April 2025",
+    "images": {
+      "thumb": "./images/discography/thumb/let-your-soul-shine.jpg"
+    },
+    "albumType": "latest",
+    "urls": {
+      "bandcamp": "#",
+      "spotify": "#",
+      "youtubeMusic": "#",
+      "amazon": "#",
+      "appleMusic": "#"
+    },
+    "canOrderAudioCd": false,
+    "isOutOfStock": false,
+    "albumCredits": [],
+    "tracklist": []
+  },
+  {
+    "id": 7,
+    "name": "I Don't Want Money",
+    "encodedName": "I-Don't-Want-Money",
+    "releaseDate": "25th April 2025",
+    "images": {
+      "thumb": "./images/discography/thumb/i-don't-want-money.jpg"
+    },
+    "albumType": "latest",
+    "urls": {
+      "bandcamp": "#",
+      "spotify": "#",
+      "youtubeMusic": "#",
+      "amazon": "#",
+      "appleMusic": "#"
+    },
+    "canOrderAudioCd": false,
+    "isOutOfStock": false,
+    "albumCredits": [],
+    "tracklist": []
+  },
+  {
+    "id": 7,
     "name": "Thoughts, Conversations and To Do Lists",
     "encodedName": "Thoughts-Conversations-and-To-Do-Lists",
-    "releaseDate": "25th March 2022",
+    "releaseDate": "23rd April 2023",
     "images": {
       "thumb": "./images/discography/thumb/thoughts-conversations-and-to-do-lists.jpg"
     },
-    "albumType": "latest",
     "urls": {
       "bandcamp": "https://fionarossjazz.bandcamp.com/album/thoughts-conversations-and-to-do-lists",
       "spotify": "https://open.spotify.com/album/6xPfgVNcKJLYwfqyU7wSu2?si=1uY2hQzLTdmrdrYviyFw2A",
