@@ -11,8 +11,9 @@ import PageButtonLink from '../components/PageButtonLink';
 import styles from './Home.module.scss';
 
 const HomePage = () => {
-  const mappedAlbums = mapDiscography(DISCOGRAPHY);
-  const latestAlbum = mappedAlbums[0];
+  const mappeDiscography = mapDiscography(DISCOGRAPHY);
+
+  const recentReleases = mappeDiscography.filter((item) => item.albumType === 'latest');
 
   return (
     <PageContainer>
@@ -82,7 +83,14 @@ const HomePage = () => {
             </div>
           </div>
 
-          <Album {...latestAlbum} />
+          <h2 className={styles.videoHeading}>New singles - out now</h2>
+
+          {recentReleases.map((item) => (
+            <Album
+              {...item}
+              key={item.title}
+            />
+          ))}
 
           {/*
           <div className={`row text-align-center ${styles.videoContainer}`}>
