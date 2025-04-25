@@ -9,15 +9,27 @@
     },
     "albumType": "latest",
     "urls": {
-      "bandcamp": "#",
-      "spotify": "#",
-      "youtubeMusic": "#",
-      "amazon": "#",
-      "appleMusic": "#"
+      "bandcamp": "https://fionarossjazz.bandcamp.com/track/let-your-soul-shine",
+      "spotify": "https://open.spotify.com/album/3IbXhbi1cHQuxLwE2gXay5?si=zevegDDlQ9mMYHDGb6yO6w",
+      "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_kVnBAGJPET68fZfZGswRr9_N3VNGbLQ_0&si=nN7E2CXRzzf8Dcps",
+      "amazon": "https://amazon.co.uk/music/player/albums/B0DZV25WXF?marketplaceId=A1F83G8C2ARO7P",
+      "appleMusic": "https://music.apple.com/gb/album/let-your-soul-shine-single/1800953877"
     },
     "canOrderAudioCd": false,
     "isOutOfStock": false,
-    "albumCredits": [],
+    "albumCredits": [
+      "Written, arranged and produced by Fiona Ross",
+      "Fiona Ross (Vocals, Piano)",
+      "Gibbi Bettini (Guitar) Derek Daley (Bass)",
+      "Marley Drummond (Drums)",
+      "Loren Hignell (Saxophones)",
+      "Dave Boa (Trumpets)",
+      "Engineered and recorded at Studio XYZ by Gibbi Bettini and Highfield Studio by Warren Woodcraft",
+      "Mixed at Highfield Studio by Warren Woodcraft and Elliot Richardson",
+      "Mastered by Nick Watson at Fluid Mastering",
+      "Assistant engineer at Highfield Studio Ioannis Siriotis",
+      "Single cover by Warren Woodcraft"
+    ],
     "tracklist": []
   },
   {
@@ -30,15 +42,25 @@
     },
     "albumType": "latest",
     "urls": {
-      "bandcamp": "#",
-      "spotify": "#",
-      "youtubeMusic": "#",
-      "amazon": "#",
-      "appleMusic": "#"
+      "bandcamp": "https://fionarossjazz.bandcamp.com/track/i-don-t-want-money",
+      "spotify": "https://open.spotify.com/album/7B3ODejvcWnedR8bN8kQi7?si=FYgPOP3yR8SWkjsRxkSgjw",
+      "youtubeMusic": "https://music.youtube.com/playlist?list=OLAK5uy_mwfNauw2ZgZsTZ7i3Ls88je4jp0rk95xE&si=QjjX-IAAPbNfw9UO",
+      "amazon": "https://www.amazon.co.uk/music/player/albums/B0DZW1VNBV",
+      "appleMusic": "https://music.apple.com/gb/album/i-dont-want-money-single/1801046513"
     },
     "canOrderAudioCd": false,
     "isOutOfStock": false,
-    "albumCredits": [],
+    "albumCredits": [
+      "Written, arranged and produced by Fiona Ross",
+      "Fiona Ross (Vocals)",
+      "Gibbi Bettini (Guitar)",
+      "Dave Boa (Trumpet)",
+      "Engineered and recorded at Studio XYZ by Gibbi Bettini and Highfield Studio by Warren Woodcraft",
+      "Mixed at Highfield Studio by Warren Woodcraft and Elliot Richardson",
+      "Mastered by Nick Watson at Fluid Mastering",
+      "Assistant engineer at Highfield Studio Ioannis Siriotis",
+      "Single cover by Steven Tiller"
+    ],
     "tracklist": []
   },
   {
