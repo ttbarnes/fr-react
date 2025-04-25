@@ -1,4 +1,6 @@
 const videos = [
+  "<iframe width='560' height='315' src='https://www.youtube.com/embed/GKuA4dMItYM?si=Ezm764LZwAWfQS2a' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+  "<iframe width='560' height='315' src='https://www.youtube.com/embed/IdOrbVqNv9k?si=x6VmcYoOyWNnsMGG' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
   "<iframe width='560' height='315' src='https://www.youtube.com/embed/KUM80lxLYbw' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
   "<iframe width='560' height='315' src='https://www.youtube.com/embed/L3NujuQCuRY' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
   "<iframe width='560' height='315' src='https://www.youtube.com/embed/y1wz17Aic48' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
