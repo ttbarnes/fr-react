@@ -85,12 +85,34 @@ const HomePage = () => {
 
           <h2 className={styles.videoHeading}>New singles - out now</h2>
 
-          {recentReleases.map((item) => (
-            <Album
-              {...item}
-              key={item.title}
-            />
-          ))}
+          {recentReleases.map((item, index) => {
+            if (index === 0) {
+              return (
+                <>
+                  <iframe width="100%" height="500" src="https://www.youtube.com/embed/GKuA4dMItYM?si=7e0xfVuxuAIQTF_H" title="Fiona Ross - Let Your Soul Shine video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" frameBorder="0"></iframe>
+
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+
+                  <Album
+                    {...item}
+                    key={item.title}
+                  />
+                </>
+              );
+            }
+
+            return (
+              <Album
+                {...item}
+                key={item.title}
+              />
+            )
+          })}
+
+            
 
           {/*
           <div className={`row text-align-center ${styles.videoContainer}`}>
