@@ -85,6 +85,7 @@ const SocialLinks = ({
           className={`${styles.listItemImageIcon} icon-tt`}
           aria-label='TikTok'
         />
+        <span className={styles.text}>TikTok</span>
       </a>
     </li>
 
@@ -102,6 +103,7 @@ const SocialLinks = ({
           className={`${styles.listItemImageIcon} icon-thr`}
           aria-label='Threads'
         />
+        <span className={styles.text}>Threads</span>
       </a>
     </li>
 
@@ -119,6 +121,7 @@ const SocialLinks = ({
           className={`${styles.listItemImageIcon} icon-bs`}
           aria-label='Bluesky'
         />
+        <span className={styles.text}>Bluesky</span>
       </a>
     </li>
 
