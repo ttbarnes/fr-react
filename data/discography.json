@@ -1,5 +1,85 @@
 [
   {
+    "id": 8,
+    "name": "Moments in My Notebook",
+    "encodedName": "Moments-in-My-Notebook",
+    "releaseDate": "30th May 2025",
+    "images": {
+      "thumb": "./images/discography/thumb/moments-in-my-notebook.jpg"
+    },
+    "albumType": "latest",
+    "urls": {
+      "bandcamp": "https://fionarossjazz.bandcamp.com/album/moments-in-my-notebook",
+      "spotify": "https://open.spotify.com/album/0YqaVNIjkSK0FNH9K1jEBN?si=hnFfafC0Q9WcPs51e7WeuA",
+      "youtubeMusic": "https://music.youtube.com/playlist?list=PLxo13hj5ir1sPnCweswJM8-bqJq7L0P-Q",
+      "amazon": "https://www.amazon.co.uk/music/player/albums/B0F2C9S5SK",
+      "appleMusic": "https://music.apple.com/gb/album/moments-in-my-notebook/1804198967"
+    },
+    "canOrderAudioCd": false,
+    "isOutOfStock": false,
+    "albumCredits": [
+      "All songs written***, arranged and produced by Fiona Ross",
+      "Fiona Ross (Vocals, Piano and finger clicks)",
+      "Gibbi Bettini (Guitar) Derek Daley (Bass)",
+      "Marley Drummond (Drums)",
+      "Loren Hignell (Saxophones, Clarinet and flutes)",
+      "Dave Boa (Trumpets)",
+      "Simon Todd and Warren Woodcraft (Percussion)",
+      "Band Banter: Everyone",
+
+      "*Special guest: Laura Impallomeni (Trombone)",
+      "**Loren Hignell ( co arranger for I Found A Song in My Notebook)",
+      "****Special guest: Migdalia van Der Hoven (Drums)",
+      "***China Told Me:",
+      "Lyrics and top line melody for verse 2 sung and written by Mary Sho",
+      "Fiona Ross ( Vox and piano)",
+      "Migdalia van Der Hoven (Drums)",
+      "Charlie Flynn (Bass)",
+      "Hannah Horton (Sax)",
+      "Charlotte Keeffe (Trumpet)",
+      "Mary Sho (LeadVox)",
+      "Diana Torti ( Backing Vox)",
+      "Mutsa (Backing Vox)",
+      "JSteps: Miriam Cooke (Trumpet) Emily Metcalfe (Sax) Lily Walpole (Oboe) Meredith Beach (Clarinet) Lydia Brown (Flute) Izzie Bishop (Trumpet) Nina Mele (Sax) Josie Horton (Sax)",
+
+      "Camera clicks by Monika S Jakubowksa recorded by Bart Kowalski",
+
+      "Engineered and recorded at Studio XYZ by Gibbi Bettini and Highfield Studio by Warren Woodcraft",
+      "Mixed at Highfield Studio by Warren Woodcraft and Elliot Richardson",
+      "China Told Me recorded at The Premises Studio, by Warren Woodcraft and Elliot Richardson",
+      "Mastered by Nick Watson at Fluid Mastering",
+      "Assistant engineer at Highfield Studio and Rain sound recorded by Ioannis Siriotis",
+
+      "Album cover by Steven Tiller",
+      "Photography by Monika S Jakubowska",
+      "Artwork by Chris Cunningham",
+      "Sleeve notes by Maxine Gordon"
+    ],
+    "tracklist": [
+      "Running Into Your Arms",
+      "Let your Soul Shine",
+      "Collecting Injustices",
+      "I Don't Want Money",
+      "You Make The Rain Go Away",
+      "I Won't Play",
+      "Pirates in Paris",
+      "This Energy*",
+      "Sometimes I Feel So Alone",
+      "I'm Going Travelling",
+      "When I Think Of You",
+      "Searching for Something I Can’t Find",
+      "I Found A Song In My Notebook**",
+      "Voices Unheard",
+      "Taking It Slow",
+      "China Told Me: Live Session ***",
+      "La Façon Dont Tu Bouges****",
+      "Not My Kind of People",
+      "Not Spending My Time",
+      "No More Hypocrisy",
+      "100 Songs"
+    ]
+  },
+  {
     "id": 7,
     "name": "Let Your Soul Shine",
     "encodedName": "Let-Your-Soul-Shine",

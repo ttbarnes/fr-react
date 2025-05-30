@@ -35,7 +35,7 @@ const DiscographyPage = ({ discography }) => (
 
       <div className='main-content container-small'>
       
-        <ul className='no-list-style' aria-label='Albums'>
+        <ul className='no-list-style' aria-label='Discography'>
           {discography.map((item) => (
             <li
               key={item.name}
