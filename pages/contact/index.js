@@ -43,10 +43,11 @@ const ContactPage = () => (
 
         <TextLinksSection
           heading='Bookings'
+          subText='Max Shaw'
           groups={[
             {
               links: [
-                { url: 'info@fionaross.co.uk', isMailTo: true }
+                { url: 'max@fionaross.co.uk', isMailTo: true }
               ]
             }
           ]}
@@ -70,9 +71,9 @@ const ContactPage = () => (
             },
             {
               groupHeading: 'UK & Europe',
-              groupHeadingSubText: 'Pete Bassett',
+              groupHeadingSubText: 'Max Shaw',
               links: [
-                { url: 'pete@quitegreat.co.uk', isMailTo: true },
+                { url: 'max@fionaross.co.uk', isMailTo: true },
                 { url: ' http://quitegreat.co.uk' }
               ]
             }
