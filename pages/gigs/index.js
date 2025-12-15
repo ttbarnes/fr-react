@@ -46,7 +46,7 @@ const sortGigs = (years) => {
 
   const gigsOrderedByYear = [
     ...currentYearGigs,
-    ...futureGigYears.reverse(),
+    ...futureGigYears,
     ...sortedPreviousGigYears
   ];
 
