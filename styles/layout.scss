@@ -48,14 +48,19 @@
 }
 
 .with-page-bg-img .page-img-bg {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 0 auto;
-  z-index: 1;
-  width: auto;
+  display: none;
+  @media (min-width: 600px) {
+    display:block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 1;
+    width: auto;
+  }
+
   &.black-white-and-a-little-bit-of-grey {
     display: none;
     @media (min-width: 1000px) {
