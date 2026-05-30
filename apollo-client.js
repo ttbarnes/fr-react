@@ -1,6 +1,7 @@
 import {
   ApolloClient,
-  HttpLink
+  HttpLink,
+  InMemoryCache
 } from '@apollo/client';
 
 const link = new HttpLink({
@@ -12,8 +13,9 @@ const link = new HttpLink({
 });
 
 const client = new ApolloClient({
-  uri: process.env.GRAPHQL_API,
   link,
+  cache: new InMemoryCache(),
+  ssrMode: typeof window === 'undefined',
 });
 
 export default client;
