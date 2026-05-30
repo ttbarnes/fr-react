@@ -10,7 +10,7 @@
     "postinstall": "husky install"
   },
   "dependencies": {
-    "@apollo/client": "^4.2.0",
+    "@apollo/client": "^3.9.11",
     "date-fns": "^4.4.0",
     "framer-motion": "^12.40.0",
     "graphql": "^16.14.0",
